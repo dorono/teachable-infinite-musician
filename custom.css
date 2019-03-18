@@ -7,7 +7,7 @@
   margin-bottom: 20px;
 }
 
-.lfcc .discount {
+.im .discount {
   display: none;
 }
 
@@ -29,19 +29,19 @@
 .description_with_share_icons em strong,
 .description-row strong em,
 .description-row em strong,
-.lfcc .blocks-page-course_sales_page p strong em,
-.lfcc .faq-answer strong em {
+.im .blocks-page-course_sales_page p strong em,
+.im .faq-answer strong em {
   font-weight: bold;
 }
 
 .lightning-fast-and-crystal-clean-signup .section-list,
-.lfcc .blocks-page-course_sales_page .section-list {
+.im .blocks-page-course_sales_page .section-list {
   pointer-events: none;
 }
 
 
 .lightning-fast-and-crystal-clean-signup .section-list .lecture-start,
-.lfcc .blocks-page-course_sales_page .lecture-start {
+.im .blocks-page-course_sales_page .lecture-start {
   display: none;
 }
 
@@ -54,7 +54,7 @@
   font-size: 26px;
 }
 
-.lfcc h3 {
+.im h3 {
   font-size: 28px;
   color: #db5424;
   font-style: italic;
@@ -133,7 +133,7 @@
   font-size: 15px;
 }
 
-.lfcc #mc-embedded-subscribe-form .btn-primary {
+.im #mc-embedded-subscribe-form .btn-primary {
   background: #2984d1 !important;
   border: 1px solid #2984d1 !important;
   margin: 20px 0 0;
@@ -158,7 +158,7 @@
   padding-top: 0;
 }
 
-.lfcc .preenrollment-form-wrapper .highlight-text em {
+.im .preenrollment-form-wrapper .highlight-text em {
   color: #000;
 }
 
@@ -217,65 +217,67 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 }
 
 /* LIGHTNING FAST AND CRYSTAL CLEAN */
-.lfcc .course-block, .block {
+.im .course-block, .block {
   padding: 0;
 }
 
-/*.lfcc-desktop-hero,
-.lfcc-mobile-hero {
+/*.im-desktop-hero,
+.im-mobile-hero {
   display:none !important;
 }*/
 
-.lfcc-mobile-hero {
+
+.im-mobile-hero,
+.im-mobile-hero {
   display: none !important;
 }
 
-.lfcc .blocks-page-course_sales_page .section-list.curriculum {
+.im .blocks-page-course_sales_page .section-list.curriculum {
   padding-left: 0;
   list-style: none;
 }
 
-.lfcc .blocks-page-course_sales_page .section-list.curriculum .lecture-icon {
+.im .blocks-page-course_sales_page .section-list.curriculum .lecture-icon {
   display: inline-block;
   margin: 0 5px 0 0;
 }
 
-.lfcc #enroll-button.btn-primary,
-.lfcc #enroll-button.btn-primary:active,
-.lfcc #enroll-button.btn-primary:focus {
+.im #enroll-button.btn-primary,
+.im #enroll-button.btn-primary:active,
+.im #enroll-button.btn-primary:focus {
   margin-bottom: 10px;
   background: green !important;
   width: 100%;
 }
 
-.lfcc p:empty,
-.lfcc .checkout center br,
-.lfcc .course-description br:last-of-type,
-.lfcc .duration-display {
+.im p:empty,
+.im .checkout center br,
+.im .course-description br:last-of-type,
+.im .duration-display {
   display: none;
 }
 
-.lfcc .custom-header-container {
+.im .custom-header-container {
   margin-bottom: 20px;
 }
 
-.lfcc .blocks-page-course_sales_page p,
-.lfcc .blocks-page-course_sales_page li,
-.lfcc .blocks-page-course_sales_page .block.rich_text ul li,
-.lfcc .blocks-page-course_sales_page .block.rich_text ol li {
+.im .blocks-page-course_sales_page p,
+.im .blocks-page-course_sales_page li,
+.im .blocks-page-course_sales_page .block.rich_text ul li,
+.im .blocks-page-course_sales_page .block.rich_text ol li {
   font-size: 19px;
 }
 
-.lfcc .blocks-page-course_sales_page li {
+.im .blocks-page-course_sales_page li {
   padding-bottom: 0;
 }
 
-.lfcc .blocks-page-course_sales_page .block.rich_text ul.curriculum li {
+.im .blocks-page-course_sales_page .block.rich_text ul.curriculum li {
   font-size: 17px;
   font-weight: bold;
 }
 
-.lfcc .blocks-page-course_sales_page .block.rich_text ul.curriculum li.section-item {
+.im .blocks-page-course_sales_page .block.rich_text ul.curriculum li.section-item {
   display: block;
   padding: 11px 16px;
   background: #f0f0f0;
@@ -288,12 +290,12 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   margin-bottom: 1px;
 }
 
-.lfcc .blocks-page-course_sales_page .block.rich_text ul.curriculum li.section-item strong {
+.im .blocks-page-course_sales_page .block.rich_text ul.curriculum li.section-item strong {
   font-weight: 600;
 
 }
 
-.lfcc .curriculum-section-title {
+.im .curriculum-section-title {
   background: #e8e8e8;
   padding: 10px 16px;
   margin: 0;
@@ -311,36 +313,36 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   font-size: 23px;
 }
 
-.lfcc .blocks-page-course_sales_page p em,
+.im .blocks-page-course_sales_page p em,
 .faq-answer em {
   font-weight: 400;
 }
 
-.lfcc .faq-answer {
+.im .faq-answer {
   border-bottom: 1px solid #000;
 }
 
-.lfcc .checkout-cta h2 {
+.im .checkout-cta h2 {
   display: none;
 }
 
-.lfcc .story {
+.im .story {
   padding: 20px;
   margin-bottom: 40px;
   box-shadow: 3px 3px 10px #9a9494;
 }
 
-.lfcc .alt-sections {
+.im .alt-sections {
   margin-bottom: 40px;
   box-shadow: 3px 3px 10px #9a9494;
   padding: 20px;
 }
 
-.lfcc .alt-sections.faq-questions .faq-answer:last-of-type {
+.im .alt-sections.faq-questions .faq-answer:last-of-type {
   border-bottom: none;
 }
 
-.lfcc .alt-section-style-1 {
+.im .alt-section-style-1 {
   background: #eae8e8;
   color: #000;
 }
@@ -351,13 +353,13 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   line-height: 130%;
 }
 
-.lfcc .blocks-page-course_sales_page .alt-section-style-2 p {
+.im .blocks-page-course_sales_page .alt-section-style-2 p {
   font-size: 30px;
   color: #fff;
   margin-bottom: 10px;
 }
 
-.lfcc .blocks-page-course_sales_page .alt-section-style-2 p small {
+.im .blocks-page-course_sales_page .alt-section-style-2 p small {
   font-size: 17px;
   line-height: 120%;
 }
@@ -367,29 +369,29 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   margin-bottom: 0;
 }
 
-.lfcc .blocks-page-course_sales_page .alt-section-style-1 h2 {
+.im .blocks-page-course_sales_page .alt-section-style-1 h2 {
   color: #000;
   border: #000 dashed;
   border-width: 2px 0;
 }
 
 
-.lfcc .custom-header h1.highlight-text {
+.im .custom-header h1.highlight-text {
   color: #db5424;
   font-size: 52px;
   font-weight: bold;
   font-style: italic;
 }
 
-.lfcc ul.benefits,
-.lfcc ul.features-list,
-.lfcc ul.bonus {
+.im ul.benefits,
+.im ul.features-list,
+.im ul.bonus {
   margin: 0;
   padding: 0;
   list-style:none;
 }
 
-.lfcc ul.benefits li {
+.im ul.benefits li {
   background: url(https://www.filepicker.io/api/file/Wn1HjASaQj6vgNnvOil5) no-repeat 9px 9px;
   /*background: url(https://www.filepicker.io/api/file/wQsSUCQSQCiIGZ84NnZ0) no-repeat 9px 3px;*/
   /*background: url(https://www.filepicker.io/api/file/DbZiLQzRcaSEcBX9Icpq) no-repeat 9px 3px;*/
@@ -400,7 +402,7 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   border-width: 0 0 1px;
 }
 
-.lfcc ul.bonus li {
+.im ul.bonus li {
   background: url(https://www.filepicker.io/api/file/Dugzs6ajQa0BLfSs1LHu) no-repeat 9px 7px;
   padding: 3px 0 20px 43px;
   list-style: none;
@@ -410,7 +412,7 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   background-size: 16px;
 }
 
-.lfcc ul.features-list li {
+.im ul.features-list li {
   background: url(https://www.filepicker.io/api/file/U3I1EcS7QIyrYVR40LXs) no-repeat 9px 7px;
   padding: 3px 0 20px 43px;
   list-style: none;
@@ -419,28 +421,28 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   border-width: 0 0 1px;
 }
 
-.lfcc ul.benefits li:last-of-type,
-.lfcc ul.features-list li:last-of-type,
-.lfcc ul.bonus li:last-of-type {
+.im ul.benefits li:last-of-type,
+.im ul.features-list li:last-of-type,
+.im ul.bonus li:last-of-type {
   border: none;
   margin-bottom: 0;
 }
 
-.lfcc .features {
+.im .features {
   padding: 20px;
   margin-bottom: 40px;
   border: 3px dashed #333;
 }
 
-.lfcc .features img {
+.im .features img {
   margin-bottom: 20px;
 }
 
-.lfcc .features img.outline {
+.im .features img.outline {
   border: 1px solid #000;
 }
 
-.lfcc .features img.sheetmusic {
+.im .features img.sheetmusic {
   -ms-transform: rotate(-11deg); /* IE 9 */
   -webkit-transform: rotate(-11deg); /* Safari */
   transform: rotate(-11deg);
@@ -448,7 +450,7 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   padding: 30px;
 }
 
-.lfcc .features h3 {
+.im .features h3 {
   background: #000;
   padding: 10px;
   font-weight: bold;
@@ -461,7 +463,7 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   max-width: 70%;
 }
 
-.lfcc .blocks-page-course_sales_page h2 {
+.im .blocks-page-course_sales_page h2 {
   padding: 10px;
   margin: 0 0 20px;
   clear: both;
@@ -470,39 +472,39 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   border-width: 1px 0;
 }
 
-.lfcc .blocks-page-course_sales_page h2.cta-subhead {
+.im .blocks-page-course_sales_page h2.cta-subhead {
   text-align: center;
   border-color: #2984d1;
   color: #2984d1;
 }
 
-.lfcc h2.highlight,
-.lfcc .highlight-text {
+.im h2.highlight,
+.im .highlight-text {
   color: #db5424;
 }
 
-.lfcc h2.highlight {
+.im h2.highlight {
   background: #000;
 }
 
-.lfcc hr {
+.im hr {
   border-top: 1px solid #c3c0c0;
 }
 
-.lfcc hr.section-divider {
+.im hr.section-divider {
   border-top: 1px solid #000;
 }
 
-.lfcc .testimonial-content {
+.im .testimonial-content {
   margin-bottom: 20px;
 }
 
-.lfcc .bio {
+.im .bio {
   margin-top: 20px;
 }
 
-.lfcc .course-block.odd-stripe,
-.lfcc .block.odd-stripe {
+.im .course-block.odd-stripe,
+.im .block.odd-stripe {
   background: #fff;
 }
 
@@ -538,13 +540,13 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
       text-align: right;
   }
 
-  .lfcc #mc-embedded-subscribe-form {
+  .im #mc-embedded-subscribe-form {
       display: flex;
       align-items: center;
       justify-content: center;
   }
 
-  .lfcc #mc-embedded-subscribe-form .btn-primary {
+  .im #mc-embedded-subscribe-form .btn-primary {
       margin: 0;
   }
 }

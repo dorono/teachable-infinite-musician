@@ -6,8 +6,11 @@
 $(function () {
     var cssCourseBodySelector = '';
     var cssPageSelector = cssPageSelector = window.location.pathname.split('/')[2] || '';
-    if (window.location.pathname.indexOf('lightning') !== -1) {
-        cssCourseBodySelector = 'lfcc';
+    if (
+      window.location.pathname.indexOf('lightning') !== -1
+      || window.location.pathname.indexOf('ultimate-guide') !== -1
+    ) {
+        cssCourseBodySelector = 'im';
     }
 
     if (cssCourseBodySelector) {
