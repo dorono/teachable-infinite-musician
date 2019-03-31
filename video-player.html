@@ -1,0 +1,67 @@
+
+<link href="https://vjs.zencdn.net/7.4.1/video-js.css">
+<style>
+  #main {
+    /*   width: 90%; */
+    margin: 0 auto;
+  }
+
+  #my-video {
+    width: 100%;
+    /*   height: auto; */
+  }
+
+  .video-js {
+    background-color: white !important;
+  }
+</style>
+<div id="main">
+  <h1><a href="#" class="skip-link" id="chapter-1" data-start-position="5">Chapter 1</a></h1>
+  <h1><a href="#" class="skip-link" id="chapter-2" data-start-position="7">Chapter 2</a></h1>
+  <hr>
+  <video id='my-video' class='video-js' controls preload='auto'
+    poster='https://www.filepicker.io/api/file/w3i9pHmtSCuyCYtkIRwF' data-setup='{ "playbackRates": [0.5, 1, 1.5, 2] }'>
+    <source src='https://www.filepicker.io/api/file/fGomr7ZGRumSYz21zdPg' type='video/mp4'>
+
+    <!--     <source src='MY_VIDEO.webm' type='video/webm'> -->
+    <p class='vjs-no-js'>
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href='https://videojs.com/html5-video-support/' target='_blank'>supports HTML5 video</a>
+    </p>
+  </video>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://vjs.zencdn.net/7.4.1/video.js"></script>
+<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+
+<script>
+  // https://docs.videojs.com/docs/guides/api.html
+
+  (function () {
+    function handleChapterClick(startTime, videoId, player) {
+      player.play();
+      player.currentTime(startTime);
+      player.pause();
+    }
+
+    $(document).ready(function () {
+      videojs("my-video", ({
+        fluid: true,
+        // responsive: true,
+        aspectRatio: '3:4'
+      })).ready(function () {
+        var liebmanPlayer = this;
+
+        $(".skip-link").on("click", function (e) {
+          e.preventDefault();
+          var startPosition = $(this).data("start-position");
+          var targetId = $(this).attr("id");
+          handleChapterClick(startPosition, targetId, liebmanPlayer);
+        });
+      });
+    });
+  })();
+
+</script>
