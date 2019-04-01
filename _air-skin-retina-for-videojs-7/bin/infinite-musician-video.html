@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Air Skin Retina for VideoJS 7</title>
+
+  <!-- Chang URLs to wherever Video.js files will be hosted -->
+  <!-- Default URLs assume the examples folder is included alongside video.js -->
+  <link href="./video-js-7.3.0/video-js.min.css" rel="stylesheet">
+  <link href="./video-js-plugins/videojs-resolution-switcher.css" rel="stylesheet">
+  <link href="./video-js-skin-air/videojs-skin-air.min.css" rel="stylesheet"/>
+
+  <!-- Include ES5 shim, sham and html5 shiv for ie8 support  -->
+  <!-- Exclude this if you don't need ie8 support -->
+  <script src="./video-js-7.3.0/ie8/videojs-ie8.min.js"></script>
+
+  <!-- video.js must be in the <head> for older IEs to work. -->
+  <script src="./video-js-7.3.0/video.min.js"></script>
+  <script src="./video-js-plugins/videojs.hotkeys.min.js"></script>
+</head>
+<body>
+  <div>
+    <video id="video_player" class="video-js vjs-big-play-centered" autoplay controls preload="none" width="815" height="340" poster="http://vjs.zencdn.net/v/oceans.png" data-setup='{"aspectRatio":"994:559", "playbackRates": [0.5, 1, 1.5, 2]}'>
+      <!-- <source src="https://www.filepicker.io/api/file/yMJQd9HhQ2OUk1Fzcwvy" type='video/mp4' label='480p' res='480' /> -->
+      <source src="https://www.filepicker.io/api/file/yMJQd9HhQ2OUk1Fzcwvy" type='video/mp4'/>
+      <!-- <source src="https://vjs.zencdn.net/v/oceans.mp4?144" type='video/mp4' label='360p' res='360'/>
+      <source src="https://vjs.zencdn.net/v/oceans.mp4?2160" type='video/mp4' label='4K' res='2160'/> -->
+      <!-- Tracks need an ending tag thanks to IE9 -->
+      <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>
+  </div>
+  <script src="./video-js-plugins/videojs-resolution-switcher.js"></script>
+  <script type='text/javascript'>
+    var player = videojs('video_player', {
+      plugins: {
+        videoJsResolutionSwitcher: {
+          dynamicLabel: false,    // Display dynamic labels or gear symbol
+          default: 'low'         // Default resolution [{Number}, 'low', 'high']
+        }
+      }
+    });
+    player.ready(function() {
+      this.hotkeys({
+        seekStep: 5
+      });
+    });
+    // Debug for
+    player.on('resolutionchange', function(){
+      console.info('Source changed to %s', player.src())
+    })
+  </script>
+</body>
+</html>
