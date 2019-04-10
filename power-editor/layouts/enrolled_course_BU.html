@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+    <html>
+      <head>
+        {% include "layouts/partials/head" %}
+      </head>
+      <body class='body-content-view'>
+        {% site_meta %}
+        {% cache 'course_header', course %}
+        {{ site.body_prepend_js }}
+        {% include "courses/partials/enrolled_course_header" %}
+        {% include "courses/partials/enrolled_course_sidebar" %}
+        {% endcache %}
+        <div class='course-mainbar' style='display: block;'>
+          {{ content_for_layout }}
+        </div>
+        {{ site.body_append_js }}
+        {{ site.footer_includes }}
+      </body>
+    </html>

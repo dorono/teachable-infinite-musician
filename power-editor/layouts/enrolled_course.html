@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include "layouts/partials/head" %}
+    <link href="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.js"></script>
+</head>
+
+<body class='body-content-view'>
+    {% site_meta %}
+    {% cache 'course_header', course %}
+    {{ site.body_prepend_js }}
+    {% include "courses/partials/enrolled_course_header" %}
+    {% include "courses/partials/enrolled_course_sidebar" %}
+    {% endcache %}
+    <div class='course-mainbar' style='display: block;'>
+        {{ content_for_layout }}
+    </div>
+    {{ site.body_append_js }}
+    {{ site.footer_includes }}
+    <script type='text/javascript'>
+        function handleChapterClick(startTime, videoId, player) {
+            player.play();
+            player.currentTime(startTime);
+            player.pause();
+        }
+
+        $(document).ready(function () {
+            var player;
+
+            if ($('#video_player').length) {
+                player = videojs('video_player', {
+                    plugins: {
+                        videoJsResolutionSwitcher: {
+                            dynamicLabel: false,    // Display dynamic labels or gear symbol
+                            default: 'low'         // Default resolution [{Number}, 'low', 'high']
+                        }
+                    }
+                });
+
+                player.ready(function () {
+                    var imVideoPlayer = this;
+
+                    this.hotkeys({
+                        seekStep: 5
+                    });
+
+                    $(".skip-link").on("click", function (e) {
+                        e.preventDefault();
+                        var startPosition = $(this).data("start-position");
+                        var targetId = $(this).attr("id");
+                        handleChapterClick(startPosition, targetId, imVideoPlayer);
+                    });
+                });
+
+                player.on('resolutionchange', function () {
+                    console.info('Source changed to %s', player.src())
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>
