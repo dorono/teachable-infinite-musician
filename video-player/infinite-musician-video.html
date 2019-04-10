@@ -50,6 +50,8 @@
             player.pause();
         }
 
+
+
         var player = videojs('video_player', {
             plugins: {
                 videoJsResolutionSwitcher: {
@@ -75,7 +77,8 @@
         // Debug for
         player.on('resolutionchange', function () {
             console.info('Source changed to %s', player.src())
-        })
+        });
+
     </script>
 </body>
 
