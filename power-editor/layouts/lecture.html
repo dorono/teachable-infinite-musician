@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     {% include "layouts/partials/head" %}
     <link href="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.js"></script>
-</head>
+  </head>
 
-<body class='body-content-view'>
+  <body data-no-turbolink="true">
     {% site_meta %}
-    {% cache 'course_header', course %}
     {{ site.body_prepend_js }}
-    {% include "courses/partials/enrolled_course_header" %}
-    {% include "courses/partials/enrolled_course_sidebar" %}
-    {% endcache %}
-    <div class='course-mainbar' style='display: block;'>
-        {{ content_for_layout }}
-    </div>
+    {% include "lectures/partials/lecture_header" %}
+    {% include "lectures/partials/lecture_sidebar" %}
+    {{ content_for_layout }}
+    {% include "lectures/partials/lecture_footer" %}
     {{ site.body_append_js }}
-    {{ site.footer_includes }}
     <script type='text/javascript'>
         function handleChapterClick(startTime, videoId, player) {
             player.play();
@@ -61,6 +56,5 @@
 
         });
     </script>
-</body>
-
+  </body>
 </html>
