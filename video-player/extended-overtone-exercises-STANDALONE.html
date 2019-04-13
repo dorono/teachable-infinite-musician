@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.css"
+        rel="stylesheet" type="text/css" />
+    <style>
+        .im-video-container {
+            max-width: 900px;
+        }
+
+        .lecture-attachment-type-video {
+            display: none;
+        }
+    </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.js"></script>
+
+</head>
+
+<body data-no-turbolink="true">
+
+
+    <p>Having trouble with this video player? <a href="" id="toggle-video-link"></a></p>
+    <div class="lecture-attachment-type-video" style="background-color: red; width: 100%; height: auto;"></div>
+    <div class="im-video-container im-custom-video">
+        <video id="video-player-1" class="video-js vjs-big-play-centered" autoplay controls preload="none" width="815"
+            height="340" poster="http://vjs.zencdn.net/v/oceans.png"
+            data-setup='{"autoplay": false, "aspectRatio":"994:559", "playbackRates": [0.5, 1, 1.5, 2]}'>
+            <source src="https://www.filepicker.io/api/file/Qd9IQsdzSAWiZCN7Ut1R" type='video/mp4' />
+            <!-- Tracks need an ending tag thanks to IE9 -->
+            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser
+                that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+
+        <div class="video-player-1-toc video-toc">
+            <ol>
+                <li>
+                    <a href="#" class="skip-link" id="chapter-1" data-start-position="8">Varying Sequences</a>
+                </li>
+                <li>
+                    <a href="#" class="skip-link" id="chapter-1" data-start-position="77">"Lester Young" Effect</a>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+
+    <script type='text/javascript'>
+        function handleChapterClick(startTime, videoId, player) {
+            player.play();
+            player.currentTime(startTime);
+            player.pause();
+        }
+
+        $(document).ready(function () {
+            var displayCustom = true;
+            var player;
+            var $toggleCustomLink = $('#toggle-video-link');
+            var defaultVideoToggleMessage = 'Switch to regular video format';
+            var customVideoToggleMessage = 'Switch to video with linking table of contents.';
+
+            $toggleCustomLink.text(defaultVideoToggleMessage);
+
+            if ($('.video-js').length) {
+                player = videojs('video-player-1', {
+                    plugins: {
+                        videoJsResolutionSwitcher: {
+                            dynamicLabel: false,    // Display dynamic labels or gear symbol
+                            default: 'low'         // Default resolution [{Number}, 'low', 'high']
+                        }
+                    }
+                });
+
+                player.ready(function () {
+                    var imVideoPlayer = this;
+
+                    this.hotkeys({
+                        seekStep: 5
+                    });
+
+                    $(".skip-link").on("click", function (e) {
+                        var startPosition = $(this).data("start-position");
+                        var targetId = $(this).attr("id");
+                        handleChapterClick(startPosition, targetId, imVideoPlayer);
+                    });
+                });
+
+                player.on('resolutionchange', function () {
+                    console.info('Source changed to %s', player.src())
+                });
+
+                $toggleCustomLink.on('click', function (e) {
+                    e.preventDefault();
+                    player.pause();
+                    displayCustom = !displayCustom;
+
+                    if (displayCustom) {
+                        $toggleCustomLink.text(defaultVideoToggleMessage)
+                        $('.im-custom-video').each(function () {
+                            $(this).show();
+                        });
+                        $('.lecture-attachment-type-video').each(function () {
+                            $(this).hide();
+                        });
+                    } else {
+                        $toggleCustomLink.text(customVideoToggleMessage)
+                        $('.im-custom-video').each(function () {
+                            $(this).hide();
+                        });
+                        $('.lecture-attachment-type-video').each(function () {
+                            $(this).show();
+                        });
+                    }
+                })
+            }
+
+        });
+    </script>
+</body>
+
+</html>
