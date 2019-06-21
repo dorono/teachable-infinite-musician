@@ -32,7 +32,7 @@
     }
 </style>
 <!-- place directly after opening <body> tag -->
-<div class="simple-banner" style="background-color: #f22b0c;">
+<div class="simple-banner" id="alert-banner" style="background-color: #f22b0c;">
     <div class="container">
         <div class="row">
             <div class="xs-12">
@@ -50,6 +50,16 @@
 
 <script>
 $(document).ready(function (){
-    console.log($('.simple-banner').outerHeight());
+    function setNavbarTopMargin() {
+        var outerHeight = $('#alert-banner').outerHeight();
+        $('#navbar').css({
+            'margin-top': outerHeight
+        });
+        console.log('outerHeight', outerHeight);
+    }
+
+    $(window).resize(function () {
+        setNavbarTopMargin();
+    });
 });
 </script>
