@@ -36,11 +36,10 @@
     <div class="container">
         <div class="row">
             <div class="xs-12">
-
-                <div>
-                    <div class="simple-banner-text"><span>"SUMMER SHED" SALE UNTIL <span style="color:#000;">6/28</span>
-                            - USE PROMO CODE <span style="color:#e4f145">INFINITECHOPS</span> FOR 25% DISCOUNT ON ALL
-                            SAX + JAZZ COURSES.</div>
+                <div class="simple-banner-text">
+                    4-DAY SUMMER SALE - USE PROMO CODE <span style="color:#e4f145">INFINITECHOPS</span> FOR <span style="color: #6df1a8;">25% DISCOUNT</span> ON ALL COURSES.
+                    <br>
+                    <em>ENDS <span style="color:#000;">6/28</span> (midnight pst)</em>
                 </div>
 
             </div>
@@ -49,17 +48,19 @@
 </div>
 
 <script>
-$(document).ready(function (){
-    function setNavbarTopMargin() {
-        var outerHeight = $('#alert-banner').outerHeight();
-        $('#navbar').css({
-            'margin-top': outerHeight
-        });
-        console.log('outerHeight', outerHeight);
-    }
+    $(document).ready(function () {
+        function setNavbarTopMargin() {
+            if ($('#alert-banner').is(':visible')) {
+                var outerHeight = $('#alert-banner').outerHeight();
+                $('#navbar').css({
+                    'margin-top': outerHeight
+                });
+                console.log('outerHeight', outerHeight);
+            }
+        }
 
-    $(window).resize(function () {
-        setNavbarTopMargin();
+        $(window).resize(function () {
+            setNavbarTopMargin();
+        });
     });
-});
 </script>
