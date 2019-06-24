@@ -28,7 +28,7 @@
         font-weight: bold;
         color: #fff;
         padding: 5px;
-        display: none;
+        /* display: none; */
     }
 </style>
 <!-- place directly after opening <body> tag -->
@@ -58,6 +58,8 @@
                 console.log('outerHeight', outerHeight);
             }
         }
+
+        setNavbarTopMargin();
 
         $(window).resize(function () {
             setNavbarTopMargin();
