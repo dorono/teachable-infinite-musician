@@ -28,7 +28,7 @@
         font-weight: bold;
         color: #fff;
         padding: 5px;
-        /* display: none; */
+        display: none;
     }
 </style>
 <!-- place directly after opening <body> tag -->
@@ -48,12 +48,16 @@
 </div>
 
 <script>
-    $(document).ready(function () {
-        function setNavbarTopMargin() {
-            if ($('#alert-banner').is(':visible')) {
-                var outerHeight = $('#alert-banner').outerHeight();
-                $('#navbar').css({
-                    'margin-top': outerHeight
+    // FOR ALERT BANNER...
+    /*$(document).ready(function () {
+        var $navBar = $('#navbar');
+        var $alertBanner = $('#alert-banner');
+
+        function setNavbarTopMargin(override) {
+            if ($alertBanner.is(':visible')) {
+                var outerHeight = $alertBanner.outerHeight();
+                $navBar.css({
+                    'margin-top': override || outerHeight
                 });
                 console.log('outerHeight', outerHeight);
             }
@@ -64,5 +68,27 @@
         $(window).resize(function () {
             setNavbarTopMargin();
         });
-    });
+
+        $(document).on('scroll', function (){
+            var outerHeight = $alertBanner.outerHeight();
+
+            if ($(this).scrollTop > 200) {
+                // $navBar.css({
+                //     'margin-top': '0 !important'
+                // });
+
+                $alertBanner.hide();
+                setNavbarTopMargin(0);
+
+            } else {
+                // $navBar.css({
+                //     'margin-top': outerHeight
+                // });
+
+                $alertBanner.show();
+                setNavbarTopMargin();
+
+            }
+        })
+    });*/
 </script>
