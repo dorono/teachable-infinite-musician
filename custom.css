@@ -356,6 +356,10 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   padding: 20px;
 }
 
+.im.ultimate-guide-to-saxophone-sound-production .alt-sections {
+  padding: 20px 20px 10px;
+}
+
 .im .alt-sections.faq-questions .faq-answer:last-of-type {
   border-bottom: none;
 }
@@ -367,7 +371,7 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 
 .alt-section-style-2,
 .description_with_share_icons .alt-section-style-2 p {
-  background: #E8BE18;
+  background: #2984d1;
   line-height: 130%;
 }
 
@@ -381,10 +385,14 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   font-size: 30px;
   color: #fff;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production .blocks-page-course_sales_page .alt-section-style-2 p {
   color: #000;
+  text-align: center;
+  font-size: 40px;
+  line-height: 1em;
 }
 
 .im .blocks-page-course_sales_page .alt-section-style-2 p small {
@@ -556,6 +564,10 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   }
   .block.rich_text img.limited-width {
       max-width: 100%;
+  }
+
+  .im.ultimate-guide-to-saxophone-sound-production .blocks-page-course_sales_page .alt-section-style-2 p {
+    font-size: 25px;
   }
 }
 
