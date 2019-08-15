@@ -306,11 +306,14 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   font-weight: 200;
   margin-bottom: 1px;
 }
+.im.ultimate-guide-to-saxophone-sound-production .blocks-page-course_sales_page .block.rich_text ul.curriculum li.section-item,
+.im.ultimate-guide-to-saxophone-sound-production .blocks-page-rich_text .block.rich_text ul.curriculum li.section-item {
+  font-size: 16px;
+}
 
 .im .blocks-page-course_sales_page .block.rich_text ul.curriculum li.section-item strong,
 .im .blocks-page-rich_text .block.rich_text ul.curriculum li.section-item strong {
   font-weight: 600;
-
 }
 
 .im .curriculum-section-title {
@@ -320,6 +323,10 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   font-size: 19px;
   font-weight: bold;
   border-bottom: 1px solid #fff;
+}
+
+.im.ultimate-guide-to-saxophone-sound-production .curriculum-section-title {
+  font-size: 22px;
 }
 
 .lecture-desc {
@@ -474,6 +481,10 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   border: 3px dashed #333;
 }
 
+.im .dashed-border {
+  border: 3px dashed #000;
+}
+
 .im .features img {
   margin-bottom: 20px;
 }
@@ -530,6 +541,11 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 .im h2.highlight,
 .im .highlight-text {
   color: #db5424;
+}
+
+.im.ultimate-guide-to-saxophone-sound-production h2.highlight,
+.im.ultimate-guide-to-saxophone-sound-production .highlight-text {
+  color: #fc0000;
 }
 
 .im h2.highlight {
