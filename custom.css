@@ -432,11 +432,17 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
 
 .im ul.benefits,
 .im ul.features-list,
-.im ul.bonus,
-.im.ultimate-guide-to-saxophone-sound-production ul.summary-bullets {
+.im ul.bonus {
   margin: 0;
   padding: 0;
   list-style:none;
+}
+
+.im ul.benefits li {
+  list-style: none;
+  border: solid #ccc;
+  border-width: 0 0 1px;
+  margin: 0 0 20px 0;
 }
 
 .im ul.benefits li {
@@ -444,16 +450,13 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   /*background: url(https://www.filepicker.io/api/file/wQsSUCQSQCiIGZ84NnZ0) no-repeat 9px 3px;*/
   /*background: url(https://www.filepicker.io/api/file/DbZiLQzRcaSEcBX9Icpq) no-repeat 9px 3px;*/
   padding: 3px 0 20px 43px;
-  list-style: none;
-  margin: 0 0 20px 0;
-  border: solid #ccc;
-  border-width: 0 0 1px;
 }
 
-.im.ultimate-guide-to-saxophone-sound-production ul.summary-bullets li {
-  background: url(https://www.filepicker.io/api/file/NnqkBxPqQVqzlLlVsyRz) no-repeat 0 6px;
-  padding: 3px 0 0px 33px;
-  list-style: none;
+.im.ultimate-guide-to-saxophone-sound-production ul.benefits li {
+  background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 0 6px;
+  /*background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 9px 3px;*/
+  /*background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 9px 3px;*/
+  padding: 3px 0 20px 33px;
 }
 
 .im ul.bonus li {
