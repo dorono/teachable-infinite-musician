@@ -583,6 +583,10 @@ font-family: Alegreya, "Helvetica Neue",Helvetica,Arial,sans-serif !important;
   background: #fff;
 }
 
+.im.ultimate-guide-to-saxophone-sound-production .video_embed h2 {
+  text-align: left;
+}
+
 @media screen and (max-width: 767px) {
   .bio.course-block img,
   .bio.block img {
