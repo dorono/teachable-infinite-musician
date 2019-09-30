@@ -1,11 +1,9 @@
 <!-- <link href="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.css" rel="stylesheet" type="text/css" /> -->
-
 <script type='text/javascript'
     src='//platform-api.sharethis.com/js/sharethis.js#property=5c4f8b3fc9830d001319af9b&product=inline-share-buttons'
     async='async'></script>
 
 <!-- <script src="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.js"></script> -->
-
 
 <script>
     $(function () {
@@ -16,6 +14,10 @@
             || window.location.pathname.indexOf('ultimate-guide') !== -1
         ) {
             cssCourseBodySelector = 'im lfcc';
+
+            if (window.location.pathname.indexOf('ultimate-guide') !== -1) {
+                cssCourseBodySelector = cssCourseBodySelector + ' ugssp';
+            }
         }
 
         if (cssCourseBodySelector) {
@@ -68,3 +70,13 @@
 <noscript><img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=909075279152522&ev=PageView&noscript=1" /></noscript>
 <!-- End Facebook Pixel Code -->
+
+<!-- Global site tag (gtag.js) - Google Ads: 1016009350 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1016009350"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-1016009350');
+</script>
