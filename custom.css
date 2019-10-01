@@ -454,6 +454,15 @@
     margin: 0 auto;
 }
 
+.im.ugssp .custom-header.signup.hero-bottom {
+    padding: 0 15px;
+}
+
+.im.ugssp .custom-header.signup.hero-bottom h2 {
+    margin-top: 0;
+    background-color: #33DDFF;
+}
+
 .im.ugssp .hero-container {
     background-image: url(https://www.filepicker.io/api/file/j7fblHDRRi1oHNF2iz3T);
     background-repeat: no-repeat;
@@ -696,6 +705,10 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .im.ugssp .custom-header.signup.hero-bottom {
+        padding: 0;
+    }
+
     .im.ugssp .hero-container {
         display: block;
         padding-top: 250px;
@@ -743,7 +756,7 @@
         justify-content: center;
     }
 
-    .im.ugssp #mc-embedded-subscribe-form {
+    .im.ugssp .hero-container #mc-embedded-subscribe-form {
         position: absolute;
         bottom: 0;
         width: 100%;
