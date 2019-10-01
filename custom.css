@@ -148,6 +148,12 @@
     margin: 20px 0 0;
 }
 
+.im.ugssp #mc-embedded-subscribe-form .btn-primary {
+    background: #E8BE18 !important;
+    border: 1px solid #E8BE18 !important;
+    color: #000;
+}
+
 .im #mc-embedded-subscribe-form {
     overflow: hidden;
     margin-top: 15px;
@@ -449,8 +455,9 @@
 }
 
 .im.ugssp .hero-container {
-    background-image: url(https://www.filepicker.io/api/file/x6LWHwxWTkqJqmcm2g6o);
+    background-image: url(https://www.filepicker.io/api/file/j7fblHDRRi1oHNF2iz3T);
     background-repeat: no-repeat;
+    background-position: center 0;
     width: 889px;
     height: 500px;
 }
@@ -661,7 +668,6 @@
 }
 
 @media screen and (max-width: 767px) {
-
     .bio.course-block img,
     .bio.block img {
         max-width: 300px;
@@ -691,7 +697,6 @@
 
 @media only screen and (max-width: 767px) {
     .im.ugssp .hero-container {
-        background-position: -525px 0;
         display: block;
         padding-top: 250px;
         width: 100%;
@@ -711,6 +716,7 @@
     .im.ugssp .ugssp-signup-hero-logo {
         width: 100%;
         background: #000;
+        padding-top: 15px;
     }
 
     .im.ugssp .custom-header-container img {
@@ -719,6 +725,10 @@
 }
 
 @media only screen and (min-width: 767px) {
+    .im.ugssp .hero-container {
+        background-position: 80% 0;
+    }
+
     .footer-column.footer-left {
         text-align: left;
     }
@@ -741,5 +751,17 @@
 
     .im #mc-embedded-subscribe-form .btn-primary {
         margin: 0;
+    }
+}
+
+@media only screen and (min-width: 840px) {
+    .im.ugssp .hero-container {
+        background-position: 90% 0;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .im.ugssp .hero-container {
+        background-position: 100% 0;
     }
 }
