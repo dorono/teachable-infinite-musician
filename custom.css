@@ -224,7 +224,7 @@
 }
 
 .im.ugssp .custom-header-container img {
-    padding: 15px 0 15px 15px;
+    padding: 15px 0 0 15px;
     box-sizing: content-box;
 }
 
@@ -494,6 +494,10 @@
     width: 50%;
 }
 
+.im.ugssp .custom-header-container .ugssp-signup-hero-logo img {
+    margin-bottom: 15px;
+}
+
 .im.ugssp .highlight-text.feature-box {
     background: #E8BE18;
     color: #000;
@@ -501,7 +505,7 @@
     border: none;
 }
 
-.im.ugssp .highlight-text.feature-box span,
+.im.ugssp .highlight-text.feature-box em,
 .im.ugssp .highlight-text.in-hero em {
     color: #fc0000;
     font-style: italic;
@@ -765,6 +769,47 @@
     .im #mc-embedded-subscribe-form .btn-primary {
         margin: 0;
     }
+}
+
+#alert-banner {
+    width: 100%;
+    background: #fc0000;
+    text-align: center;
+    z-index: 200000;
+    display: block;
+    line-height: 1;
+    font-weight: bold;
+    color: #fff;
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+}
+
+#alert-banner .simple-banner-text {
+    text-align: center;
+    max-width: 695px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#alert-banner #alert-close {
+    padding: 5px 0;
+    float: right;
+    font-size: 17px;
+    text-decoration: underline;
+    color: #fff;
+}
+
+#alert-banner #alert-close:hover {
+    color: #33DDFF;
+}
+
+#alert-banner .simple-banner-text img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 @media only screen and (min-width: 840px) {
