@@ -812,6 +812,10 @@
     margin: 0 auto;
 }
 
+.block.proceed_to_course_button {
+    padding-top: 15px;
+}
+
 @media only screen and (min-width: 840px) {
     .im.ugssp .hero-container {
         background-position: 90% 0;

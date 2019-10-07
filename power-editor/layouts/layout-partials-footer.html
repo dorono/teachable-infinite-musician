@@ -16,6 +16,12 @@
             var $alertClose = $('#alert-close');
             var currentAlertStatus = sessionStorage.getItem('SHOW_ALERT');
             console.log('currentAlertStatus', currentAlertStatus);
+            var pathToLower = window.location.pathname.toLowerCase();
+
+            if (pathToLower.indexOf('purchased') !== -1) {
+                return;
+            }
+
             if (
                 currentAlertStatus !== 'hide'
             ) {
