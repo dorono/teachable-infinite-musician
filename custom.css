@@ -269,7 +269,8 @@
     list-style: none;
 }
 
-.im .blocks-page-course_sales_page .section-list.curriculum .lecture-icon {
+.im .blocks-page-course_sales_page .section-list.curriculum .lecture-icon,
+.im .blocks-page-post_purchase_page .section-list.curriculum .lecture-icon {
     display: inline-block;
     margin: 0 5px 0 0;
 }
@@ -297,6 +298,7 @@
 .im .blocks-page-course_sales_page li,
 .im .blocks-page-course_sales_page .block.rich_text ul li,
 .im .blocks-page-course_sales_page .block.rich_text ol li,
+.im .blocks-page-post_purchase_page ul li,
 .im .blocks-page-rich_text .block.rich_text ol li,
 .im .blocks-page-rich_text .block.rich_text ul li {
     font-size: 19px;
@@ -314,7 +316,8 @@
 }
 
 .im .blocks-page-course_sales_page .block.rich_text ul.curriculum li.section-item,
-.im .blocks-page-rich_text .block.rich_text ul.curriculum li.section-item {
+.im .blocks-page-rich_text .block.rich_text ul.curriculum li.section-item,
+.im .blocks-page-post_purchase_page .block.rich_text ul.curriculum li.section-item {
     display: block;
     padding: 11px 16px;
     background: #f0f0f0;
@@ -409,11 +412,26 @@
     color: #000;
 }
 
-.im .blocks-page-course_sales_page .alt-section-style-2 p {
+.im .blocks-page-course_sales_page .alt-section-style-2 p,
+.im .blocks-page-post_purchase_page .alt-section-style-2 p {
     font-size: 30px;
     color: #fff;
     margin-bottom: 10px;
     text-align: center;
+}
+
+.im .blocks-page-post_purchase_page .alt-section-style-2  p {
+    font-size: 22px;
+}
+
+.im .blocks-page-post_purchase_page .alt-sections {
+    margin-bottom: 0;
+}
+
+.im .blocks-page-post_purchase_page .alt-section-style-2 .highlight-text {
+    color: #000;
+    font-size: 26px;
+    font-weight: bold;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production .blocks-page-course_sales_page .alt-section-style-2 p {
@@ -626,13 +644,18 @@
 }
 
 .im .blocks-page-course_sales_page h2,
-.im .blocks-page-rich_text h2 {
+.im .blocks-page-rich_text h2,
+.im .blocks-page-post_purchase_page h2 {
     padding: 10px;
     margin: 0 0 20px;
     clear: both;
     line-height: 120%;
     border: black solid;
     border-width: 1px 0;
+}
+
+.im .blocks-page-post_purchase_page h2.course-curriculum {
+    margin-top: 30px;
 }
 
 .im .blocks-page-course_sales_page h2.cta-subhead {
