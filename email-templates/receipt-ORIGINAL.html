@@ -1,0 +1,17 @@
+<!--
+Email template: student/purchase_notification_with_tax_details
+Description: This email is sent to a student when they enroll in a course.
+ -->
+
+<!-- Email Title -->
+<div class="header-title">
+    <h1>{{ text.email_receipts.thank_you_for_enrolling_in }} "{{ sale.course.name }}"</h1>
+  </div>
+
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td class="text-center"><a href="{{ sale.course.url }}" class="btn-primary" target="_blank">Access course</a></td>
+    </tr>
+  </table>
+  <!-- Auto-generated JSON-ld compliant JSON for showing action buttons in emails -->
+  <script type="application/ld+json">{{ goto_action_json }}</script>
