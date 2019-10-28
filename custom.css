@@ -1,3 +1,22 @@
+#banners {
+    width: 100%;
+}
+
+#banners div div {
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+#banners div img {
+    display: block;
+    max-width: 600px;
+    height: auto;
+    width: 100%;
+    margin: 0 auto 15px;
+}
+
 .video-custom-responsive {
     overflow: hidden;
     padding-bottom: 56.25%;
@@ -861,5 +880,17 @@
 @media only screen and (min-width: 992px) {
     .im.ugssp .hero-container {
         background-position: 100% 0;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .im.ugssp .hero-container {
+        background-position: 90% 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #banners div div {
+        width: 100%;
     }
 }
