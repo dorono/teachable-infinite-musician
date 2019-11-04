@@ -117,8 +117,8 @@
 }
 
 .homepage-hero {
-    padding-top: 130px;
-    padding-bottom: 80px;
+    padding-top: 80px;
+    padding-bottom: 40px;
 }
 
 .centered-block {
@@ -726,6 +726,33 @@
 
 .im.ultimate-guide-to-saxophone-sound-production .video_embed h2 {
     text-align: left;
+}
+
+.ugssp.highlight-section {
+    background: #E8BE18;
+    color: #000;
+    padding: 15px;
+}
+
+.ugssp.highlight-section a.highlight-link {
+    color: #fc0000;
+    text-decoration: underline;
+}
+
+.lfcc.highlight-section {
+    background: #2984d1;
+    color: #fff;
+    padding: 15px;
+}
+
+.lfcc.highlight-section a.highlight-link {
+    color: #000;
+    text-decoration: underline;
+}
+
+.ugssp.highlight-section a.highlight-link:hover,
+.lfcc.highlight-section a.highlight-link:hover {
+    text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
