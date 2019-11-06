@@ -1,3 +1,16 @@
+.blocks-page-homepage .course-block.featured_courses,
+.blocks-page-homepage .block.featured_courses {
+    padding: 20px 0;
+}
+
+.blocks-page-homepage .course-block.featured_courses .container h2 {
+    font-size: 40px;
+}
+
+.blocks-page-homepage .course-block.featured_courses a.btn-md {
+    font-size: 17px !important;
+}
+
 #banners {
     width: 100%;
 }
