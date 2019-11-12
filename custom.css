@@ -260,6 +260,15 @@
     background-color: #000;
 }
 
+.slws .custom-header-container {
+    background-color: #fff;
+}
+
+.slws .custom-header-container img {
+    margin: 20px auto 0;
+    border: 6px dashed black;
+}
+
 .im.ugssp .custom-header-container img {
     padding: 15px 0 0 15px;
     box-sizing: content-box;
@@ -310,6 +319,15 @@
 .im .blocks-page-post_purchase_page .section-list.curriculum .lecture-icon {
     display: inline-block;
     margin: 0 5px 0 0;
+}
+
+.sax-lessons-with-the-stars .course-section.course-section-locked .section-days-to-drip,
+.sax-lessons-with-the-stars .course-section.progress-locked .section-days-to-drip {
+    display: none;
+}
+
+.sax-lessons-with-the-stars .fa-clock-o:before {
+    content: "\f028";
 }
 
 .im #enroll-button.btn-primary,
@@ -530,6 +548,14 @@
 .im.ugssp .highlight-text,
 .im.ugssp .custom-header h1.highlight-text {
     color: #fc0000;
+}
+
+.im.slws .highlight-text {
+    color: #d79a42;
+}
+
+.im.slws h3 {
+    color: #000;
 }
 
 .im.ugssp .intro-message .highlight-text em.deemphasize {
