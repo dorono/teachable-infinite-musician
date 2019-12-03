@@ -885,6 +885,10 @@
     }
 }
 
+#alert-bar {
+    display: none;
+}
+
 #alert-banner {
     width: 100%;
     background: #fc0000;
