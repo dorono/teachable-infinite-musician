@@ -14,11 +14,17 @@
         if (
             window.location.pathname.indexOf('lightning') !== -1
             || window.location.pathname.indexOf('ultimate-guide') !== -1
+            || window.location.pathname.indexOf('sax-lessons-with-the-stars') !== -1
         ) {
             cssCourseBodySelector = 'lfcc';
 
             if (window.location.pathname.indexOf('ultimate-guide') !== -1) {
                 cssCourseBodySelector = cssCourseBodySelector + ' ugssp';
+            }
+
+            if (window.location.pathname.indexOf('sax-lessons-with-the-stars') !== -1) {
+                console.log('ADDING');
+                cssCourseBodySelector = cssCourseBodySelector + ' slws';
             }
         }
 
