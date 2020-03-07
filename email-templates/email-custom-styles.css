@@ -1,0 +1,506 @@
+<style type="text/css">
+/* -------------------------------------
+Email template: email_styles
+Description: The CSS used across all email templates.
+------------------------------------- */
+
+
+/* -------------------------------------
+GLOBAL
+------------------------------------- */
+.rounded-gravatar {
+  border-radius: 30px;
+  margin-top: -5px;
+}
+
+.aligned-user {
+  position:relative;
+  clear:both;
+}
+
+.condensed-users {
+  margin-left:120px;
+  margin-right:120px
+}
+
+.clear-elements {
+  clear: both;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.6;
+}
+
+.table-wrapper {
+  width: 700px;
+  margin: auto;
+  margin-top: 50px;
+  box-shadow: 0 8px 20px #e3e7ea !important;
+  -webkit-box-shadow: 0 8px 20px #e3e7ea !important;
+  -moz-box-shadow: 0 8px 20px #e3e7ea !important;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+}
+
+/* -------------------------------------
+ELEMENTS
+------------------------------------- */
+p a {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  color: {{ email_settings.brand_secondary }};
+}
+
+.btn-primary {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  color: #FFF !important;
+  background-color: {{ email_settings.brand_secondary }};
+  border: solid {{ email_settings.brand_secondary }};
+  line-height: 2;
+  max-width: 100%;
+  font-size: 14px;
+  padding: 8px 40px 8px 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* -------------------------------------
+BODY
+------------------------------------- */
+table.body-wrap {
+  width: 100%;
+  padding: 30px 55px;
+  background: #f6f6f6;
+  margin: 0;
+  font-size: 100%;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.container {
+  display: block !important;
+  margin: 0 auto !important; /* makes it centered */
+  clear: both !important;
+}
+
+/* -------------------------------------
+HEADER
+------------------------------------- */
+.header {
+  background-repeat: no-repeat;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  height: 80px;
+  background: #4d9bc5;
+  background-size: 300px;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  line-height: 55px;
+  padding-top: 40px;
+  text-align: center;
+  color: {{ email_settings.brand_navbar_text }};
+}
+
+.header img {
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.header-title {
+  background: {{ email_settings.brand_primary }};
+  color: {{ email_settings.brand_navbar_text }};
+  padding: 0px 60px 40px;
+  text-align: center;
+  {% if email_settings.brand_primary == "#ffffff" %}
+    padding-bottom: 0px;
+  {% endif %}
+  margin-bottom: 40px;
+}
+
+.header-school-title {
+  font-weight: bold;
+}
+
+.header-title h1, .header-title h1 a {
+  font-size: 28px;
+  line-height: 40px;
+  padding-top: 0px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: {{ email_settings.brand_navbar_text }};
+}
+
+.content .header-title h1:first-child {
+  padding-top: 0px;
+}
+
+.header-title p, .header-title p a {
+  color: {{ email_settings.brand_navbar_text }};
+  opacity: 0.8;
+}
+
+.header-margin-overide {
+  margin-top: -40px;
+}
+
+/* -------------------------------------
+CONTENT
+------------------------------------- */
+
+.content {
+  margin: 0 auto !important; /* makes it centered */
+  clear: both !important;
+  background: #fff;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding-bottom: 40px;
+}
+
+.content p, .content h1, .content h2, .content table, .content hr {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.content p:first-child, .content h1 {
+  padding-top: 40px;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.condensed-width {
+  max-width: 510px;
+  margin: auto;
+}
+
+/* -------------------------------------
+FOOTER
+------------------------------------- */
+.footer {
+  padding-top: 30px;
+  padding-bottom: 55px;
+  width: 100%;
+  clear: both !important;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #666;
+}
+
+.footer a {
+  color: #999;
+}
+
+.footer .social-icons {
+  padding-top: 5px;
+}
+
+
+/* -------------------------------------
+INVOICE RECEIPT
+------------------------------------- */
+
+h1.price-jumbo {
+  text-align: center;
+  font-weight: 200;
+  font-size: 40px;
+  padding-top: 10px;
+}
+
+.data-table {
+  width: 550px;
+  margin:auto;
+  margin-bottom: 30px;
+}
+
+.data-table td {
+  color: #a0a5ad;
+  letter-spacing: 0.6px;
+  font-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom: 1px dashed #B5C2D3;
+}
+
+.data-table .total td, .data-table .total td.text-right {
+  background: #f7f7f7;
+  border: 0;
+  color: #4f5c63;
+  font-weight: bold;
+}
+
+.data-table td a {
+  color: {{ email_settings.brand_secondary }};
+}
+
+.data-table td.text-right {
+  color: #4f5c63;
+}
+
+/* -------------------------------------
+TYPOGRAPHY
+------------------------------------- */
+a {
+  color: {{ email_settings.brand_secondary }};
+  word-wrap: break-word;
+}
+
+h1, h2, h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 1.1;
+  margin-bottom: 15px;
+  color: #47505E;
+  margin: 0px 0 10px;
+  line-height: 1.2;
+  font-weight: 200;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.small {
+  font-size: 80%;
+  line-height: 250%;
+  vertical-align: middle;
+}
+
+.margin-none {
+  margin: 0 !important;
+}
+
+.padding-none {
+  padding: 0 !important;
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 45px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p, ul, ol {
+  font-weight: normal;
+  padding: 0;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  margin-bottom: 1.3em;
+  font-size: 15px;
+  color: #47505E;
+}
+
+p:first-child {
+  margin-top: 0px;
+}
+
+ul li, ol li {
+  margin-left: 50px;
+  list-style-position: inside;
+}
+
+hr {
+  border-top-width: 0;
+}
+
+/* Unsubscribe Link */
+a.unsubscribe-link {
+  font-size: 12px;
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* -------------------------------------
+TAX FORMS
+------------------------------------- */
+.tax-form-box {
+  border: solid;
+  border-width: 2px;
+  border-color: #808080;
+  border-radius: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-top: 20px;
+  height: 45px;
+  text-align: center;
+  color: #44443f;
+}
+
+/* -------------------------------------
+LEGACY STUFF
+These are no longer needed, but will save old customized templates from breaking
+------------------------------------- */
+.content h1.headline:first-child, .content h2.headline:first-child {
+  padding-top: 40px;
+}
+
+.content h2.subline {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.invoice {
+  margin: 20px auto;
+  text-align: left;
+  width: 80%;
+}
+
+.invoice td {
+  padding: 15px 10px;
+  font-size: 110%;
+  line-height: 125%;
+}
+
+.invoice .invoice-details {
+  font-size: 19px;
+}
+
+.invoice .invoice-items {
+  width: 100%;
+}
+
+.invoice .invoice-items td {
+  border-top: #eee 1px solid;
+}
+
+.invoice .invoice-items .total td {
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+  font-weight: 700;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.personal-details {
+  margin: 0px auto;
+  text-align: left;
+  width: 80%;
+}
+
+.personal-details td {
+  padding: 15px 10px;
+  font-size: 100%;
+  line-height: 125%;
+}
+
+.personal-details .detail-items {
+  width: 100%;
+}
+
+.personal-details .detail-items tr:first-child td {
+  border-top: #eee 1px solid;
+}
+
+.personal-details .detail-items td {
+  border-bottom: #eee 1px solid;
+}
+
+.personal-details .detail-items .stripe {
+  background: #fcfcfc;
+}
+
+.personal-details .detail-items .alignleft {
+  font-weight: bold;
+}
+
+.personal-details .detail-items .alignright {
+  border-left: 1px solid #eee;
+  padding-left: 20px;
+}
+
+</style>
+
+
+<style data-roadie-ignore>
+/* -------------------------------------
+RESPONSIVENESS
+!importants in here are necessary since email clients
+don't automatically override these
+------------------------------------- */
+@media only screen and (max-device-width: 700px) {
+  .table-wrapper {
+    width: 100% !important;
+    margin-top: 0px !important;
+    border-radius: 0px !important;
+  }
+
+  .header {
+    border-radius: 0px !important;
+  }
+
+  .header-title {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .header-title h1 {
+    font-size: 25px !important;
+  }
+
+  .data-table {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+</style>

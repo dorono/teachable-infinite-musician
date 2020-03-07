@@ -1,0 +1,29 @@
+<!--
+Email template: email_header
+Description: The email header used across all templates
+ -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title></title>
+    {% include "mailer_partials/email_styles" %}
+  </head>
+  <body>
+    <table style="background: #F5F6F7;" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <!-- body -->
+          <table cellpadding="0" cellspacing="0" class="table-wrapper" style="box-shadow: 0 8px 20px #e3e7ea !important; -webkit-box-shadow: 0 8px 20px #e3e7ea !important; -moz-box-shadow: 0 8px 20px #e3e7ea !important;">
+            <tr>
+              <!-- Brand Header -->
+                <td class="container header">
+                  {% if email_settings.favicon_url %}
+                    <img src="{{ email_settings.favicon_url }}" height="64" width="64">
+                  {% else %}
+                    <div class="header-school-title">{{ school.name }}</div>
+                  {% endif %}
+               </td>
+            </tr>
