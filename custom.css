@@ -1,66 +1,66 @@
 .blocks-page-homepage .course-block.featured_courses,
 .blocks-page-homepage .block.featured_courses {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .blocks-page-homepage .course-block.featured_courses .container h2 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .blocks-page-homepage .course-block.featured_courses a.btn-md {
-    font-size: 17px !important;
+  font-size: 17px !important;
 }
 
 #banners {
-    width: 100%;
+  width: 100%;
 }
 
 #banners div div {
-    float: left;
-    width: 50%;
-    padding: 0 15px;
-    box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 #banners div img {
-    display: block;
-    max-width: 600px;
-    height: auto;
-    width: 100%;
-    margin: 0 auto 15px;
+  display: block;
+  max-width: 600px;
+  height: auto;
+  width: 100%;
+  margin: 0 auto 15px;
 }
 
 .video-custom-responsive {
-    overflow: hidden;
-    padding-bottom: 56.25%;
-    position: relative;
-    height: 0;
-    text-align: center;
-    margin-bottom: 20px;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .im .discount {
-    display: none;
+  display: none;
 }
 
 .main-shadow {
-    box-shadow: 3px 1px 8px rgb(0, 0, 0, .5);
-    border: 1px solid #e4e3e3;
+  box-shadow: 3px 1px 8px rgb(0, 0, 0, 0.5);
+  border: 1px solid #e4e3e3;
 }
 
 .video-custom-responsive iframe {
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .description-row p,
 .description-row em,
 .description_with_share_icons em,
 .quote-wrapper em {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .description_with_share_icons strong em,
@@ -69,209 +69,214 @@
 .description-row em strong,
 .im .blocks-page-course_sales_page p strong em,
 .im .faq-answer strong em {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .lightning-fast-and-crystal-clean-signup .section-list {
-    pointer-events: none;
+  pointer-events: none;
 }
-
 
 .lightning-fast-and-crystal-clean-signup .section-list .lecture-start,
 .im .blocks-page-course_sales_page .lecture-start {
-    display: none;
+  display: none;
 }
 
 .description_with_share_icons h2 em {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .description-row h2,
 .description_with_share_icons h2 {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 .im h3 {
-    font-size: 28px;
-    color: #db5424;
-    font-style: italic;
-    margin: 24px 0;
-    font-weight: 500;
+  font-size: 28px;
+  color: #db5424;
+  font-style: italic;
+  margin: 24px 0;
+  font-weight: 500;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production h3 {
-    color: #fc0000;
+  color: #fc0000;
 }
 
 .bottom-margin {
-    margin-bottom: 20px !important;
+  margin-bottom: 20px !important;
 }
 
 .top-margin {
-    margin-top: 20px !important;
+  margin-top: 20px !important;
 }
 
 .no-bottom-border {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .img-right-float {
-    display: block;
-    padding-bottom: 15px;
+  display: block;
+  padding-bottom: 15px;
 }
 
 .navbar-fedora .navbar-brand.header-logo {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 
 .navbar-fedora .navbar-brand.header-logo img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .homepage-hero {
-    padding-top: 80px;
-    padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .centered-block {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .block.rich_text p.money-back {
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 0;
-    font-style: italic;
-    color: green;
-    font-size: 23px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 0;
+  font-style: italic;
+  color: green;
+  font-size: 23px;
 }
 
 .security {
-    max-height: 60px;
-    margin: 0 auto;
+  max-height: 60px;
+  margin: 0 auto;
 }
 
 .lecture-desc {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 #homepage-feature {
-    width: 100%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
 }
 
 .lecture-content .lecture-attachment .attachment {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .lecture-content .lecture-attachment .attachment a.download {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .im #mc-embedded-subscribe-form .btn-primary {
-    background: #2984d1 !important;
-    border: 1px solid #2984d1 !important;
-    margin: 20px 0 0;
+  background: #2984d1 !important;
+  border: 1px solid #2984d1 !important;
+  margin: 20px 0 0;
 }
 
 .im.ugssp #mc-embedded-subscribe-form .btn-primary {
-    background: #E8BE18 !important;
-    border: 1px solid #E8BE18 !important;
-    color: #000;
+  background: #e8be18 !important;
+  border: 1px solid #e8be18 !important;
+  color: #000;
 }
 
 .im #mc-embedded-subscribe-form {
-    overflow: hidden;
-    margin-top: 15px;
-    position: relative;
+  overflow: hidden;
+  margin-top: 15px;
+  position: relative;
 }
 
-.block .full-width-image-bg.background-not-set .preenrollment-form-wrapper h2.signup-form-title,
+.block
+  .full-width-image-bg.background-not-set
+  .preenrollment-form-wrapper
+  h2.signup-form-title,
 .block.rich_text h2.signup-form-title,
-.course-block .full-width-image-bg.background-not-set .preenrollment-form-wrapper h2.signup-form-title {
-    padding: 20px;
-    font-size: 50px;
-    color: #db5424 !important;
-    text-align: center;
-    font-weight: bold;
-    line-height: 1.25em;
-    border: none;
-    padding: 0;
+.course-block
+  .full-width-image-bg.background-not-set
+  .preenrollment-form-wrapper
+  h2.signup-form-title {
+  padding: 20px;
+  font-size: 50px;
+  color: #db5424 !important;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.25em;
+  border: none;
+  padding: 0;
 }
 
 .course-block .full-width-image-bg.embedded-form .preenrollment-form-wrapper,
 .block .full-width-image-bg.embedded-form .preenrollment-form-wrapper,
 .block .full-width-image-bg.embedded-form {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .preenrollment-form-wrapper {
-    background: none;
+  background: none;
 }
 
 .im .preenrollment-form-wrapper .highlight-text em {
-    color: #000;
+  color: #000;
 }
 
 .preenrollment-form-wrapper h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 30px;
 }
 
 .block .full-width-image-bg.background-not-set .preenrollment-form-wrapper h4 {
-    font-size: 26px;
-    margin: 0 0 20px;
-    text-align: center;
-    font-style: italic;
+  font-size: 26px;
+  margin: 0 0 20px;
+  text-align: center;
+  font-style: italic;
 }
 
 #homepage-feature div {
-    padding: 5px;
-    width: 300px;
-    height: 250px;
-    text-align: center;
+  padding: 5px;
+  width: 300px;
+  height: 250px;
+  text-align: center;
 }
 
 #homepage-feature div img {
-    height: auto;
-    max-width: 300px;
-    width: 100%;
+  height: auto;
+  max-width: 300px;
+  width: 100%;
 }
 
 .cognito .c-forms-form .c-forms-form-title h2,
 .cognito label[for] {
-    font-family: Alegreya, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family: Alegreya, 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
 
 .custom-header-container {
-    width: 100%;
-    background-color: #000;
+  width: 100%;
+  background-color: #000;
 }
 
 .slws .custom-header-container {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .slws .custom-header-container img {
-    margin: 20px auto 0;
-    border: 6px dashed black;
+  margin: 20px auto 0;
+  border: 6px dashed black;
 }
 
 .im.ugssp .custom-header-container img {
-    padding: 15px 0 0 15px;
-    box-sizing: content-box;
+  padding: 15px 0 0 15px;
+  box-sizing: content-box;
 }
 
 .lecture-attachment ul.regular-bullets li,
@@ -280,23 +285,23 @@
 .post ol.regular-bullets li,
 .block.rich_text ul.regular-bullets li,
 .block.rich_text ol.regular-bullets li {
-    line-height: 120%;
-    margin-bottom: 0;
-    padding-bottom: 20px;
+  line-height: 120%;
+  margin-bottom: 0;
+  padding-bottom: 20px;
 }
 
 .custom-header-container img {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .custom-header-container {
-    text-align: center;
+  text-align: center;
 }
 
 /* LIGHTNING FAST AND CRYSTAL CLEAN */
 .im .course-block,
 .block {
-    padding: 0;
+  padding: 0;
 }
 
 /*.im-desktop-hero,
@@ -304,49 +309,52 @@
     display:none !important;
   }*/
 
-
 .lfcc-mobile-hero,
 .im-mobile-hero {
-    display: none !important;
+  display: none !important;
 }
 
 .im .section-list.curriculum {
-    padding-left: 0;
-    list-style: none;
+  padding-left: 0;
+  list-style: none;
 }
 
 .im .blocks-page-course_sales_page .section-list.curriculum .lecture-icon,
 .im .blocks-page-post_purchase_page .section-list.curriculum .lecture-icon {
-    display: inline-block;
-    margin: 0 5px 0 0;
+  display: inline-block;
+  margin: 0 5px 0 0;
 }
 
-.sax-lessons-with-the-stars .course-section.course-section-locked .section-days-to-drip,
-.sax-lessons-with-the-stars .course-section.progress-locked .section-days-to-drip {
-    display: none;
+.sax-lessons-with-the-stars
+  .course-section.course-section-locked
+  .section-days-to-drip,
+.sax-lessons-with-the-stars
+  .course-section.progress-locked
+  .section-days-to-drip {
+  display: none;
 }
 
 .sax-lessons-with-the-stars .fa-clock-o:before {
-    content: "\f028";
+  content: '\f028';
 }
 
 .im #enroll-button.btn-primary,
 .im #enroll-button.btn-primary:active,
 .im #enroll-button.btn-primary:focus {
-    margin-bottom: 10px;
-    background: green !important;
-    width: 100%;
+  margin-bottom: 10px;
+  background: green !important;
+  width: 100%;
 }
 
 .im p:empty,
 .im .checkout center br,
 .im .course-description br:last-of-type,
 .im .duration-display {
-    display: none;
+  display: none;
 }
 
 .im .custom-header-container {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .im .blocks-page-course_sales_page p,
@@ -357,610 +365,658 @@
 .im .blocks-page-post_purchase_page ul li,
 .im .blocks-page-rich_text .block.rich_text ol li,
 .im .blocks-page-rich_text .block.rich_text ul li {
-    font-size: 19px;
+  font-size: 19px;
 }
 
 .im .blocks-page-course_sales_page li,
 .im .blocks-page-rich_text li {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .im .blocks-page-course_sales_page .block.rich_text ul.curriculum li,
 .im .blocks-page-rich_text .block.rich_text ul.curriculum li {
-    font-size: 17px;
-    font-weight: bold;
+  font-size: 17px;
+  font-weight: bold;
 }
 
-.im .blocks-page-course_sales_page .block.rich_text ul.curriculum li.section-item,
+.im
+  .blocks-page-course_sales_page
+  .block.rich_text
+  ul.curriculum
+  li.section-item,
 .im .blocks-page-rich_text .block.rich_text ul.curriculum li.section-item,
-.im .blocks-page-post_purchase_page .block.rich_text ul.curriculum li.section-item {
-    display: block;
-    padding: 11px 16px;
-    background: #f0f0f0;
-    list-style-type: none;
-    font-size: 15px;
-    letter-spacing: 0px;
-    color: #425252;
-    text-decoration: none;
-    font-weight: 200;
-    margin-bottom: 1px;
+.im
+  .blocks-page-post_purchase_page
+  .block.rich_text
+  ul.curriculum
+  li.section-item {
+  display: block;
+  padding: 11px 16px;
+  background: #f0f0f0;
+  list-style-type: none;
+  font-size: 15px;
+  letter-spacing: 0px;
+  color: #425252;
+  text-decoration: none;
+  font-weight: 200;
+  margin-bottom: 1px;
 }
 
-.im.ultimate-guide-to-saxophone-sound-production .blocks-page-course_sales_page .block.rich_text ul.curriculum li.section-item,
-.im.ultimate-guide-to-saxophone-sound-production .blocks-page-rich_text .block.rich_text ul.curriculum li.section-item {
-    font-size: 16px;
+.im.ultimate-guide-to-saxophone-sound-production
+  .blocks-page-course_sales_page
+  .block.rich_text
+  ul.curriculum
+  li.section-item,
+.im.ultimate-guide-to-saxophone-sound-production
+  .blocks-page-rich_text
+  .block.rich_text
+  ul.curriculum
+  li.section-item {
+  font-size: 16px;
 }
 
-.im .blocks-page-course_sales_page .block.rich_text ul.curriculum li.section-item strong,
-.im .blocks-page-rich_text .block.rich_text ul.curriculum li.section-item strong {
-    font-weight: 600;
+.im
+  .blocks-page-course_sales_page
+  .block.rich_text
+  ul.curriculum
+  li.section-item
+  strong,
+.im
+  .blocks-page-rich_text
+  .block.rich_text
+  ul.curriculum
+  li.section-item
+  strong {
+  font-weight: 600;
 }
 
 .im .curriculum-section-title {
-    background: #e8e8e8;
-    padding: 10px 16px;
-    margin: 0;
-    font-size: 19px;
-    font-weight: bold;
-    border-bottom: 1px solid #fff;
+  background: #e8e8e8;
+  padding: 10px 16px;
+  margin: 0;
+  font-size: 19px;
+  font-weight: bold;
+  border-bottom: 1px solid #fff;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production .curriculum-section-title {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .lecture-desc {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .block.rich_text .faq-question p {
-    font-weight: bold;
-    font-size: 23px;
+  font-weight: bold;
+  font-size: 23px;
 }
 
 .im .blocks-page-course_sales_page p em,
 .faq-answer em {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 .im .faq-answer {
-    border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .im .checkout-cta h2 {
-    display: none;
+  display: none;
 }
 
 .im .story {
-    padding: 20px;
-    margin-bottom: 40px;
-    box-shadow: 3px 3px 10px #9a9494;
+  padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 3px 3px 10px #9a9494;
 }
 
 .im .alt-sections {
-    margin-bottom: 40px;
-    box-shadow: 3px 3px 10px #9a9494;
-    padding: 20px;
+  margin-bottom: 40px;
+  box-shadow: 3px 3px 10px #9a9494;
+  padding: 20px;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production .alt-sections {
-    padding: 20px 20px 10px;
+  padding: 20px 20px 10px;
 }
 
 .im .alt-sections.faq-questions .faq-answer:last-of-type {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .im .alt-section-style-1 {
-    background: #eae8e8;
-    color: #000;
+  background: #eae8e8;
+  color: #000;
 }
 
 .alt-section-style-2,
 .description_with_share_icons .alt-section-style-2 p {
-    background: #2984d1;
-    line-height: 130%;
+  background: #2984d1;
+  line-height: 130%;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production .alt-section-style-2,
-.im.ultimate-guide-to-saxophone-sound-production .description_with_share_icons .alt-section-style-2 p {
-    background: #E8BE18;
-    color: #000;
+.im.ultimate-guide-to-saxophone-sound-production
+  .description_with_share_icons
+  .alt-section-style-2
+  p {
+  background: #e8be18;
+  color: #000;
 }
 
 .im .blocks-page-course_sales_page .alt-section-style-2 p,
 .im .blocks-page-post_purchase_page .alt-section-style-2 p {
-    font-size: 30px;
-    color: #fff;
-    margin-bottom: 10px;
-    text-align: center;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.im .blocks-page-post_purchase_page .alt-section-style-2  p {
-    font-size: 22px;
+.im .blocks-page-post_purchase_page .alt-section-style-2 p {
+  font-size: 22px;
 }
 
 .im .blocks-page-post_purchase_page .alt-sections {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .im .blocks-page-post_purchase_page .alt-section-style-2 .highlight-text {
-    color: #000;
-    font-size: 26px;
-    font-weight: bold;
+  color: #000;
+  font-size: 26px;
+  font-weight: bold;
 }
 
-.im.ultimate-guide-to-saxophone-sound-production .blocks-page-course_sales_page .alt-section-style-2 p {
-    color: #000;
-    text-align: center;
-    font-size: 30px;
-    line-height: 1em;
+.im.ultimate-guide-to-saxophone-sound-production
+  .blocks-page-course_sales_page
+  .alt-section-style-2
+  p {
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  line-height: 1em;
 }
 
 .im .blocks-page-course_sales_page .alt-section-style-2 p small {
-    font-size: 17px;
-    line-height: 120%;
+  font-size: 17px;
+  line-height: 120%;
 }
 
 .alt-section-style-2 p:last-of-type {
-    padding-bottom: 0;
-    margin-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .im .blocks-page-course_sales_page .alt-section-style-1 h2 {
-    color: #000;
-    border: #000 dashed;
-    border-width: 2px 0;
+  color: #000;
+  border: #000 dashed;
+  border-width: 2px 0;
 }
 
-
 .im .custom-header h1.highlight-text {
-    color: #db5424;
-    font-size: 52px;
-    font-weight: bold;
-    font-style: italic;
+  color: #db5424;
+  font-size: 52px;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .im.ugssp .custom-header.signup {
-    position: relative;
-    position: relative;
-    max-width: 889px;
-    margin: 0 auto;
+  position: relative;
+  position: relative;
+  max-width: 889px;
+  margin: 0 auto;
 }
 
 .im.ugssp .custom-header.signup.hero-bottom {
-    padding: 0 15px;
+  padding: 0 15px;
 }
 
 .im.ugssp .custom-header.signup.hero-bottom h2 {
-    margin-top: 0;
-    background-color: #33DDFF;
+  margin-top: 0;
+  background-color: #33ddff;
 }
 
 .im.ugssp .hero-container {
-    background-image: url(https://www.filepicker.io/api/file/j7fblHDRRi1oHNF2iz3T);
-    background-repeat: no-repeat;
-    background-position: center 0;
-    width: 889px;
-    height: 500px;
+  background-image: url(https://www.filepicker.io/api/file/j7fblHDRRi1oHNF2iz3T);
+  background-repeat: no-repeat;
+  background-position: center 0;
+  width: 889px;
+  height: 500px;
 }
 
 .im.ugssp .highlight-text,
 .im.ugssp .custom-header h1.highlight-text {
-    color: #fc0000;
+  color: #fc0000;
 }
 
 .im.slws .highlight-text {
-    color: #d79a42;
+  color: #d79a42;
 }
 
 .im.slws h3 {
-    color: #000;
+  color: #000;
 }
 
 .im.ugssp .intro-message .highlight-text em.deemphasize {
-    color: #8f9a9c;
-    font-size: 80%;
+  color: #8f9a9c;
+  font-size: 80%;
 }
 
 .im.ugssp .highlight-text.in-hero {
-    background: #fff;
-    color: #000;
-    margin: 10px auto 20px;
-    width: 50%;
-    margin: 0 0 0 15px;
-    border: 7px dashed #fc0000;
+  background: #fff;
+  color: #000;
+  margin: 10px auto 20px;
+  width: 50%;
+  margin: 0 0 0 15px;
+  border: 7px dashed #fc0000;
 }
 
 .im.ugssp .ugssp-signup-hero-logo {
-    width: 50%;
+  width: 50%;
 }
 
 .im.ugssp .custom-header-container .ugssp-signup-hero-logo img {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .im.ugssp .highlight-text.feature-box {
-    background: #E8BE18;
-    color: #000;
-    margin: 10px auto 20px;
-    border: none;
+  background: #e8be18;
+  color: #000;
+  margin: 10px auto 20px;
+  border: none;
 }
 
 .im.ugssp .highlight-text.feature-box em,
 .im.ugssp .highlight-text.in-hero em {
-    color: #fc0000;
-    font-style: italic;
+  color: #fc0000;
+  font-style: italic;
 }
 
 .im.ugssp .highlight-text.intro-message {
-    margin: 0;
-    display: flex;
-    align-items: center;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 .im.ugssp .highlight-text.intro-message em {
-    color: #000;
+  color: #000;
 }
 
 .im ul.benefits,
 .im ul.features-list,
 .im ul.bonus {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .im ul.benefits li {
-    list-style: none;
-    border: solid #ccc;
-    border-width: 0 0 1px;
-    margin: 0 0 20px 0;
+  list-style: none;
+  border: solid #ccc;
+  border-width: 0 0 1px;
+  margin: 0 0 20px 0;
 }
 
 .im ul.benefits li {
-    background: url(https://www.filepicker.io/api/file/Wn1HjASaQj6vgNnvOil5) no-repeat 9px 9px;
-    /*background: url(https://www.filepicker.io/api/file/wQsSUCQSQCiIGZ84NnZ0) no-repeat 9px 3px;*/
-    /*background: url(https://www.filepicker.io/api/file/DbZiLQzRcaSEcBX9Icpq) no-repeat 9px 3px;*/
-    padding: 3px 0 20px 43px;
+  background: url(https://www.filepicker.io/api/file/Wn1HjASaQj6vgNnvOil5)
+    no-repeat 9px 9px;
+  /*background: url(https://www.filepicker.io/api/file/wQsSUCQSQCiIGZ84NnZ0) no-repeat 9px 3px;*/
+  /*background: url(https://www.filepicker.io/api/file/DbZiLQzRcaSEcBX9Icpq) no-repeat 9px 3px;*/
+  padding: 3px 0 20px 43px;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production ul.benefits li {
-    background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 0 6px;
-    /*background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 9px 3px;*/
-    /*background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 9px 3px;*/
-    padding: 3px 0 20px 33px;
+  background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu)
+    no-repeat 0 6px;
+  /*background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 9px 3px;*/
+  /*background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 9px 3px;*/
+  padding: 3px 0 20px 33px;
+}
+
+.im.conversation-starters .custom-header-container {
+  background-color: #ffffff;
+}
+
+.im.conversation-starters .custom-header-container .custom-header img {
+  -webkit-box-shadow: 0px 0px 21px 3px rgba(138, 136, 138, 1);
+  -moz-box-shadow: 0px 0px 21px 3px rgba(138, 136, 138, 1);
+  box-shadow: 0px 0px 21px 3px rgba(138, 136, 138, 1);
 }
 
 .im ul.bonus li {
-    background: url(https://www.filepicker.io/api/file/Dugzs6ajQa0BLfSs1LHu) no-repeat 9px 7px;
-    padding: 3px 0 20px 43px;
-    list-style: none;
-    margin: 0 0 20px 0;
-    border: solid #ccc;
-    border-width: 0 0 1px;
-    background-size: 16px;
+  background: url(https://www.filepicker.io/api/file/Dugzs6ajQa0BLfSs1LHu)
+    no-repeat 9px 7px;
+  padding: 3px 0 20px 43px;
+  list-style: none;
+  margin: 0 0 20px 0;
+  border: solid #ccc;
+  border-width: 0 0 1px;
+  background-size: 16px;
 }
 
 .im ul.features-list li {
-    background: url(https://www.filepicker.io/api/file/U3I1EcS7QIyrYVR40LXs) no-repeat 9px 7px;
-    padding: 3px 0 20px 43px;
-    list-style: none;
-    margin: 0 0 20px 0;
-    border: solid #ccc;
-    border-width: 0 0 1px;
+  background: url(https://www.filepicker.io/api/file/U3I1EcS7QIyrYVR40LXs)
+    no-repeat 9px 7px;
+  padding: 3px 0 20px 43px;
+  list-style: none;
+  margin: 0 0 20px 0;
+  border: solid #ccc;
+  border-width: 0 0 1px;
 }
 
 .im ul.benefits li:last-of-type,
 .im ul.features-list li:last-of-type,
 .im ul.bonus li:last-of-type {
-    border: none;
-    margin-bottom: 0;
+  border: none;
+  margin-bottom: 0;
 }
 
 .im .features {
-    padding: 20px;
-    margin-bottom: 40px;
-    border: 3px dashed #333;
+  padding: 20px;
+  margin-bottom: 40px;
+  border: 3px dashed #333;
 }
 
 .im .dashed-border {
-    border: 3px dashed #000;
+  border: 3px dashed #000;
 }
 
 .im .features img {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .im .features img.outline {
-    border: 1px solid #000;
+  border: 1px solid #000;
 }
 
 .im .features img.sheetmusic {
-    -ms-transform: rotate(-11deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-11deg);
-    /* Safari */
-    transform: rotate(-11deg);
-    padding: 30px;
+  -ms-transform: rotate(-11deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-11deg);
+  /* Safari */
+  transform: rotate(-11deg);
+  padding: 30px;
 }
 
 .im .features img.sheetmusic,
 .im .features img.feature-image {
-    max-width: 75%;
+  max-width: 75%;
 }
 
 .im .features img.feature-image {
-    padding: 10px;
+  padding: 10px;
 }
 
 .im .features h3 {
-    background: #000;
-    padding: 10px;
-    font-weight: bold;
-    color: #fff;
-    font-size: 28px;
-    margin: 10px 0 30px;
+  background: #000;
+  padding: 10px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 28px;
+  margin: 10px 0 30px;
 }
 
 .block.rich_text img.limited-width {
-    max-width: 70%;
+  max-width: 70%;
 }
 
 .im .blocks-page-course_sales_page h2,
 .im .blocks-page-rich_text h2,
 .im .blocks-page-post_purchase_page h2 {
-    padding: 10px;
-    margin: 0 0 20px;
-    clear: both;
-    line-height: 120%;
-    border: black solid;
-    border-width: 1px 0;
+  padding: 10px;
+  margin: 0 0 20px;
+  clear: both;
+  line-height: 120%;
+  border: black solid;
+  border-width: 1px 0;
 }
 
 .im .blocks-page-post_purchase_page h2.course-curriculum {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .im .blocks-page-course_sales_page h2.cta-subhead {
-    text-align: center;
-    border-color: #2984d1;
-    color: #2984d1;
+  text-align: center;
+  border-color: #2984d1;
+  color: #2984d1;
 }
 
 .im h2.highlight,
 .im .highlight-text {
-    color: #db5424;
+  color: #db5424;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production h2.highlight,
 .im.ultimate-guide-to-saxophone-sound-production .highlight-text {
-    color: #fc0000;
+  color: #fc0000;
 }
 
 .im h2.highlight {
-    background: #000;
+  background: #000;
 }
 
 .im hr {
-    border-top: 1px solid #c3c0c0;
+  border-top: 1px solid #c3c0c0;
 }
 
 .im hr.section-divider {
-    border-top: 1px solid #000;
+  border-top: 1px solid #000;
 }
 
 .im .testimonial-content {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .im .bio {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .im .course-block.odd-stripe,
 .im .block.odd-stripe {
-    background: #fff;
+  background: #fff;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production .video_embed h2 {
-    text-align: left;
+  text-align: left;
 }
 
 .ugssp.highlight-section {
-    background: #E8BE18;
-    color: #000;
-    padding: 15px;
+  background: #e8be18;
+  color: #000;
+  padding: 15px;
 }
 
 .ugssp.highlight-section a.highlight-link {
-    color: #fc0000;
-    text-decoration: underline;
+  color: #fc0000;
+  text-decoration: underline;
 }
 
 .lfcc.highlight-section {
-    background: #2984d1;
-    color: #fff;
-    padding: 15px;
+  background: #2984d1;
+  color: #fff;
+  padding: 15px;
 }
 
 .lfcc.highlight-section a.highlight-link {
-    color: #000;
-    text-decoration: underline;
+  color: #000;
+  text-decoration: underline;
 }
 
 .ugssp.highlight-section a.highlight-link:hover,
 .lfcc.highlight-section a.highlight-link:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
-    .bio.course-block img,
-    .bio.block img {
-        max-width: 300px;
-    }
+  .bio.course-block img,
+  .bio.block img {
+    max-width: 300px;
+  }
 
-    .block.rich_text img.limited-width {
-        max-width: 100%;
-    }
+  .block.rich_text img.limited-width {
+    max-width: 100%;
+  }
 
-    .im.ultimate-guide-to-saxophone-sound-production .blocks-page-course_sales_page .alt-section-style-2 p {
-        font-size: 25px;
-    }
+  .im.ultimate-guide-to-saxophone-sound-production
+    .blocks-page-course_sales_page
+    .alt-section-style-2
+    p {
+    font-size: 25px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
-    .image-container {
-        float: left;
-        margin: 0 20px 0 0;
-        max-width: 50%;
-    }
+  .image-container {
+    float: left;
+    margin: 0 20px 0 0;
+    max-width: 50%;
+  }
 
-    .img-right-float {
-        float: right;
-        padding-bottom: 0;
-    }
+  .img-right-float {
+    float: right;
+    padding-bottom: 0;
+  }
 }
 
 @media only screen and (max-width: 767px) {
-    .im.ugssp .custom-header.signup.hero-bottom {
-        padding: 0;
-    }
+  .im.ugssp .custom-header.signup.hero-bottom {
+    padding: 0;
+  }
 
-    .im.ugssp .hero-container {
-        display: block;
-        padding-top: 250px;
-        width: 100%;
-        height: auto;
-    }
+  .im.ugssp .hero-container {
+    display: block;
+    padding-top: 250px;
+    width: 100%;
+    height: auto;
+  }
 
-    .im.ugssp .highlight-text.in-hero {
-        width: 100%;
-        margin: 0;
-    }
+  .im.ugssp .highlight-text.in-hero {
+    width: 100%;
+    margin: 0;
+  }
 
-    .im.ugssp #mc-embedded-subscribe-form .col-xs-12.col-sm-64 {
-        padding-left: 0;
-        padding-right: 0;
-    }
+  .im.ugssp #mc-embedded-subscribe-form .col-xs-12.col-sm-64 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-    .im.ugssp .ugssp-signup-hero-logo {
-        width: 100%;
-        background: #000;
-        padding-top: 15px;
-    }
+  .im.ugssp .ugssp-signup-hero-logo {
+    width: 100%;
+    background: #000;
+    padding-top: 15px;
+  }
 
-    .im.ugssp .custom-header-container img {
-        padding: 0 0 15px;
-    }
+  .im.ugssp .custom-header-container img {
+    padding: 0 0 15px;
+  }
 }
 
 @media only screen and (min-width: 767px) {
-    .im.ugssp .hero-container {
-        background-position: 80% 0;
-    }
+  .im.ugssp .hero-container {
+    background-position: 80% 0;
+  }
 
-    .footer-column.footer-left {
-        text-align: left;
-    }
+  .footer-column.footer-left {
+    text-align: left;
+  }
 
-    .footer-column.footer-right {
-        text-align: right;
-    }
+  .footer-column.footer-right {
+    text-align: right;
+  }
 
-    .im #mc-embedded-subscribe-form {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .im #mc-embedded-subscribe-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .im.ugssp .hero-container #mc-embedded-subscribe-form {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
+  .im.ugssp .hero-container #mc-embedded-subscribe-form {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 
-    .im #mc-embedded-subscribe-form .btn-primary {
-        margin: 0;
-    }
+  .im #mc-embedded-subscribe-form .btn-primary {
+    margin: 0;
+  }
 }
 
 #alert-bar {
-    display: none;
+  display: none;
 }
 
 #alert-banner {
-    width: 100%;
-    background: #fc0000;
-    text-align: center;
-    z-index: 200000;
-    display: block;
-    line-height: 1;
-    font-weight: bold;
-    color: #fff;
-    visibility: hidden;
-    position: fixed;
-    bottom: 0;
+  width: 100%;
+  background: #fc0000;
+  text-align: center;
+  z-index: 200000;
+  display: block;
+  line-height: 1;
+  font-weight: bold;
+  color: #fff;
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
 }
 
 #alert-banner .simple-banner-text {
-    text-align: center;
-    max-width: 695px;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
+  text-align: center;
+  max-width: 695px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 #alert-banner #alert-close {
-    padding: 5px 0;
-    float: right;
-    font-size: 17px;
-    text-decoration: underline;
-    color: #fff;
+  padding: 5px 0;
+  float: right;
+  font-size: 17px;
+  text-decoration: underline;
+  color: #fff;
 }
 
 #alert-banner #alert-close:hover {
-    color: #33DDFF;
+  color: #33ddff;
 }
 
 #alert-banner .simple-banner-text img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .block.proceed_to_course_button {
-    padding-top: 15px;
+  padding-top: 15px;
 }
 
 .im-custom-audio-player {
-    background: black;
-    width: 75%;
-    display: block;
-    padding: 15px;
+  background: black;
+  width: 75%;
+  display: block;
+  padding: 15px;
 }
 
 @media only screen and (min-width: 840px) {
-    .im.ugssp .hero-container {
-        background-position: 90% 0;
-    }
+  .im.ugssp .hero-container {
+    background-position: 90% 0;
+  }
 }
 
 @media only screen and (min-width: 992px) {
-    .im.ugssp .hero-container {
-        background-position: 100% 0;
-    }
+  .im.ugssp .hero-container {
+    background-position: 100% 0;
+  }
 }
 
 @media only screen and (min-width: 700px) {
-    .im.ugssp .hero-container {
-        background-position: 90% 0;
-    }
+  .im.ugssp .hero-container {
+    background-position: 90% 0;
+  }
 }
 
 @media only screen and (max-width: 600px) {
-    #banners div div {
-        width: 100%;
-    }
+  #banners div div {
+    width: 100%;
+  }
 }
