@@ -1,0 +1,68 @@
+<!-- Meta tag for tracking lecture progress -->
+{% lecture_completion_data %}
+
+<h2 class='section-title'>
+  {{'courses.curriculum'|i18n}}
+</h2>
+<div class='next-lecture-wrapper'>
+  <a class='btn btn-primary start-next-lecture' data-no-turbolink='true' data-ss-course-id='{{course.id}}' data-ss-event-name='Lecture: Start Next' data-ss-event-type='button' data-ss-school-id='{{current_school.id}}' data-ss-user-id='{{current_user.id}}'>
+    {{'courses.start_next_lecture'| i18n}}&nbsp;&nbsp;
+    <span aria-hidden='true'>&#8250;</span>
+  </a>
+  <span class='next-lecture-name hidden-sm'></span>
+</div>
+
+<!-- Lecture list on courses page (enrolled user) -->
+{% for lecture_section in course.ordered_published_lecture_sections %}
+<div class='row'>
+  <div class='col-sm-12 course-section'>
+    <div class='section-title' data-release-date="{{lecture_section.release_date}}" data-days-until-dripped="{{lecture_section.days}}" data-is-dripped-by-date="{{lecture_section.is_dripped_by_date}}" data-course-id="{{course.id}}">
+      <span class="section-lock">
+        <i class="fa fa-lock"></i>&nbsp;
+      </span>
+      {{ lecture_section.name }}
+      <div class="section-days-to-drip">
+        <div class="section-days-logged-in">
+          {{'courses.available_in' | i18n}}
+          <span class="section-days-to-drip-number"></span>
+          {{'courses.days' | i18n}}
+        </div>
+        <div class="section-days-logged-out">
+          <span class="section-days-to-drip-number"></span>
+          {{'courses.days' | i18n}}
+          {{'courses.after_you_enroll' | i18n}}
+        </div>
+      </div>
+    </div>
+    <ul class='section-list'>
+      {% for lecture in lecture_section.lectures %}
+      <li class='section-item incomplete' data-lecture-id="{{lecture.id}}">
+        <a class='item' data-no-turbolink='true' data-ss-course-id='{{lecture.course_id}}' data-ss-event-name='Lecture: Start (Course Curriculum)' data-ss-event-href='{{course.path}}/lectures/{{lecture.id}}' data-ss-event-type='button' data-ss-lecture-id='{{lecture.id}}' data-ss-school-id='{{current_school.id}}' data-ss-user-id='{{current_user.id}}' href='{{course.path}}/lectures/{{lecture.id}}'>
+          <span class='status-container'>
+            <span class='status-icon'>
+              &nbsp;
+            </span>
+          </span>
+          <div class='title-container'>
+            <div class='btn-primary btn-sm pull-right'>
+              {{'courses.lecture_list_start' | i18n}}
+            </div>
+            <span class='lecture-icon'>
+              <i class='fa {{lecture.icon}}'></i>
+            </span>
+            <span class='lecture-name'>
+              {{ lecture.name }}
+              {% if lecture.formatted_duration != "" %}
+              ({{ lecture.formatted_duration }})
+              {% endif %}
+
+            </span>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endfor %}
+<br>

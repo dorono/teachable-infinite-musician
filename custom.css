@@ -1004,6 +1004,16 @@
   height: 250px;
 }
 
+.im-courses-banner {
+  display: none;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.slws-curriculum .im-courses-banner {
+  display: block;
+}
+
 @media only screen and (min-width: 840px) {
   .im.ugssp .hero-container {
     background-position: 90% 0;
