@@ -1,0 +1,61 @@
+<!-- Course Listing -->
+<div class='col-xs-12 col-sm-6 col-md-4'>
+  <div data-course-id="{{course_box.id}}" data-course-url="{{course_box.course_link_for_user}}" , class='course-listing'>
+    <div class='row'>
+      <a href="{{course_box.course_link_for_user}}" data-role="course-box-link">
+        <div class='col-lg-12'>
+          <!-- Course Image, Name & Subtitle (everyone) -->
+          <div class='course-box-image-container'>
+            <img class='course-box-image' src='{{course_box.safe_image_url }}' role="presentation">
+          </div>
+          <div class='course-listing-title' role="heading" aria-level="2" title="{{ course_box.name }}">
+            {{ course_box.name }}
+          </div>
+          <!-- Progress bar (enrolled users) -->
+          <div class='col-xs-12 hidden course-listing-enrolled' aria-hidden="true">
+            <div class='progressbar'>
+              <div class='progressbar-fill' role="progressbar" aria-labelledby="percent-complete-{{course_box.id}}"></div>
+            </div>
+            <p class="course-access-limit hidden">{{'courses.available_until'|i18n}} <span></span></p>
+          </div>
+          <!-- Subtitle (unenrolled users) -->
+          <div class='course-listing-subtitle' title="{{ course_box.heading }}" role="heading" aria-level="3">
+            {{ course_box.heading }}
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class='course-listing-extra-info col-xs-12'>
+      <div class='pull-left'>
+        <!-- Bundle Info (everyone) -->
+        {% if course_box.bundle? %}
+        <div class='small course-bundle'>
+          {{course_box.bundled_courses_count}} {{'courses.bundle_size'|i18n}}
+        </div>
+        {% else %}
+        <!-- Author Image and Name (everyone) -->
+        <img align='left' class='img-circle' src='{{course_box.author_bio.profile_image_thumb_url}}' alt="{{ course_box.author_bio.name }}">
+        <div class='small course-author-name'>
+          {{ course_box.author_bio.name }}
+        </div>
+        {% endif %}
+      </div>
+      <!-- Progress percentage (enrolled users) -->
+      <div class='pull-right hidden' aria-hidden="true">
+        <div class='small course-progress'>
+          <span class='percentage' id="percent-complete-{{course_box.id}}" data-course-id="{{course_box.id}}">
+            %
+          </span>
+          <br>
+          {{'common.course_percent_complete'|i18n}}
+        </div>
+      </div>
+      <!-- Price (unenrolled users) -->
+      <div class='pull-right'>
+        <div class='small course-price' id="course-box-price-product-{{course_box.default_product.id}}">
+          {{ course_box.default_product.formatted_price }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

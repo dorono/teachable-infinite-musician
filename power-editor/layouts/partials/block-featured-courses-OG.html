@@ -1,0 +1,34 @@
+{% if block.data.displayed_courses_count %}
+{% assign displayed_courses_count = block.data.displayed_courses_count %}
+{% else %}
+{% assign displayed_courses_count = 3 %}
+{% endif %}
+{% if block.data.heading %}
+{% assign heading = block.data.heading %}
+{% else %}
+{% assign heading = 'homepage.featured_courses' | i18n %}
+{% endif %}
+{% if current_school.publicly_viewable_courses.size >= 1 %}
+
+<div class='container'>
+  {% if current_school.publicly_viewable_courses.size > 1 %}
+  <h2>{{heading}}</h2>
+  {% for course_box in current_school.publicly_viewable_courses limit:displayed_courses_count %}
+  {% include  "courses/partials/course_box" for course_box %}
+  {% endfor %}
+  {% elsif current_school.publicly_viewable_courses.size == 1 %}
+  <h2 class='homepage-section-title'>{{'homepage.featured_course' | i18n}}</h2>
+  {% for course_box in current_school.publicly_viewable_courses limit:displayed_courses_count %}
+  <div class="course-single">
+    {% include  "courses/partials/course_box" for course_box %}
+  </div>
+  {% endfor %}
+  {% endif %}
+</div>
+
+{% if current_school.publicly_viewable_courses.size > displayed_courses_count %}
+<center>
+  <a class='btn btn-md btn-primary' href='/courses'>{{ 'homepage.view_all_courses' | i18n }}</a>
+</center>
+{% endif %}
+{% endif %}
