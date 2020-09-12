@@ -1,0 +1,14 @@
+<button id="view-pdf">VIEW PDF IN FULL SCREEN</button>
+<div id="adobe-dc-view"></div>
+<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<script>
+  $(document).ready(function() {
+    $('#view-pdf').on('click',function() {
+      var adobeDCView=new AdobeDC.View({clientId: "ba5b5ac5525f48febdadf8c4cc05c61e",divId: "adobe-dc-view"});
+      adobeDCView.previewFile({
+        content: {location: {url: "https://www.filepicker.io/api/file/b96gvRxARNyEVcjDND1F"}},
+        metaData: {fileName: "Bodea Brochure.pdf"}
+      },{embedMode: "LIGHT_BOX"});
+    });
+  });
+</script>

@@ -1,0 +1,18 @@
+<div class='download-pdf bottom-margin'>
+  {% if attachment.downloadable %}
+  {% include "lectures/partials/attachment_file" %}
+  {% endif %}
+</div>
+{% if attachment.embeddable %}
+<div class='row attachment-pdf-embed'>
+  <div class='col-xs-12'>
+    <div class='label'>
+      <i class='fa fa-paperclip'></i>
+      {{attachment.name}}
+    </div>
+    <div class='wrapper'>
+      <div data-pdfviewer data-pdfviewer-id="{{attachment.filepicker_id}}" id="pdfViewer-{{attachment.filepicker_id}}"></div>
+    </div>
+  </div>
+</div>
+{% endif %}
