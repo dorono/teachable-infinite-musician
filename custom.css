@@ -11,6 +11,10 @@
   font-size: 17px !important;
 }
 
+.course-listing .course-listing-extra-info .course-author-name {
+  padding-left: 10px;
+}
+
 #banners {
   width: 100%;
 }
