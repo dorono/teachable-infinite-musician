@@ -146,6 +146,14 @@
   margin: 0 auto;
 }
 
+.centered-img-container {
+  text-align: center;
+}
+
+.centered-img-container img {
+  margin: 0 auto;
+}
+
 .block.rich_text p.money-back {
   text-align: center;
   font-weight: bold;
@@ -775,7 +783,11 @@
 
 .im .blocks-page-course_sales_page h2,
 .im .blocks-page-rich_text h2,
-.im .blocks-page-post_purchase_page h2 {
+.im .blocks-page-post_purchase_page h2,
+.im.infinite-musician-saxophone-practice-framework
+  .lecture-content
+  .lecture-text-container
+  h2 {
   padding: 10px;
   margin: 0 0 20px;
   clear: both;
@@ -860,6 +872,10 @@
   text-decoration: none;
 }
 
+.im.vignettes .blocks-page-course_sales_page .alt-section-style-2 {
+  background-color: #000;
+}
+
 @media screen and (max-width: 767px) {
   .bio.course-block img,
   .bio.block img {
@@ -875,6 +891,15 @@
     .alt-section-style-2
     p {
     font-size: 25px;
+  }
+
+  .im.vignettes .blocks-page-course_sales_page .alt-section-style-2 {
+    /* background-color: #000; */
+  }
+
+  .im.vignettes .blocks-page-course_sales_page .alt-section-style-2 p {
+    font-size: 25px;
+    color: #fff;
   }
 }
 
@@ -1027,6 +1052,37 @@
   display: block;
 }
 
+.im.vignettes .blocks-page-course_sales_page .video_embed h2 {
+  display: none;
+}
+
+.im.infinite-musician-saxophone-practice-framework .lecture-content h4 {
+  font-weight: bold;
+}
+
+.im.infinite-musician-saxophone-practice-framework
+  .lecture-content
+  .lecture-text-container
+  h3 {
+  color: #000;
+  font-size: 25px;
+}
+
+.im.infinite-musician-saxophone-practice-framework
+  .lecture-content
+  .lecture-text-container
+  a {
+  color: #001c6e;
+  text-decoration: underline;
+}
+
+.im.infinite-musician-saxophone-practice-framework
+  .lecture-content
+  .lecture-text-container
+  a:hover {
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 840px) {
   .im.ugssp .hero-container {
     background-position: 90% 0;
@@ -1054,5 +1110,20 @@
 @media only screen and (max-width: 600px) {
   #banners div div {
     width: 100%;
+  }
+}
+
+@media print {
+  .navbar-collapse.collapse#courseSidebar {
+    display: none !important;
+  }
+
+  .course-mainbar {
+    margin: 0;
+    padding: 0;
+  }
+
+  header.half-height {
+    display: none;
   }
 }
