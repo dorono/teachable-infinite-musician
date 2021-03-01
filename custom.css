@@ -574,11 +574,47 @@
   border-width: 2px 0;
 }
 
+.im .blocks-page-course_sales_page .alt-section-style-3 {
+  border: 1px solid #000;
+  background: #fff;
+  padding: 15px 0;
+  overflow: hidden;
+}
+
+.im .blocks-page-course_sales_page .alt-section-style-3 img.flex-img {
+  width: 200px;
+}
+
+.im .blocks-page-course_sales_page .alt-section-style-3 p {
+  font-size: 20px;
+  color: #000;
+  padding: 0;
+  margin: 0;
+  line-height: 120%;
+}
+
 .im .custom-header h1.highlight-text {
   color: #db5424;
   font-size: 52px;
   font-weight: bold;
   font-style: italic;
+}
+
+.im .blocks-page-course_sales_page .row.no-x-margin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.im .blocks-page-course_sales_page .row .responsive-left {
+  text-align: center;
+}
+
+.im .blocks-page-course_sales_page .row .responsive-right {
+  text-align: center;
+}
+
+.flex-container-responsive-cols {
+  text-align: center;
 }
 
 .im.ugssp .custom-header.signup {
@@ -914,6 +950,29 @@
     float: right;
     padding-bottom: 0;
   }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
+
+  .flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
+
+  .flex-column.align-left {
+    align-items: flex-start;
+  }
+
+  .flex-column.align-right {
+    align-items: flex-end;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -1081,6 +1140,21 @@
   .lecture-text-container
   a:hover {
   text-decoration: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .im .blocks-page-course_sales_page .row .responsive-right {
+    text-align: right;
+  }
+
+  .im .blocks-page-course_sales_page .row .responsive-left {
+    text-align: left;
+  }
+
+  .flex-container-responsive-cols {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media only screen and (min-width: 840px) {
