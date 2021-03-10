@@ -110,6 +110,10 @@
   margin-bottom: 20px !important;
 }
 
+.no-bottom-margin {
+  margin-bottom: 0 !important;
+}
+
 .bottom-margin.download-pdf {
   margin-bottom: 40px !important;
 }
@@ -120,6 +124,16 @@
 
 .no-bottom-border {
   border-bottom: none;
+}
+
+.top-border {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid;
+}
+
+.logo-text-color {
+  color: #4d9bc5;
 }
 
 .img-right-float {
@@ -575,22 +589,30 @@
 }
 
 .im .blocks-page-course_sales_page .alt-section-style-3 {
-  border: 1px solid #000;
-  background: #fff;
-  padding: 15px 0;
+  padding: 15px;
   overflow: hidden;
-}
-
-.im .blocks-page-course_sales_page .alt-section-style-3 img.flex-img {
-  width: 200px;
+  border: 1px solid black;
 }
 
 .im .blocks-page-course_sales_page .alt-section-style-3 p {
-  font-size: 20px;
+  font-size: 25px;
   color: #000;
   padding: 0;
   margin: 0;
   line-height: 120%;
+  font-weight: normal;
+}
+
+.im .logo-banner-2-col {
+  background-color: #000;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.im .blocks-page-course_sales_page .logo-banner-2-col img.flex-img {
+  width: 200px;
 }
 
 .im .custom-header h1.highlight-text {
