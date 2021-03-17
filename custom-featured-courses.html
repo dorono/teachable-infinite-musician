@@ -1,0 +1,31 @@
+<div class='container'>
+  <h2>{{heading}}</h2>
+  {% for course_box in current_school.publicly_viewable_courses limit:displayed_courses_count %}
+  {% include "courses/partials/course_box" for course_box %}
+  {% endfor %}
+  {% elsif current_school.publicly_viewable_courses.size == 1 %}
+  <h2 class='homepage-section-title'>{{'homepage.featured_course' | i18n}}</h2>
+  {% for course_box in current_school.publicly_viewable_courses limit:displayed_courses_count %}
+  <div class="course-single">
+    {% include "courses/partials/course_box" for course_box %}
+  </div>
+  {% endfor %}
+  {% endif %}
+</div>
+
+{% if current_school.publicly_viewable_courses.size > displayed_courses_count %}
+<center>
+  <a class='btn btn-md btn-primary' href='/courses'>{{ 'homepage.view_all_courses' | i18n }}</a>
+</center>
+{% endif %}
+{% endif %}
+
+<script>
+  $(function() {
+    $('a[data-role=course-box-link]').each(function(idx,el) {
+      $(this).on('click',function(e) {
+        e.stopPropagation();
+      });
+    });
+  });
+</script>
