@@ -1,24 +1,64 @@
-<div class='container'>
-  <h2>{{heading}}</h2>
-  {% for course_box in current_school.publicly_viewable_courses limit:displayed_courses_count %}
-  {% include "courses/partials/course_box" for course_box %}
-  {% endfor %}
-  {% elsif current_school.publicly_viewable_courses.size == 1 %}
-  <h2 class='homepage-section-title'>{{'homepage.featured_course' | i18n}}</h2>
-  {% for course_box in current_school.publicly_viewable_courses limit:displayed_courses_count %}
-  <div class="course-single">
-    {% include "courses/partials/course_box" for course_box %}
+<div class="row custom-featured-courses">
+  <div class="col-xs-12">
+    <h2>Featured Courses from Infinite Musician</h2>
   </div>
-  {% endfor %}
-  {% endif %}
-</div>
+  <!-- START UGSSP -->
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="course-listing">
+      <div class="row">
+        <a target="_blank" href="https://www.infinitemusician.com/p/ultimate-guide-to-saxophone-sound-production" data-role="course-box-link">
+          <div class="col-lg-12">
+            <!-- Course Image, Name & Subtitle (everyone) -->
+            <div class="course-box-image-container">
+              <img class="course-box-image" src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/Rzxt0CEiQ3m9Yu0h2O2F" role="presentation">
+            </div>
+            <div class="course-listing-title" role="heading" aria-level="2">
+              The ONLY course on saxophone sound you'll ever need.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- END UGSSP -->
 
-{% if current_school.publicly_viewable_courses.size > displayed_courses_count %}
-<center>
-  <a class='btn btn-md btn-primary' href='/courses'>{{ 'homepage.view_all_courses' | i18n }}</a>
-</center>
-{% endif %}
-{% endif %}
+  <!-- START LFCC -->
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="course-listing">
+      <div class="row">
+        <a target="_blank" href="https://www.infinitemusician.com/p/lightning-fast-and-crystal-clean" data-role="course-box-link">
+          <div class="col-lg-12">
+            <!-- Course Image, Name & Subtitle (everyone) -->
+            <div class="course-box-image-container">
+              <img class="course-box-image" src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/pdLA8r5dQPiWKwM1J6Ko" role="presentation">
+            </div>
+            <div class="course-listing-title" role="heading" aria-level="2">
+              Build that "adrenaline-rush" technique that got you excited about the saxophone in the first place.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- END LFCC -->
+
+  <!-- START JLWG -->
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="course-listing">
+      <div class="row">
+        <a target="_blank" href="http://jazzlessonswithgiants.com/" data-role="course-box-link">
+          <div class="col-lg-12">
+            <!-- Course Image, Name & Subtitle (everyone) -->
+            <div class="course-box-image-container">
+              <img class="course-box-image" src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/fVaMKGQlSzajPXcLXr1z" role="presentation">
+            </div>
+            <div class="course-listing-title" role="heading" aria-level="2">
+              Three of the world's most renowned saxophonists share concepts and exercises to help you build hip and unique solos, and much more.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- END JLWG -->
+</div>
 
 <script>
   $(function() {
