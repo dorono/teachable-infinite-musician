@@ -1189,6 +1189,30 @@
   font-weight: normal;
 }
 
+.im .custom-sale-promo .promo-content {
+  background-color: #000;
+  color: #fff;
+}
+
+.im .custom-sale-promo .promo-content .highlight-text {
+  color: #6bb36b;
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.im .custom-sale-promo .promo-content .highlight-text-2 {
+  color: #e8be18;
+  font-weight: bold;
+}
+
+html body .promo-content.p-3-xs {
+  padding: 16px 16px 25px 16px;
+}
+
+.im .custom-sale-promo .promo-content img {
+  border: 1px solid white;
+}
+
 @media only screen and (min-width: 600px) {
   .im .blocks-page-course_sales_page .row .responsive-right {
     text-align: right;
