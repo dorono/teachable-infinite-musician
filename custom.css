@@ -4,7 +4,7 @@
 }
 
 .blocks-page-homepage .course-block.featured_courses .container h2 {
-  font-size: 40px;
+  font-size: al 40px;
 }
 
 .blocks-page-homepage .course-block.featured_courses a.btn-md {
@@ -897,6 +897,10 @@
 .im .course-block.odd-stripe,
 .im .block.odd-stripe {
   background: #fff;
+}
+
+.im.slws .custom-header-container {
+  background: #9ccfee;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production .video_embed h2 {
