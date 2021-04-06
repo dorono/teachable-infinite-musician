@@ -1170,6 +1170,11 @@
 
 .im .custom-featured-courses {
   border-bottom: 1px solid gray;
+  display: none;
+}
+
+.im.slws-curriculum .custom-featured-courses {
+  display: block;
 }
 
 .im .custom-featured-courses {
