@@ -7,6 +7,7 @@
     </div>
 
   </div>
+  <div id="course-id-val" style="text-indent: 3000px; position: absolute;">{{course.id}}</div>
 
   <script>
     // FOR ALERT BANNER...
@@ -17,7 +18,7 @@
       var currentAlertStatus=sessionStorage.getItem('SHOW_ALERT');
       console.log('currentAlertStatus',currentAlertStatus);
       var pathToLower=window.location.pathname.toLowerCase();
-
+      c
       if(pathToLower.indexOf('purchased')!==-1) {
         return;
       }
@@ -106,6 +107,11 @@
   </div>
 </footer>
 
+
+<!-- MAKE sure to use
+$('#course-id-val').text()); for _pa.orderId and
+if (window.location.hostname === 'www.bestsaxophonewebsiteever.com') {
+-->
 <script type="text/javascript">
   var _ss=_ss||[];
   _ss.push(['_setDomain','https://koi-3QNPV4UII8.marketingautomation.services/net']);
@@ -115,14 +121,21 @@
   // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
   // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
   // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+  if($('#course-id-val')&&$('#course-id-val').text()) {
+    _pa.productId=$('#course-id-val').text(); // OPTIONAL: attach unique conversion identifier to conversions
+  }
   (function() {
-    var ss=document.createElement('script');
-    ss.type='text/javascript'; ss.async=true;
-    ss.src=('https:'==document.location.protocol? 'https://':'http://')+'koi-3QNPV4UII8.marketingautomation.services/client/ss.js?ver=2.4.0';
-    var scr=document.getElementsByTagName('script')[0];
-    scr.parentNode.insertBefore(ss,scr);
-  })();
+    if(window.location.hostname==='www.infinitemusician.com') {
+
+      var ss=document.createElement('script');
+      ss.type='text/javascript'; ss.async=true;
+      ss.src=('https:'==document.location.protocol? 'https://':'http://')+'koi-3QNPV4UII8.marketingautomation.services/client/ss.js?ver=2.4.0';
+      var scr=document.getElementsByTagName('script')[0];
+      scr.parentNode.insertBefore(ss,scr);
+    }) ();
+  }
 </script>
+
 
 
 <!--
