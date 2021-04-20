@@ -903,7 +903,8 @@
   background: #9ccfee;
 }
 
-.im.ultimate-guide-to-saxophone-sound-production .video_embed h2 {
+.im.ultimate-guide-to-saxophone-sound-production .video_embed h2,
+.im.ugssp .video_embed h2 {
   text-align: left;
 }
 
