@@ -300,6 +300,11 @@
   background-color: #000;
 }
 
+.social-sharing-img {
+  position: absolute;
+  top: -5000px;
+}
+
 .slws .custom-header-container {
   background-color: #fff;
 }
