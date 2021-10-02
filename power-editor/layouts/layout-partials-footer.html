@@ -1,110 +1,141 @@
 {% cache current_school %}
 <footer class='bottom-menu bottom-menu-inverse'>
-    <div class="simple-banner" id="alert-banner">
-        <div class="simple-banner-text">
-            <a href="#" id="alert-close">HIDE</a>
-            <a href="https://www.infinitemusician.com/p/ultimate-guide-to-saxophone-sound-production-signup" target="_blank"><img src="https://www.bestsaxophonewebsiteever.com/wp-content/uploads/UGSSP-Alert-Bar-V4.png" style="width: 100%; height: auto; display: block; margin: 0 auto;"></a>
-        </div>
-
+  <!--<div class="simple-banner" id="alert-banner">
+    <div class="simple-banner-text">
+      <a href="#" id="alert-close">HIDE</a>
+      <img src="https://www.bestsaxophonewebsiteever.com/wp-content/uploads/back-to-school-sale-promo-banner.png" style="width: 100%; height: auto; display: block; margin: 0 auto;">
     </div>
 
-    <script>
-        // FOR ALERT BANNER...
-        $(document).ready(function () {
-            return;
-            var $alertBanner = $('#alert-banner');
-            var $alertClose = $('#alert-close');
-            var currentAlertStatus = sessionStorage.getItem('SHOW_ALERT');
-            console.log('currentAlertStatus', currentAlertStatus);
-            var pathToLower = window.location.pathname.toLowerCase();
+  </div>-->
+  <div id="course-id-val" style="text-indent: 3000px; position: absolute;">{{course.id}}</div>
 
-            if (pathToLower.indexOf('purchased') !== -1) {
-                return;
-            }
+  <script>
+    // FOR ALERT BANNER...
+    $(document).ready(function() {
+      // return;
+      var $alertBanner=$('#alert-banner');
+      var $alertClose=$('#alert-close');
+      var currentAlertStatus=sessionStorage.getItem('SHOW_ALERT');
+      console.log('currentAlertStatus',currentAlertStatus);
+      var pathToLower=window.location.pathname.toLowerCase();
 
-            if (
-                currentAlertStatus !== 'hide'
-            ) {
-                $alertBanner.css({
-                    visibility: 'visible'
-                });
-                sessionStorage.setItem('SHOW_ALERT', 'show');
-            } else {
-                $alertBanner.css({
-                    visibility: 'hidden'
-                });
-            }
+      if(pathToLower.indexOf('purchased')!==-1) {
+        return;
+      }
 
-            $alertClose.on('click', function (e) {
-                e.preventDefault();
-                $alertBanner.css({
-                    visibility: 'hidden'
-                });
-                sessionStorage.setItem('SHOW_ALERT', 'hide');
-            });
+      if(
+        currentAlertStatus!=='hide'
+      ) {
+        $alertBanner.css({
+          visibility: 'visible'
         });
-    </script>
-    <div class='container'>
-        <div class='row'>
-            <div class='col-xs-12 col-sm-6 col-md-6 footer-left footer-column'>
-                <p>
-                    {{'footer.copyright'|i18n}}
-                    {{current_school.name}}
-                </p>
-            </div>
-            <div class='col-xs-12 col-sm-6 col-sm6 footer-right footer-column'>
-                <ul class='list-unstyled'>
-                    <li>
-                        <a href="{{'/p/terms' | school_link}}">
-                            {{'common.terms'|i18n}}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{'/p/privacy' | school_link}}">
-                            {{'common.privacy_policy' | i18n}}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class='col-xs-12 col-sm-4 col-md-4 footer-column'>
-                {% if site.custom_footer_links? %}
-                <ul class='list-unstyled'>
-                    {% for link in site.custom_footer_links %}
-                    <li>
-                        <a href='{{ link.url | school_link }}' target='{{link.target}}'>
-                            {{ link.text }}
-                        </a>
-                    </li>
-                    {% endfor %}
-                    {% unless site.turn_off_fedora_branding %}
-                    <li>
-                        <a class='powered-by' href='https://teachable.com/?src=school_footer' style="visibility: visible !important;">{{'common.powered_by'|i18n}} <img src="{{'footer/teachable-logo-white.svg' | asset_path }}" class='powered-by-logo' alt="Teachable"></a>
-                    </li>
-                    {% endunless %}
-                </ul>
-                {% endif %}
-                {% unless site.custom_footer_links?  %}
-                {% unless site.turn_off_fedora_branding %}
-                <ul class='list-unstyled'>
-                    <li>
-                        {% if site.brand_footer_link_text and site.brand_footer_link_url %}
-                        <a class='powered-by' href='{{ site.brand_footer_link_url }}'>
-                            {{site.brand_footer_link_text}} <img src="{{'footer/teachable-logo-white.svg' | asset_path }}" class='powered-by-logo' target="_blank" alt="Teachable">
-                        </a>
-                        {% else %}
-                        <a class='powered-by' href='https://teachable.com/?src=school_footer'>
-                            {{'common.powered_by'|i18n}} <img src="{{'footer/teachable-logo-white.svg' | asset_path }}" class='powered-by-logo' target="_blank" alt="Teachable">
-                        </a>
-                        {% endif %}
-                    </li>
-                </ul>
-                {% endunless %}
-                {% endunless %}
-            </div>
+        sessionStorage.setItem('SHOW_ALERT','show');
+      } else {
+        $alertBanner.css({
+          visibility: 'hidden'
+        });
+      }
 
-        </div>
+      $alertClose.on('click',function(e) {
+        e.preventDefault();
+        $alertBanner.css({
+          visibility: 'hidden'
+        });
+        sessionStorage.setItem('SHOW_ALERT','hide');
+      });
+    });
+  </script>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-xs-12 col-sm-6 col-md-6 footer-left footer-column'>
+        <p>
+          {{'footer.copyright'|i18n}}
+          {{current_school.name}}
+        </p>
+      </div>
+      <div class='col-xs-12 col-sm-6 col-sm6 footer-right footer-column'>
+        <ul class='list-unstyled'>
+          <li>
+            <a href="{{'/p/terms' | school_link}}">
+              {{'common.terms'|i18n}}
+            </a>
+          </li>
+          <li>
+            <a href="{{'/p/privacy' | school_link}}">
+              {{'common.privacy_policy' | i18n}}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class='col-xs-12 col-sm-4 col-md-4 footer-column'>
+        {% if site.custom_footer_links? %}
+        <ul class='list-unstyled'>
+          {% for link in site.custom_footer_links %}
+          <li>
+            <a href='{{ link.url | school_link }}' target='{{link.target}}'>
+              {{ link.text }}
+            </a>
+          </li>
+          {% endfor %}
+          {% unless site.turn_off_fedora_branding %}
+          <li>
+            <a class='powered-by' href='https://teachable.com/?src=school_footer' style="visibility: visible !important;">{{'common.powered_by'|i18n}} <img src="{{'footer/teachable-logo-white.svg' | asset_path }}" class='powered-by-logo' alt="Teachable"></a>
+          </li>
+          {% endunless %}
+        </ul>
+        {% endif %}
+        {% unless site.custom_footer_links? %}
+        {% unless site.turn_off_fedora_branding %}
+        <ul class='list-unstyled'>
+          <li>
+            {% if site.brand_footer_link_text and site.brand_footer_link_url %}
+            <a class='powered-by' href='{{ site.brand_footer_link_url }}'>
+              {{site.brand_footer_link_text}} <img src="{{'footer/teachable-logo-white.svg' | asset_path }}" class='powered-by-logo' target="_blank" alt="Teachable">
+            </a>
+            {% else %}
+            <a class='powered-by' href='https://teachable.com/?src=school_footer'>
+              {{'common.powered_by'|i18n}} <img src="{{'footer/teachable-logo-white.svg' | asset_path }}" class='powered-by-logo' target="_blank" alt="Teachable">
+            </a>
+            {% endif %}
+          </li>
+        </ul>
+        {% endunless %}
+        {% endunless %}
+      </div>
+
     </div>
+  </div>
 </footer>
+
+
+<!-- MAKE sure to use
+$('#course-id-val').text()); for _pa.orderId and
+if (window.location.hostname === 'www.bestsaxophonewebsiteever.com') {
+-->
+<script type="text/javascript">
+  // var _ss=_ss||[];
+  // _ss.push(['_setDomain','https://koi-3QNPV4UII8.marketingautomation.services/net']);
+  // _ss.push(['_setAccount','KOI-4ELKN6VN0O']);
+  // _ss.push(['_trackPageView']);
+  // window._pa=window._pa||{};
+  // // _pa.orderId = "myOrderId"; // OPTIONAL: attach unique conversion identifier to conversions
+  // // _pa.revenue = "19.99"; // OPTIONAL: attach dynamic purchase values to conversions
+  // // _pa.productId = "myProductId"; // OPTIONAL: Include product ID for use with dynamic ads
+  // if($('#course-id-val')&&$('#course-id-val').text()) {
+  //   _pa.productId=$('#course-id-val').text(); // OPTIONAL: attach unique conversion identifier to conversions
+  // }
+  // (function() {
+  //   if(window.location.hostname==='www.infinitemusician.com') {
+
+  //     var ss=document.createElement('script');
+  //     ss.type='text/javascript'; ss.async=true;
+  //     ss.src=('https:'==document.location.protocol? 'https://':'http://')+'koi-3QNPV4UII8.marketingautomation.services/client/ss.js?ver=2.4.0';
+  //     var scr=document.getElementsByTagName('script')[0];
+  //     scr.parentNode.insertBefore(ss,scr);
+  //   }) ();
+  // }
+</script>
+
 
 
 <!--
