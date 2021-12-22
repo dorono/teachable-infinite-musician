@@ -236,7 +236,6 @@ body {
 
 .im #mc-embedded-subscribe-form {
   overflow: hidden;
-  margin-top: 15px;
   position: relative;
 }
 
@@ -957,6 +956,17 @@ body {
   padding: 15px 15px 5px;
 }
 
+@media only screen and (min-width: 767px) {
+  .im #dev-form.row #mc-embedded-subscribe-form {
+    display: flex;
+    align-items: center;
+  }
+
+  .im #dev-form.row #mc-embedded-subscribe-form > div {
+    padding-right: 10px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .bio.course-block img,
   .bio.block img {
@@ -1021,6 +1031,16 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+  .im #dev-form.row #mc-embedded-subscribe-form > div:first-child {
+    padding-bottom: 15px;
+  }
+
+  .im #dev-form.row #mc-embedded-subscribe-form > div.col-sm-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
   .im.ugssp .custom-header.signup.hero-bottom {
     padding: 0;
   }
@@ -1037,7 +1057,7 @@ body {
     margin: 0;
   }
 
-  .im.ugssp #mc-embedded-subscribe-form .col-xs-12.col-sm-64 {
+  .im.ugssp #mc-embedded-subscribe-form .col-xs-12.col-sm-4 {
     padding-left: 0;
     padding-right: 0;
   }
