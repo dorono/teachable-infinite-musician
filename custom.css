@@ -1112,4 +1112,13 @@ body {
   background: #fc0000;
   text-align: center;
   z-index: 200000;
-  /* display: block; */ /*
+  /* display: block; */
+}
+
+.video-sheet-music-links {
+  font-size: 17px;
+  padding: 5px 0;
+  border: solid black;
+  border-width: 1px 0;
+  margin: 10px 0;
+}
