@@ -1,0 +1,38 @@
+<!-- Lecture Header -->
+<header class='full-width half-height {{ site.signed_in_class }}'>
+  <div class='lecture-left'>
+    <a class='nav-icon-back' aria-label='Back to course curriculum' data-no-turbolink="true" role='button' href='{{lecture.course.path }}'>
+      <i class='fa fa-angle-left' title='Back to course curriculum'></i>
+    </a>
+    <div class="dropdown settings-dropdown" role='menubar'>
+      <a href='#' class='nav-icon-settings dropdown-toggle' aria-label='Settings Menu' aria-haspopup='true' role='menuitem' id='settings_menu' data-toggle='dropdown'>
+        <i class='fa fa-cog' title='Settings Menu'></i>
+      </a>
+      {% include "lectures/partials/lecture_settings" %}
+    </div>
+    <a class="nav-icon-list show-xs hidden-sm hidden-md hidden-lg collapsed" aria-label='Course Sidebar' role="button" data-toggle="collapse" href="#courseSidebar" aria-expanded="false" aria-controls="courseSidebar">
+        <i class='fa fa-list' title='Course Sidebar'></i>
+      </a>
+  </div>
+  {% cache "lecture_footer", lecture %}
+  <div class='lecture-nav'>
+    <a class='nav-btn' href='{{lecture.previous_lecture.url }}' role='button' id='lecture_previous_button'>
+      <i class='fa fa-arrow-left' aria-hidden='true'></i>
+      &nbsp;
+      <span class='nav-text'>{{'lectures.previous_button'|i18n}}</span>
+    </a>
+    <a
+      class='nav-btn complete'
+      data-cpl-tooltip='{{"lectures.content_progress_locked_tooltip"|i18n}}'
+      data-vpl-tooltip='{{"lectures.video_content_progress_locked_tooltip"|i18n}}'
+      href='{{lecture.next_lecture.url}}'
+      id='lecture_complete_button'
+      role='button'
+    >
+      <span class='nav-text'>{{'lectures.complete_button'|i18n}}</span>
+      &nbsp;
+      <i class='fa fa-arrow-right' aria-hidden='true'></i>
+    </a>
+  </div>
+  {% endcache %}
+</header>
