@@ -53,6 +53,13 @@
 
     console.log('VAL',$('#course-id-val').text());
 
+    var lowerCasePath = window.location.href.toLowerCase();
+     if (lowerCasePath.indexOf('music-practice-for-busy-people') !== -1) {
+      $('.btn-enroll').each(function (idx, elem) {
+          $(elem).text($(elem).text().replace('Enroll', 'Pre-Enroll'));
+      });       
+    }
+
     /*
     var lowerCasePath = window.location.href.toLowerCase();
      if (lowerCasePath.indexOf('giantsound') !== -1) {

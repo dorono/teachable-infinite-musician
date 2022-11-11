@@ -509,6 +509,14 @@ body {
   border-bottom: 1px solid #000;
 }
 
+.im .features-subhead {
+  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
+  font-weight: bold;
+  padding: 5px 0 3px;
+  font-size: 20px;
+}
+
 .im .checkout-cta h2 {
   display: none;
 }
