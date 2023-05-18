@@ -1,16 +1,17 @@
 <!--  pages/partials/block_homepage_hero -->
 <!--  courses/index -->
-<div class="simple-banner" id="alert-banner" style="display: none;">
-  <div class="simple-banner-text">
-    <a href="#" id="alert-close" style="display: block; float: right; color: white; padding: 10px;">HIDE</a>
-    <img src="https://www.bestsaxophonewebsiteever.com/wp-content/uploads/may-2023-sale-alert-banner.png" style="width: 100%; height: auto; display: block; margin: 0 auto;">
-  </div>
+<!--<div class="simple-banner" id="alert-banner" style="display: none;">-->
+<!--  <div class="simple-banner-text">-->
+<!--    <a href="#" id="alert-close" style="display: block; float: right; color: white; padding: 10px;">HIDE</a>-->
+<!--    <img src="https://www.bestsaxophonewebsiteever.com/wp-content/uploads/may-2023-sale-alert-banner.png" style="width: 100%; height: auto; display: block; margin: 0 auto;">-->
+<!--  </div>-->
 
-</div>
+<!--</div>-->
 {% include 'courses/partials/course_directory' %}
 
 <script>
   $(function() {
+    return; // comment this line to activate banner (although we might not need it here)
     $('#alert-bar').each(function(idx,el) {
       $(this).on('click',function(e) {
         e.stopPropagation();
