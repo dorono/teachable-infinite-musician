@@ -1,9 +1,9 @@
 {% cache current_school %}
 <footer class='bottom-menu bottom-menu-inverse'>
-  <div class="simple-banner" id="alert-banner">
+ <div class="simple-banner" id="alert-banner" style="display: none;">
     <div class="simple-banner-text">
-      <a href="#" id="alert-close">HIDE</a>
-      <img src="https://www.bestsaxophonewebsiteever.com/wp-content/uploads/back-to-school-sale-promo-banner.png" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      <a href="#" id="alert-close" style="float: right; color: white; padding: 10px;">HIDE</a>
+      <img src="https://www.bestsaxophonewebsiteever.com/wp-content/uploads/may-2023-sale-alert-banne-for-im.png" style="width: 100%; height: auto; display: block; margin: 0 auto;">
     </div>
 
   </div>
@@ -27,19 +27,19 @@
         currentAlertStatus!=='hide'
       ) {
         $alertBanner.css({
-          visibility: 'visible'
+          display: 'block'
         });
         sessionStorage.setItem('SHOW_ALERT','show');
       } else {
         $alertBanner.css({
-          visibility: 'hidden'
+          display: 'none'
         });
       }
 
       $alertClose.on('click',function(e) {
         e.preventDefault();
         $alertBanner.css({
-          visibility: 'hidden'
+          display: 'none'
         });
         sessionStorage.setItem('SHOW_ALERT','hide');
       });
