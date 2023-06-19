@@ -1,12 +1,19 @@
-<meta name="facebook-domain-verification" content="9mfpgoflo3fb6pz6fs5gyh075x8vct" />
+<meta
+  name="facebook-domain-verification"
+  content="9mfpgoflo3fb6pz6fs5gyh075x8vct"
+/>
 <!-- <link href="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.css" rel="stylesheet" type="text/css" /> -->
 
-<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5c4f8b3fc9830d001319af9b&product=inline-share-buttons' async='async'></script>
+<script
+  type="text/javascript"
+  src="//platform-api.sharethis.com/js/sharethis.js#property=5c4f8b3fc9830d001319af9b&product=inline-share-buttons"
+  async="async"
+></script>
 
 <!-- <script src="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.js"></script> -->
 
 <script>
-  $(function() {
+  $(function () {
     // $('a[data-role=course-box-link]').each(function(idx,el) {
     //   $(this).on('click',function(e) {
     //     e.stopPropagation();
@@ -14,50 +21,65 @@
     //   });
     // });
 
-    var cssCourseBodySelector='';
-    var cssPageSelector=cssPageSelector=window.location.pathname.split('/')[2]||'';
-    $('body').addClass('im');
+    var cssCourseBodySelector = "";
+    var cssPageSelector = (cssPageSelector =
+      window.location.pathname.split("/")[2] || "");
+    $("body").addClass("im");
 
-    if(window.location.pathname.indexOf('sax-lessons-with-the-stars/lectures')!==-1||window.location.pathname.indexOf('691872')!==-1) {
-      $('body').addClass('slws-curriculum');
-    }
-
-    if(
-      window.location.pathname.indexOf('lightning')!==-1
-      ||window.location.pathname.indexOf('ultimate-guide')!==-1
-      ||window.location.pathname.indexOf('sax-lessons-with-the-stars')!==-1
+    if (
+      window.location.pathname.indexOf(
+        "sax-lessons-with-the-stars/lectures"
+      ) !== -1 ||
+      window.location.pathname.indexOf("691872") !== -1
     ) {
-      cssCourseBodySelector='lfcc';
+      $("body").addClass("slws-curriculum");
+    }
 
-      if(window.location.pathname.indexOf('ultimate-guide')!==-1) {
-        cssCourseBodySelector=cssCourseBodySelector+' ugssp';
+    if (
+      window.location.pathname.indexOf("lightning") !== -1 ||
+      window.location.pathname.indexOf("ultimate-guide") !== -1 ||
+      window.location.pathname.indexOf("sax-lessons-with-the-stars") !== -1 ||
+      window.location.pathname.indexOf("bach-shapes") !== -1
+    ) {
+      cssCourseBodySelector = "lfcc";
+
+      if (window.location.pathname.indexOf("ultimate-guide") !== -1) {
+        cssCourseBodySelector = cssCourseBodySelector + " ugssp";
       }
 
-      if(window.location.pathname.indexOf('sax-lessons-with-the-stars')!==-1) {
-        console.log('ADDING');
-        cssCourseBodySelector=cssCourseBodySelector+' slws';
+      if (
+        window.location.pathname.indexOf("sax-lessons-with-the-stars") !== -1
+      ) {
+        cssCourseBodySelector = cssCourseBodySelector + " slws";
+      }
+
+      if (window.location.pathname.indexOf("bach-shapes") !== -1) {
+        cssCourseBodySelector = cssCourseBodySelector + " bs";
       }
     }
 
-    if(cssCourseBodySelector) {
-      $('body').addClass(cssCourseBodySelector);
+    if (cssCourseBodySelector) {
+      $("body").addClass(cssCourseBodySelector);
     }
 
-    if(cssPageSelector) {
-      $('body').addClass(cssPageSelector);
+    if (cssPageSelector) {
+      $("body").addClass(cssPageSelector);
     }
 
-    $('.custom-header').each(function() {
-      $(this).parents().closest('.container').addClass('custom-header-container');
+    $(".custom-header").each(function () {
+      $(this)
+        .parents()
+        .closest(".container")
+        .addClass("custom-header-container");
     });
 
-    console.log('VAL',$('#course-id-val').text());
+    console.log("VAL", $("#course-id-val").text());
 
     var lowerCasePath = window.location.href.toLowerCase();
-     if (lowerCasePath.indexOf('music-practice-for-busy-people') !== -1) {
-      $('.btn-enroll').each(function (idx, elem) {
-          $(elem).text($(elem).text().replace('Enroll', 'Pre-Enroll'));
-      });       
+    if (lowerCasePath.indexOf("music-practice-for-busy-people") !== -1) {
+      $(".btn-enroll").each(function (idx, elem) {
+        $(elem).text($(elem).text().replace("Enroll", "Pre-Enroll"));
+      });
     }
 
     /*
@@ -81,32 +103,52 @@
 </script>
 
 <!-- Global site tag (gtag.js) - Google Ads: 1016009350 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1016009350"></script>
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=AW-1016009350"
+></script>
 <script>
-  window.dataLayer=window.dataLayer||[];
-  function gtag() {dataLayer.push(arguments);}
-  gtag('js',new Date());
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-  gtag('config','AW-1016009350');
+  gtag("config", "AW-1016009350");
 </script>
 
 <!-- Facebook Pixel Code -->
 <script>
-  !function(f,b,e,v,n,t,s) {
-    if(f.fbq) return; n=f.fbq=function() {
-      n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)
+  !(function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
     };
-    if(!f._fbq) f._fbq=n; n.push=n; n.loaded=!0; n.version='2.0';
-    n.queue=[]; t=b.createElement(e); t.async=!0;
-    t.src=v; s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)
-  }(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init','751675342232877');
-  fbq('track','PageView');
-  fbq('dataProcessingOptions',['LDU'],0,0);
-
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = "2.0";
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s);
+  })(
+    window,
+    document,
+    "script",
+    "https://connect.facebook.net/en_US/fbevents.js"
+  );
+  fbq("init", "751675342232877");
+  fbq("track", "PageView");
+  fbq("dataProcessingOptions", ["LDU"], 0, 0);
 </script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=751675342232877&ev=PageView&noscript=1" /></noscript>
+<noscript
+  ><img
+    height="1"
+    width="1"
+    style="display: none"
+    src="https://www.facebook.com/tr?id=751675342232877&ev=PageView&noscript=1"
+/></noscript>
 <!-- End Facebook Pixel Code -->

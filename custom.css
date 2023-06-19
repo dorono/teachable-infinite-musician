@@ -103,6 +103,17 @@ body {
   font-size: 26px;
 }
 
+.im .blocks-page-course_sales_page h2.no-bottom-border, 
+.im .blocks-page-rich_text h2.no-bottom-border, 
+.im .blocks-page-post_purchase_page h2.no-bottom-border, 
+.im.infinite-musician-saxophone-practice-framework .lecture-content .lecture-text-container h2.no-bottom-border
+.im .blocks-page-course_sales_page h2.no-bottom-border {
+  border-bottom: none; 
+  margin-bottom: 0; 
+  padding-bottom: 0;
+  transform: translateY(12px);
+}
+
 .im h3 {
   font-size: 28px;
   color: #db5424;
@@ -113,6 +124,19 @@ body {
 
 .im.ultimate-guide-to-saxophone-sound-production h3 {
   color: #fc0000;
+}
+
+.im h3.author-name {
+  font-weight: bold;
+  text-align: right;
+  margin-top: 0;
+  border-bottom: 1px solid #000;
+  padding: 0 0 10px;    
+}
+
+.im.bs h3.author-name {
+  color: #2576ae;
+  border-bottom: 1px solid #2576ae;
 }
 
 .bottom-margin {
@@ -148,6 +172,15 @@ body {
 .img-right-float {
   display: block;
   padding-bottom: 15px;
+}
+
+.bs .block.rich_text .img-right-float img {
+  max-height: 350px;
+}
+
+.bs .img-right-float {
+  padding-left: 15px;
+  max-height: 450px;
 }
 
 .navbar-fedora .navbar-brand.header-logo {
@@ -320,6 +353,10 @@ body {
 .slws .custom-header-container img {
   margin: 20px auto 0;
   border: 6px dashed black;
+}
+
+.bs .custom-header-container > .row {
+  border-bottom: 5px solid #000;
 }
 
 .im.ugssp .custom-header-container img {
@@ -697,6 +734,10 @@ body {
   color: #000;
 }
 
+.im.bs h3 {
+  color: #2576ae;
+}
+
 .im.ugssp .intro-message .highlight-text em.deemphasize {
   color: #8f9a9c;
   font-size: 80%;
@@ -817,6 +858,10 @@ body {
   border: 3px dashed #333;
 }
 
+.im.bs .features {
+  border: 3px dashed #2576ae;
+}
+
 .im .dashed-border {
   border: 3px dashed #000;
 }
@@ -854,6 +899,17 @@ body {
   color: #fff;
   font-size: 28px;
   margin: 10px 0 30px;
+}
+
+.im.bs .features h3 {
+  background: none; 
+  padding: 10px 0 8px;
+  font-weight: bold;
+  color: #2576ae;
+  font-size: 25px;
+  margin: 0 0 15px;
+  border: solid #2576ae;
+  border-width: 1px 0;
 }
 
 .block.rich_text img.limited-width {
@@ -895,9 +951,17 @@ body {
   color: #fc0000;
 }
 
+.
 .im h2.highlight {
   background: #000;
 }
+
+.im.bs h2.highlight {
+  color: #ebd655;
+  background-color: #2576ae;
+  border: none;
+}
+
 
 .im hr {
   border-top: 1px solid #c3c0c0;
@@ -911,8 +975,17 @@ body {
   margin-bottom: 20px;
 }
 
+.bs .course-block.testimonial .large-img-rounded, .block.testimonial .large-img-rounded {
+    width: 175px;
+    height: auto;  
+}
+
 .im .bio {
   margin-top: 20px;
+}
+
+.im.bs .bio h2 {
+  display: none;
 }
 
 .im .course-block.odd-stripe,
@@ -956,13 +1029,19 @@ body {
   text-decoration: none;
 }
 
-.im.vignettes .blocks-page-course_sales_page .alt-section-style-2 {
+.im.vignettes .blocks-page-course_sales_page .alt-section-style-2,
+.im.bs .blocks-page-course_sales_page .alt-section-style-2 {
   background-color: #000;
 }
 
-.im.vignettes .navbar-fedora.is-at-top.is-not-signed-in.hide-nav-background-color {
+.im.vignettes .navbar-fedora.is-at-top.is-not-signed-in.hide-nav-background-color,
+.im.bs .navbar-fedora.is-at-top.is-not-signed-in.hide-nav-background-color {
   background: #000 !important;
   background-color: #000;
+}
+
+.im.bs .custom-header-container {
+  background-color: #2576ae;
 }
 
 .im footer {
@@ -1017,6 +1096,19 @@ body {
   .img-right-float {
     float: right;
     padding-bottom: 0;
+  }
+
+  .bs .img-right-float {
+    max-width: 450px;
+  }  
+  
+  .bs .img-right-float {
+    padding-left: 15px;
+    max-height: 450px;
+  }    
+  
+  .bs .block.rich_text .img-right-float img {
+    max-height: 275px;
   }
 
   .flex-row {
