@@ -114,6 +114,10 @@ body {
   transform: translateY(12px);
 }
 
+.im .blocks-page-post_purchase_page .block.rich_text p {
+  font-size: 19px;
+} 
+
 .im h3 {
   font-size: 28px;
   color: #db5424;
@@ -252,7 +256,7 @@ body {
 
 .lecture-content .lecture-attachment .btn-view-fullscreen-pdf {
   position: absolute;
-  top: -43px;
+  top: -35px;
 }
 
 .im #mc-embedded-subscribe-form .btn-primary {
@@ -941,6 +945,13 @@ body {
   color: #2984d1;
 }
 
+.im .blocks-page-post_purchase_page .purchase_confirmation.course-block.block,
+.im .blocks-page-post_purchase_page .proceed_to_course_button.course-block.block,
+.im .blocks-page-post_purchase_page .video_embed.course-block.block
+{
+  margin-bottom: 20px;
+}
+
 .im h2.highlight,
 .im .highlight-text {
   color: #db5424;
@@ -951,7 +962,16 @@ body {
   color: #fc0000;
 }
 
-.
+.im.bs .blocks-page-post_purchase_page h2 {
+  background-color: #000;
+  color: #db5424;
+}
+
+.im.vignettes .blocks-page-course_sales_page .video_embed h2,
+.im.bs .blocks-page-post_purchase_page .video_embed h2 {
+  display: none;
+}
+
 .im h2.highlight {
   background: #000;
 }
@@ -1046,6 +1066,15 @@ body {
 
 .im footer {
   padding: 15px 15px 5px;
+}
+
+
+
+.lfcc-h2 {
+  color: #db5424;
+  background: none;
+  border: #000 solid;
+  border-width: 1px 0;
 }
 
 @media only screen and (min-width: 767px) {
