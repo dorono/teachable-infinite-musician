@@ -13,7 +13,7 @@ body {
 }
 
 .blocks-page-homepage .course-block.featured_courses .container h2 {
-  font-size: al 40px;
+  font-size: 40px;
 }
 
 .blocks-page-homepage .course-block.featured_courses a.btn-md {
@@ -119,11 +119,15 @@ body {
 } 
 
 .im h3 {
-  font-size: 28px;
+  font-size: 22px;
   color: #db5424;
   font-style: italic;
   margin: 24px 0;
   font-weight: 500;
+}
+
+.im h3.bach-shapes {
+  color: #2576ae;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production h3 {
@@ -225,6 +229,11 @@ body {
 
 .security {
   max-height: 60px;
+  margin: 0 auto;
+}
+
+.block.rich_text img.security-v2 {
+  max-height: 115px;
   margin: 0 auto;
 }
 
@@ -785,6 +794,12 @@ body {
 
 .im.ugssp .highlight-text.intro-message em {
   color: #000;
+}
+
+.im.bs .highlight-bar {
+  color: #2576ae;
+  background-color: #ebd655;
+  padding: 10px;
 }
 
 .im ul.benefits,
