@@ -24,6 +24,11 @@ body {
   padding-left: 10px;
 }
 
+/* temporarily hiding the author filter until it stops displaying authors that shouldn't be there */
+/*.pull-left.course-filter:nth-of-type(even) {*/
+/*  display: none;*/
+/*}*/
+
 #banners {
   width: 100%;
 }
@@ -130,6 +135,10 @@ body {
   color: #2576ae;
 }
 
+.im h3.famt {
+  color: #172536;
+}
+
 .im.ultimate-guide-to-saxophone-sound-production h3 {
   color: #fc0000;
 }
@@ -145,6 +154,11 @@ body {
 .im.bs h3.author-name {
   color: #2576ae;
   border-bottom: 1px solid #2576ae;
+}
+
+.im.famt h3.author-name {
+  color: #172536;
+  border-bottom: 1px solid #172536;
 }
 
 .bottom-margin {
@@ -375,6 +389,10 @@ body {
 .im.ugssp .custom-header-container img {
   padding: 15px 0 0 15px;
   box-sizing: content-box;
+}
+
+.im.famt .custom-header-container   {
+  border-bottom: 1px solid #b5b800;
 }
 
 .lecture-attachment ul.regular-bullets li,
@@ -802,6 +820,12 @@ body {
   padding: 10px;
 }
 
+.im.famt .highlight-bar {
+  color: #172536;
+  background-color: #b5b800;
+  padding: 10px;
+}
+
 .im ul.benefits,
 .im ul.features-list,
 .im ul.bonus {
@@ -881,6 +905,10 @@ body {
   border: 3px dashed #2576ae;
 }
 
+.im.famt .features {
+  border: 3px dashed #172536;
+}
+
 .im .dashed-border {
   border: 3px dashed #000;
 }
@@ -928,6 +956,17 @@ body {
   font-size: 25px;
   margin: 0 0 15px;
   border: solid #2576ae;
+  border-width: 1px 0;
+}
+
+.im.bs .features h3 {
+  background: none; 
+  padding: 10px 0 8px;
+  font-weight: bold;
+  color: #172536;
+  font-size: 25px;
+  margin: 0 0 15px;
+  border: solid #172536;
   border-width: 1px 0;
 }
 
@@ -982,6 +1021,11 @@ body {
   color: #db5424;
 }
 
+.im.famt .blocks-page-post_purchase_page h2 {
+  background-color: #000;
+  color: #a11c29 ;
+}
+
 .im.vignettes .blocks-page-course_sales_page .video_embed h2,
 .im.bs .blocks-page-post_purchase_page .video_embed h2 {
   display: none;
@@ -996,7 +1040,6 @@ body {
   background-color: #2576ae;
   border: none;
 }
-
 
 .im hr {
   border-top: 1px solid #c3c0c0;
@@ -1083,7 +1126,9 @@ body {
   padding: 15px 15px 5px;
 }
 
-
+.im.famt .custom-header-container {
+  background-color: #fff6df;
+}
 
 .lfcc-h2 {
   color: #db5424;

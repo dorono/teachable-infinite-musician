@@ -39,7 +39,8 @@
       window.location.pathname.indexOf("lightning") !== -1 ||
       window.location.pathname.indexOf("ultimate-guide") !== -1 ||
       window.location.pathname.indexOf("sax-lessons-with-the-stars") !== -1 ||
-      window.location.pathname.indexOf("bach-shapes") !== -1
+      window.location.pathname.indexOf("bach-shapes") !== -1 ||
+      window.location.pathname.indexOf("fun-and-modern-tunes") !== -1
     ) {
       cssCourseBodySelector = "lfcc";
 
@@ -55,6 +56,10 @@
 
       if (window.location.pathname.indexOf("bach-shapes") !== -1) {
         cssCourseBodySelector = cssCourseBodySelector + " bs";
+      }
+
+      if (window.location.pathname.indexOf("fun-and-modern-tunes") !== -1) {
+        cssCourseBodySelector = " famt";
       }
     }
 
