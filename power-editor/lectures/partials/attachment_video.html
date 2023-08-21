@@ -1,0 +1,25 @@
+<!-- Attachment: Video -->
+{% if attachment.embeddable %}
+{{ attachment.video_player_embed_code }}
+</div>
+{% endif %}
+
+<!-- Video actions -->
+{% if attachment.downloadable %}
+<div class='video-options'>
+    {% if attachment.embeddable == false %}
+      <p class="attachment-title">Video: {{ attachment.name | replace: ".mp4", ""}}</p>
+    {% endif %}
+    <a
+      class='download'
+      href='{{attachment.url}}'
+      target='_blank'
+      download
+      data-x-origin-download
+      data-x-origin-download-name='{{attachment.name}}'
+    >
+      <div class='span glyphicon glyphicon-save'></div>
+      {{ 'lectures.download'|i18n }}
+    </a>
+</div>
+{% endif %}
