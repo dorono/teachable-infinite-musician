@@ -1,0 +1,47 @@
+<div class="well locked">
+  <center>
+    <div class="lecture-contents-locked">
+      <div class="locked-icon">{% include "lectures/partials/lock_seal" %}</div>
+      {{ 'lectures.content_locked' | i18n }}
+      <div class="already-enrolled">
+        {{ 'lectures.if_you_are_enrolled' | i18n }}
+        <a
+          href='{{"/sign_in" | append: "?origin_path=" | append: lecture.url | school_link}}'
+          >{{ 'lectures.you_will_need_to_login' | i18n }}</a
+        >.
+      </div>
+      {% if lecture.course.id == 522606 %}
+      <a
+        class="btn btn-md btn-primary btn-md"
+        href="https://www.infinitemusician.com/p/ultimate-guide-to-saxophone-sound-production?coupon_code=BIGSOUND23&product_id=1341881"
+        id="lecture-locked"
+        title="{{lecture.course.name}}"
+        >Unlock Now with 25% Off</a
+      >
+      {% else %}
+      <a
+        class="btn btn-md btn-primary btn-md"
+        href="{{lecture.course.url}}"
+        id="lecture-locked"
+        title="{{lecture.course.name}}"
+        >{{ 'lectures.enroll_in_course_to_unlock' | i18n }}</a
+      >
+      {% endif %}
+    </div>
+    {% if lecture.course.id == 522606 %}
+    <div class="ugssp-promo-code">
+      This course is currently on sale at a rare
+      <strong style="background: yellow; color: black">25% discount</strong>
+      that <em>ends <strong>Wednesday, August 30 at 11:59 PM PST</strong></em
+      >.
+      <br />
+      <br />
+      Remember...
+      <ul>
+        <li>100% lifetime no-hassles refund policy,</li>
+        <li>Now offering "Buy Now, Pay Later" option.</li>
+      </ul>
+    </div>
+    {% endif %}
+  </center>
+</div>

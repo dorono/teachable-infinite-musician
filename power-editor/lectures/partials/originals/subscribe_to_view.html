@@ -1,0 +1,22 @@
+<div class="well locked">
+  <center>
+    <div class="lecture-contents-locked">
+      <div class="locked-icon">{% include "lectures/partials/lock_seal" %}</div>
+      {{ 'lectures.content_locked' | i18n }}
+      <div class="already-enrolled">
+        {{ 'lectures.if_you_are_enrolled' | i18n }}
+        <a
+          href='{{"/sign_in" | append: "?origin_path=" | append: lecture.url | school_link}}'
+          >{{ 'lectures.you_will_need_to_login' | i18n }}</a
+        >.
+      </div>
+      <a
+        class="btn btn-md btn-primary btn-md"
+        href="{{lecture.course.url}}"
+        id="lecture-locked"
+        title="{{lecture.course.name}}"
+        >{{ 'lectures.enroll_in_course_to_unlock' | i18n }}</a
+      >
+    </div>
+  </center>
+</div>
