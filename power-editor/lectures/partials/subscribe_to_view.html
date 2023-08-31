@@ -10,7 +10,12 @@
           >{{ 'lectures.you_will_need_to_login' | i18n }}</a
         >.
       </div>
-      {% if lecture.course.id == 522606 %}
+      <!-- 
+        condition below is hard-coded to be false, replace 'INSERT_COURSE_ID'
+        with course ID next time you need an alternative
+        "course locked" button
+      -->
+      {% if lecture.course.id == 'INSERT_COURSE_ID' %}
       <a
         class="btn btn-md btn-primary btn-md"
         href="https://www.infinitemusician.com/p/ultimate-guide-to-saxophone-sound-production?coupon_code=BIGSOUND23&product_id=1341881"
@@ -28,7 +33,7 @@
       >
       {% endif %}
     </div>
-    {% if lecture.course.id == 522606 %}
+    {% if lecture.course.id == 'INSERT_COURSE_ID' %}
     <div class="ugssp-promo-code">
       This course is currently on sale at a rare
       <strong style="background: yellow; color: black">25% discount</strong>
