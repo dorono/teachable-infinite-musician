@@ -161,6 +161,40 @@ body {
   border-bottom: 1px solid #172536;
 }
 
+.im.fun-and-modern-tunes-for-beginner-saxophonists h3.author-name {
+  margin-bottom: 0;
+}
+
+.im.fun-and-modern-tunes-for-beginner-saxophonists h3.massive {
+  color: #000;
+  font-weight: 525;
+  line-height: 1.3em;   
+  font-size: 21px;
+  padding: 0 0 20px;
+  margin: 0;
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 767px) {
+  .im.fun-and-modern-tunes-for-beginner-saxophonists h3.massive {
+    font-size: 30px;
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 1201px) {
+  .im.fun-and-modern-tunes-for-beginner-saxophonists h3.massive {
+    font-size: 44px;
+    text-align: left;
+  }
+}
+
+.im.fun-and-modern-tunes-for-beginner-saxophonists h3.massive em {
+  color: #a11c29;
+  font-weight: 600;
+}
+
 .bottom-margin {
   margin-bottom: 20px !important;
 }
@@ -1340,10 +1374,8 @@ body {
   padding-bottom: 20px;
 }
 
-.fun-and-modern-tunes-for-beginner-saxophonists h3.massive {
-  font-size: 40px;
-  line-height: 1.2em;
-  color: #fff6df;
-  padding: 0;
-  margin: 0;
+.im .row.block-2-col {
+  padding: 20px 0; 
+  margin-bottom: 20px; 
+  border-bottom: 1px solid #000;  
 }
