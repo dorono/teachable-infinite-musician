@@ -1331,3 +1331,19 @@ body {
   text-align: left;
   border-radius: 10px  
 }
+
+.lecture-attachment.lecture-attachment-type-audio h2 {
+  font-size: 17px;
+}
+
+.lecture-content .lecture-attachment .video-options {
+  padding-bottom: 20px;
+}
+
+.fun-and-modern-tunes-for-beginner-saxophonists h3.massive {
+  font-size: 40px;
+  line-height: 1.2em;
+  color: #fff6df;
+  padding: 0;
+  margin: 0;
+}
