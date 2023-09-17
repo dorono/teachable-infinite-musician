@@ -211,6 +211,10 @@ body {
   margin-top: 20px !important;
 }
 
+.no-top-margin {
+  margin-top: 0 !important;
+}
+
 .no-bottom-border {
   border-bottom: none;
 }
@@ -651,7 +655,11 @@ body {
 .alt-section-style-2,
 .description_with_share_icons .alt-section-style-2 p {
   background: #2984d1;
-  line-height: 130%;
+  line-height: 1.2em;
+}
+
+.block.rich_text .alt-section-style-2 p {
+  line-height: 1.2em;
 }
 
 .im.ultimate-guide-to-saxophone-sound-production .alt-section-style-2,
@@ -1150,6 +1158,17 @@ body {
   background-color: #000;
 }
 
+.im.bulletproof-saxophone-playing-complete-package-bu .alt-section-style-2,
+.im.bulletproof-saxophone-playing .alt-section-style-2 {
+  background-color: #ece083;
+}
+
+.im.bulletproof-saxophone-playing-complete-package-bu .alt-section-style-2 p,
+.im.bulletproof-saxophone-playing .alt-section-style-2 p {
+  text-align: center;
+  color: #000;
+}
+
 .im.vignettes .navbar-fedora.is-at-top.is-not-signed-in.hide-nav-background-color,
 .im.bs .navbar-fedora.is-at-top.is-not-signed-in.hide-nav-background-color {
   background: #000 !important;
@@ -1377,5 +1396,36 @@ body {
 .im .row.block-2-col {
   padding: 20px 0; 
   margin-bottom: 20px; 
-  border-bottom: 1px solid #000;  
+  border-bottom: 1px solid #c3c0c0;  
+}
+
+
+.instructor-row {
+  background: #000;
+  border: solid #fff ;
+  color: #fff;
+  border-width: 1px 0 0;
+  padding: 15px 0;
+  font-size: 18px;
+  margin: 0;
+}
+
+.instructor-row:first-of-type {
+  padding-top: 15px;
+  border-width: 0 0 1px;
+}
+
+.instructor-row:last-of-type {
+  border-width: 1px 0 0;
+  margin-bottom: 15px;
+}
+
+.row.instructor-row h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ece083;
+}
+
+.instructor-row img {
+  border: 2px solid #ece083;
 }
