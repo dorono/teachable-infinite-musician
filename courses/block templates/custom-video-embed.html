@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1 course-description">
+      <!-- taken from https://www.tutorialspoint.com/creating-a-responsive-video-player-using-video-js -->
+      <div class="im-embedded-video square-video bottom-margin">
+        <video
+          id="bsp-promo-plake-square"
+          class="video-js vjs-default-skin"
+          controls
+          preload="auto"
+          data-setup='{ "fluid" : true }'
+          poster="https://www.bestsaxophonewebsiteever.com/wp-content/uploads/BSP_Promo_Video_Cover_Plake_square.png"
+        >
+          <source
+            src="https://www.bestsaxophonewebsiteever.com/wp-content/uploads/BSP_Promo_Video_Plake_square.mp4"
+            type="video/mp4"
+          />
+          <source
+            src="https://www.bestsaxophonewebsiteever.com/wp-content/uploads/BSP_Promo_Video_Plake_square.webm"
+            type="video/webm"
+          />
+        </video>
+      </div>
+      <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
+      <script>
+        var player = videojs("bsp-promo-plake-square");
+      </script>
+    </div>
+  </div>
+</div>

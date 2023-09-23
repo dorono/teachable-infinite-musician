@@ -123,6 +123,7 @@ body {
 .im.bulletproof-saxophone-playing .blocks-page-course_sales_page h2 {
   background: #000;
   color: #ece083;
+  font-weight: 500;
 }
 
 .im .blocks-page-post_purchase_page .block.rich_text p {
@@ -901,7 +902,9 @@ body {
   padding: 3px 0 20px 43px;
 }
 
-.im.ultimate-guide-to-saxophone-sound-production ul.benefits li {
+.im.ultimate-guide-to-saxophone-sound-production ul.benefits li,
+.im.bulletproof-saxophone-playing-complete-package-bu ul.benefits li,
+.im.bulletproof-saxophone-playing ul.benefits li {
   background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu)
     no-repeat 0 6px;
   /*background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 9px 3px;*/
@@ -1006,7 +1009,7 @@ body {
   border: dotted #000;
   border-width: 1px 0;
   color: #000;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 22px;
 }
 
@@ -1298,6 +1301,11 @@ body {
   }
 }
 
+.btn.complete.lecture-complete {
+  display: flex;
+  align-items: center; 
+}
+
 @media only screen and (max-width: 767px) {
   .im #dev-form.row #mc-embedded-subscribe-form > div:first-child {
     padding-bottom: 15px;
@@ -1467,6 +1475,21 @@ body {
   display: block;
   margin: 10px auto 0;
   border: 1px solid #ece083;
+}
+
+.update-box {
+  padding: 15px;
+  border: dashed 4px red;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+.im-embedded-video {
+  margin: 0 auto;
+}
+
+.im-embedded-video.square-video {
+  max-width: 650px;
 }
 
 @media only screen and (max-width : 768px) {
