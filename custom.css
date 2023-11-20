@@ -24,6 +24,10 @@ body {
   padding-left: 10px;
 }
 
+.course-listing {
+  border-color: #000;
+}
+
 /* temporarily hiding the author filter until it stops displaying authors that shouldn't be there */
 /*.pull-left.course-filter:nth-of-type(even) {*/
 /*  display: none;*/
@@ -325,6 +329,11 @@ body {
 .lecture-content .lecture-attachment .btn-view-fullscreen-pdf {
   position: absolute;
   top: -35px;
+}
+
+.im.famt .lecture-attachment-type-audio:nth-of-type(3) {
+  border: dashed black;
+  border-width: 0 0 3px;
 }
 
 .im #mc-embedded-subscribe-form .btn-primary {
@@ -904,7 +913,8 @@ body {
 
 .im.ultimate-guide-to-saxophone-sound-production ul.benefits li,
 .im.bulletproof-saxophone-playing-complete-package-bu ul.benefits li,
-.im.bulletproof-saxophone-playing ul.benefits li {
+.im.bulletproof-saxophone-playing ul.benefits li,
+.im.famt ul.benefits li {
   background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu)
     no-repeat 0 6px;
   /*background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 9px 3px;*/
@@ -950,10 +960,16 @@ body {
   margin-bottom: 0;
 }
 
-.im .features {
+.im .features,
+.im.famt .video_embed .row > div {
   padding: 20px;
   margin-bottom: 40px;
   border: 3px dashed #333;
+}
+
+.im.famt .video_embed .row {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .im.bs .features {
@@ -962,6 +978,15 @@ body {
 
 .im.famt .features {
   border: 3px dashed #172536;
+}
+
+.im.famt .features h4 {
+  font-weight: bold;
+  font-size: 21px;
+  border: solid #a11c29;
+  border-width: 1px 0;
+  padding: 5px;
+  color: #a11c29;
 }
 
 .im .dashed-border {
@@ -994,13 +1019,32 @@ body {
   padding: 10px;
 }
 
-.im .features h3 {
+.im .features h3,
+.im.famt .video_embed h2 {
   background: #000;
   padding: 10px;
   font-weight: bold;
   color: #fff;
   font-size: 28px;
   margin: 10px 0 30px;
+  text-align: left;
+}
+
+.im.famt .features h3,
+.im.famt .video_embed h2  {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 21px;
+}
+
+.im.famt .video_embed h2 {
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.im.famt .video_embed p {
+  text-align: left;
+  font-size: 19px;
 }
 
 .im.bulletproof-saxophone-playing-complete-package-bu .features h3,
@@ -1081,6 +1125,11 @@ body {
   color: #fc0000;
 }
 
+.im.famt h2.highlight,
+.im.famt .highlight-text {
+  color: #fff6df;
+}
+
 .im.bs .blocks-page-post_purchase_page h2 {
   background-color: #000;
   color: #db5424;
@@ -1105,6 +1154,13 @@ body {
   background-color: #2576ae;
   border: none;
 }
+
+.im.famt h2.highlight {
+  background-color: #ffb500;
+  color: #000;
+  border: none;
+}
+
 
 .im hr {
   border-top: 1px solid #c3c0c0;
@@ -1490,6 +1546,14 @@ body {
 
 .im-embedded-video.square-video {
   max-width: 650px;
+}
+
+html body .upsell-app h1 {
+  line-height: 1.175em;
+  border: solid #000;
+  border-width: 1px 0;
+  margin: 10px 0;
+  padding: 7px 0;  
 }
 
 @media only screen and (max-width : 768px) {
