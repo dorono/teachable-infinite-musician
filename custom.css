@@ -623,7 +623,11 @@ body {
 }
 
 .im .blocks-page-course_sales_page p em,
-.faq-answer em {
+.faq-answer em,
+.features p,
+.video_embed p,
+.bio p,
+p.testimonial-quote {
   font-weight: 400;
 }
 
@@ -1441,10 +1445,16 @@ body {
 
 #alert-banner {
   width: 100%;
-  background: #fc0000;
-  text-align: center;
-  z-index: 200000;
-  /* display: block; */
+  background-color: #ff0000;
+  /* display: none; */
+  text-align: left;
+  font-size: 22px;
+  color: yellow;
+  font-weight: 475;  
+}
+
+#alert-banner span {
+  color: #fff;
 }
 
 .video-sheet-music-links {
@@ -1546,6 +1556,26 @@ body {
 
 .im-embedded-video.square-video {
   max-width: 650px;
+}
+
+.gift-card-message {
+    font-weight: bold;
+    display: block;
+    /*display: none;*/
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-style: normal;
+    color: #000;
+    /*transform: translateY(-14px);*/
+    border: 2px dotted #000;
+}
+
+.gift-card-message a {
+  text-decoration: underline;
+}
+
+.gift-card-message a:hover {
+  text-decoration: none;
 }
 
 html body .upsell-app h1 {

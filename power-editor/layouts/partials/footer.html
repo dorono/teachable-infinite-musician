@@ -1,18 +1,22 @@
 {% cache current_school %}
-<footer class='bottom-menu bottom-menu-inverse'>
- <!--<div class="simple-banner" id="alert-banner" style="display: none;">-->
- <!--   <div class="simple-banner-text">-->
- <!--     <a href="#" id="alert-close" style="float: right; color: white; padding: 10px;">HIDE</a>-->
- <!--     <img src="https://www.bestsaxophonewebsiteever.com/wp-content/uploads/may-2023-sale-alert-banne-for-im.png" style="width: 100%; height: auto; display: block; margin: 0 auto;">-->
- <!--   </div>-->
+<footer class="bottom-menu bottom-menu-inverse">
+  <!--<div class="simple-banner" id="alert-banner" style="display: none;">-->
+  <!--   <div class="simple-banner-text">-->
+  <!--     <a href="#" id="alert-close" style="float: right; color: white; padding: 10px;">HIDE</a>-->
+  <!--     <img src="https://www.bestsaxophonewebsiteever.com/wp-content/uploads/may-2023-sale-alert-banne-for-im.png" style="width: 100%; height: auto; display: block; margin: 0 auto;">-->
+  <!--   </div>-->
 
- <!-- </div>-->
-  <div id="course-id-val" style="text-indent: 3000px; position: absolute;">{{course.id}}</div>
+  <!-- </div>-->
+  <div id="course-id-val" style="text-indent: 3000px; position: absolute">
+    {{course.id}}
+  </div>
 
   <script>
     // FOR ALERT BANNER...
+    /*
     $(document).ready(function() {
-      return; // uncomment to get this working...
+      //return; // uncomment to get this working...
+      
       var $alertBanner=$('#alert-banner');
       var $alertClose=$('#alert-close');
       var currentAlertStatus=sessionStorage.getItem('SHOW_ALERT');
@@ -44,21 +48,17 @@
         sessionStorage.setItem('SHOW_ALERT','hide');
       });
     });
+    */
   </script>
-  <div class='container'>
-    <div class='row'>
-      <div class='col-xs-12 col-sm-6 col-md-6 footer-left footer-column'>
-        <p>
-          {{'footer.copyright'|i18n}}
-          {{current_school.name}}
-        </p>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 footer-left footer-column">
+        <p>{{'footer.copyright'|i18n}} {{current_school.name}}</p>
       </div>
-      <div class='col-xs-12 col-sm-6 col-sm6 footer-right footer-column'>
-        <ul class='list-unstyled'>
+      <div class="col-xs-12 col-sm-6 col-sm6 footer-right footer-column">
+        <ul class="list-unstyled">
           <li>
-            <a href="{{'/p/terms' | school_link}}">
-              {{'common.terms'|i18n}}
-            </a>
+            <a href="{{'/p/terms' | school_link}}"> {{'common.terms'|i18n}} </a>
           </li>
           <li>
             <a href="{{'/p/privacy' | school_link}}">
@@ -67,46 +67,65 @@
           </li>
         </ul>
       </div>
-      <div class='col-xs-12 col-sm-4 col-md-4 footer-column'>
+      <div class="col-xs-12 col-sm-4 col-md-4 footer-column">
         {% if site.custom_footer_links? %}
-        <ul class='list-unstyled'>
+        <ul class="list-unstyled">
           {% for link in site.custom_footer_links %}
           <li>
-            <a href='{{ link.url | school_link }}' target='{{link.target}}'>
+            <a href="{{ link.url | school_link }}" target="{{link.target}}">
               {{ link.text }}
             </a>
           </li>
-          {% endfor %}
-          {% unless site.turn_off_fedora_branding %}
+          {% endfor %} {% unless site.turn_off_fedora_branding %}
           <li>
-            <a class='powered-by' href='https://teachable.com/?src=school_footer' style="visibility: visible !important;">{{'common.powered_by'|i18n}} <img src="{{'footer/teachable-logo-white.svg' | asset_path }}" class='powered-by-logo' alt="Teachable"></a>
+            <a
+              class="powered-by"
+              href="https://teachable.com/?src=school_footer"
+              style="visibility: visible !important"
+              >{{'common.powered_by'|i18n}}
+              <img
+                src="{{'footer/teachable-logo-white.svg' | asset_path }}"
+                class="powered-by-logo"
+                alt="Teachable"
+            /></a>
           </li>
           {% endunless %}
         </ul>
-        {% endif %}
-        {% unless site.custom_footer_links? %}
-        {% unless site.turn_off_fedora_branding %}
-        <ul class='list-unstyled'>
+        {% endif %} {% unless site.custom_footer_links? %} {% unless
+        site.turn_off_fedora_branding %}
+        <ul class="list-unstyled">
           <li>
             {% if site.brand_footer_link_text and site.brand_footer_link_url %}
-            <a class='powered-by' href='{{ site.brand_footer_link_url }}'>
-              {{site.brand_footer_link_text}} <img src="{{'footer/teachable-logo-white.svg' | asset_path }}" class='powered-by-logo' target="_blank" alt="Teachable">
+            <a class="powered-by" href="{{ site.brand_footer_link_url }}">
+              {{site.brand_footer_link_text}}
+              <img
+                src="{{'footer/teachable-logo-white.svg' | asset_path }}"
+                class="powered-by-logo"
+                target="_blank"
+                alt="Teachable"
+              />
             </a>
             {% else %}
-            <a class='powered-by' href='https://teachable.com/?src=school_footer'>
-              {{'common.powered_by'|i18n}} <img src="{{'footer/teachable-logo-white.svg' | asset_path }}" class='powered-by-logo' target="_blank" alt="Teachable">
+            <a
+              class="powered-by"
+              href="https://teachable.com/?src=school_footer"
+            >
+              {{'common.powered_by'|i18n}}
+              <img
+                src="{{'footer/teachable-logo-white.svg' | asset_path }}"
+                class="powered-by-logo"
+                target="_blank"
+                alt="Teachable"
+              />
             </a>
             {% endif %}
           </li>
         </ul>
-        {% endunless %}
-        {% endunless %}
+        {% endunless %} {% endunless %}
       </div>
-
     </div>
   </div>
 </footer>
-
 
 <!-- MAKE sure to use
 $('#course-id-val').text()); for _pa.orderId and
@@ -135,8 +154,6 @@ if (window.location.hostname === 'www.bestsaxophonewebsiteever.com') {
   //   }) ();
   // }
 </script>
-
-
 
 <!--
 <script src="https://cdn.jsdelivr.net/npm/mediaelement@4.2.12/build/mediaelement-and-player.min.js"></script> -->

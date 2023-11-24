@@ -2,6 +2,7 @@
   name="facebook-domain-verification"
   content="9mfpgoflo3fb6pz6fs5gyh075x8vct"
 />
+<link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
 <!-- <link href="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.css" rel="stylesheet" type="text/css" /> -->
 
 <script
@@ -104,6 +105,15 @@
             $(elem).hide();
         });
     }*/
+
+    // insert gift card messaging below all couse purchase buttons
+    if ($(".blocks-page-course_sales_page").length) {
+      $(".security-v2").each(function () {
+        $(this).after(
+          '<span class="gift-card-message">🎁 Looking to purchase this for someone else? You can pick up a gift card for this course on our <a href="https://www.infinitemusician.com/p/gift-cards/">Gift Cards page</a>.</span>'
+        );
+      });
+    }
   });
 </script>
 
