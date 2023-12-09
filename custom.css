@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  font-weight: 400;
+}
+
 .blocks-page-homepage .course-block.featured_courses,
 .blocks-page-homepage .block.featured_courses {
   padding: 20px 0;
@@ -331,10 +335,25 @@ body {
   top: -35px;
 }
 
-.im.famt .lecture-attachment-type-audio:nth-of-type(3) {
-  border: dashed black;
-  border-width: 0 0 3px;
+/* 2413545 is the course id for Little Leaps and Sounds */
+[class="im 2413545"] .lecture-content .lecture-attachment.lecture-attachment-type-audio h2,
+[class="im 2413545"] .lecture-content .lecture-attachment.lecture-attachment-type-audio .audioloader__name {
+  display: none;
 }
+
+[class="im 2413545"] .lecture-content .lecture-attachment.lecture-attachment-type-audio .audioloader__placeholder {
+  background-color: #333;
+  border-radius: 45px;
+}
+
+[class="im 2413545"] .lecture-content .lecture-attachment.lecture-attachment-type-audio .audioloader__placeholder button {
+  color: #fff;
+}
+
+/*.im div.lecture-attachment-type-audio:nth-of-type(3) {*/
+/*  border: dashed black;*/
+/*  border-width: 0 0 3px;*/
+/*}*/
 
 .im #mc-embedded-subscribe-form .btn-primary {
   background: #2984d1 !important;
@@ -1140,8 +1159,10 @@ p.testimonial-quote {
 }
 
 .im.famt .blocks-page-post_purchase_page h2 {
-  background-color: #000;
-  color: #a11c29 ;
+  background-color: #fff;
+  color: #a11c29;
+  border: 2px dashed #000;
+  font-size: 22px;
 }
 
 .im.vignettes .blocks-page-course_sales_page .video_embed h2,
@@ -1265,6 +1286,10 @@ p.testimonial-quote {
 
 .im.famt .custom-header-container {
   background-color: #fff6df;
+}
+
+.im.lls .custom-header-container {
+  background-color: #e3e5d0;
 }
 
 .lfcc-h2 {
@@ -1446,7 +1471,7 @@ p.testimonial-quote {
 #alert-banner {
   width: 100%;
   background-color: #ff0000;
-  /* display: none; */
+  display: none;
   text-align: left;
   font-size: 22px;
   color: yellow;

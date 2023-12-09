@@ -2,7 +2,7 @@
   name="facebook-domain-verification"
   content="9mfpgoflo3fb6pz6fs5gyh075x8vct"
 />
-<link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
+<!--<link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />-->
 <!-- <link href="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.css" rel="stylesheet" type="text/css" /> -->
 
 <script
@@ -41,7 +41,8 @@
       window.location.pathname.indexOf("ultimate-guide") !== -1 ||
       window.location.pathname.indexOf("sax-lessons-with-the-stars") !== -1 ||
       window.location.pathname.indexOf("bach-shapes") !== -1 ||
-      window.location.pathname.indexOf("fun-and-modern-tunes") !== -1
+      window.location.pathname.indexOf("fun-and-modern-tunes") !== -1 ||
+      window.location.pathname.indexOf("little-leaps-and-sounds") !== -1
     ) {
       cssCourseBodySelector = "lfcc";
 
@@ -61,6 +62,10 @@
 
       if (window.location.pathname.indexOf("fun-and-modern-tunes") !== -1) {
         cssCourseBodySelector = " famt";
+      }
+
+      if (window.location.pathname.indexOf("little-leaps-and-sounds") !== -1) {
+        cssCourseBodySelector = " lls";
       }
     }
 
