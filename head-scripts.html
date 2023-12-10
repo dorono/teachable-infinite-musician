@@ -64,7 +64,10 @@
         cssCourseBodySelector = " famt";
       }
 
-      if (window.location.pathname.indexOf("little-leaps-and-sounds") !== -1) {
+      if (
+        window.location.pathname.indexOf("little-leaps-and-sounds") !== -1 ||
+        window.location.pathname.indexOf("2413545") !== -1
+      ) {
         cssCourseBodySelector = " lls";
       }
     }
@@ -115,7 +118,7 @@
     if ($(".blocks-page-course_sales_page").length) {
       $(".security-v2").each(function () {
         $(this).after(
-          '<span class="gift-card-message">🎁 Looking to purchase this for someone else? You can pick up a gift card for this course on our <a href="https://www.infinitemusician.com/p/gift-cards/">Gift Cards page</a>.</span>'
+          '<span class="gift-card-message">🎁 Looking to purchase this for someone else? At checkout, just check the "Send as a gift" check box.</span>'
         );
       });
     }

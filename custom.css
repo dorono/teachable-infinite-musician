@@ -337,9 +337,20 @@ p {
 
 /* 2413545 is the course id for Little Leaps and Sounds */
 [class="im 2413545"] .lecture-content .lecture-attachment.lecture-attachment-type-audio h2,
-[class="im 2413545"] .lecture-content .lecture-attachment.lecture-attachment-type-audio .audioloader__name {
+.im.lls .lecture-content .lecture-attachment.lecture-attachment-type-audio h2,
+[class="im 2413545"] .lecture-content .lecture-attachment.lecture-attachment-type-audio .audioloader__name,
+.im.lls .lecture-content .lecture-attachment.lecture-attachment-type-audio .audioloader__name
+ {
   display: none;
 }
+
+.im.lls .lecture-attachment:not(.lecture-attachment-type-video) h2,
+[class="im 2413545"]  .lecture-attachment:not(.lecture-attachment-type-video) h2 {
+  font-size: 22px;
+  border-top: 1px solid black;
+  padding-top: 15px;  
+}
+
 
 [class="im 2413545"] .lecture-content .lecture-attachment.lecture-attachment-type-audio .audioloader__placeholder {
   background-color: #333;
@@ -1020,7 +1031,8 @@ p.testimonial-quote {
   margin-bottom: 20px;
 }
 
-.im .features img.outline {
+.im .features img.outline,
+.im.lls img.outline {
   border: 1px solid #000;
 }
 
