@@ -42,7 +42,8 @@
       window.location.pathname.indexOf("sax-lessons-with-the-stars") !== -1 ||
       window.location.pathname.indexOf("bach-shapes") !== -1 ||
       window.location.pathname.indexOf("fun-and-modern-tunes") !== -1 ||
-      window.location.pathname.indexOf("little-leaps-and-sounds") !== -1
+      window.location.pathname.indexOf("little-leaps-and-sounds") !== -1 ||
+      window.location.pathname.indexOf("one-chorus-wonders") !== -1
     ) {
       cssCourseBodySelector = "lfcc";
 
@@ -66,9 +67,13 @@
 
       if (
         window.location.pathname.indexOf("little-leaps-and-sounds") !== -1 ||
-        window.location.pathname.indexOf("2413545") !== -1
+        window.location.pathname.indexOf(2413545) !== -1
       ) {
         cssCourseBodySelector = " lls";
+      }
+
+      if (window.location.pathname.indexOf("one-chorus-wonders") !== -1) {
+        cssCourseBodySelector = " ocw";
       }
     }
 

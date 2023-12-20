@@ -479,6 +479,10 @@ p {
   border-bottom: 1px solid #b5b800;
 }
 
+.im.ocw .custom-header-container {
+  background-color: #2a9396;
+}
+
 .lecture-attachment ul.regular-bullets li,
 .lecture-attachment ol.regular-bullets li,
 .post ul li,
@@ -922,6 +926,12 @@ p.testimonial-quote {
   padding: 10px;
 }
 
+.im.lls .highlight-bar {
+  color: #000;
+  background-color: #ddd22d;
+  padding: 10px;
+}
+
 .im ul.benefits,
 .im ul.features-list,
 .im ul.bonus {
@@ -1065,6 +1075,13 @@ p.testimonial-quote {
   text-align: left;
 }
 
+.im.lls .features h3 {
+  font-weight: 500;
+  font-size: 25px;
+  background-color: #1670cd;
+  color: #fff;
+}
+
 .im.famt .features h3,
 .im.famt .video_embed h2  {
   color: #ffffff;
@@ -1163,6 +1180,12 @@ p.testimonial-quote {
 .im.famt h2.highlight,
 .im.famt .highlight-text {
   color: #fff6df;
+}
+
+.im.lls h2.highlight {
+  color: #000;
+  background-color: #ddd22d;
+  border: none;
 }
 
 .im.bs .blocks-page-post_purchase_page h2 {
@@ -1484,8 +1507,8 @@ p.testimonial-quote {
   width: 100%;
   background-color: #ff0000;
   display: none;
-  text-align: left;
-  font-size: 22px;
+  text-align: center;
+  font-size: 25px;
   color: yellow;
   font-weight: 475;  
 }
