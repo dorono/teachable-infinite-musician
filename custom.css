@@ -479,6 +479,22 @@ p {
   border-bottom: 1px solid #b5b800;
 }
 
+.im.famt .custom-header.no-region {
+  display: block;
+}
+
+.im.famt .custom-header.afr-hdr {
+  display: none;
+}
+
+.im.famt .region-afr .custom-header.no-region {
+  display: none;
+}
+
+.im.famt .region-afr .custom-header.afr-hdr {
+  display: block;
+}
+
 .im.ocw .custom-header-container {
   background-color: #2a9396;
 }
@@ -1506,7 +1522,7 @@ p.testimonial-quote {
 #alert-banner {
   width: 100%;
   background-color: #ff0000;
-  display: none;
+  /* display: none; */
   text-align: center;
   font-size: 25px;
   color: yellow;

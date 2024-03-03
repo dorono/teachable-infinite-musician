@@ -26,6 +26,17 @@
     //   });
     // });
 
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var region = urlParams.get("region");
+
+    if (region) {
+      $(".view-school:first").addClass("region-" + region);
+      if (!localStorage.getItem("REGION")) {
+        localStorage.setItem("REGION", region);
+      }
+    }
+
     var cssCourseBodySelector = "";
     var cssPageSelector = (cssPageSelector =
       window.location.pathname.split("/")[2] || "");
