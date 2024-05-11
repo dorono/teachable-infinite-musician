@@ -1522,7 +1522,7 @@ p.testimonial-quote {
 #alert-banner {
   width: 100%;
   background-color: #ff0000;
-  /* display: none; */
+  /* display: none;  */
   text-align: center;
   font-size: 25px;
   color: yellow;
