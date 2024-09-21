@@ -1522,12 +1522,18 @@ p.testimonial-quote {
 #alert-banner {
   width: 100%;
   background-color: #ff0000;
-  /* display: none;  */
+  display: none;  
   text-align: center;
   font-size: 25px;
   color: yellow;
   font-weight: 475;  
 }
+
+/*#alert-banner .col-xs-12 {*/
+/*  padding: 4px 0;*/
+/*  margin: 0;*/
+/*  line-height: 100%;  */
+/*}*/
 
 #alert-banner span {
   color: #fff;
