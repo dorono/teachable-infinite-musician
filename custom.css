@@ -1668,6 +1668,25 @@ html body .upsell-app h1 {
   padding: 7px 0;  
 }
 
+.playjazz-now-play-along-tracks {
+  .lecture-attachment-type-audio {
+    display: none;
+  }
+}
+
+.playjazz-now-play-along-tracks #lecture_heading i.fa.fa-download {
+  display: none;
+}
+
+.audioContainer select {
+  margin-left: 10px
+}
+
+.audioContainer audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
 @media only screen and (max-width : 768px) {
     .flex-row {
         display: flex;

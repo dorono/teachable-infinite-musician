@@ -199,11 +199,19 @@
 /></noscript>
 <!-- End Facebook Pixel Code -->
 
-  <script>
-        function createAudioPlayer(songsData, tempo) {
-            const container = document.querySelector('.audioContainer');
+<script>
+    function createAudioPlayer(songsData, tempo) {
+        const container = document.querySelector('.audioContainer');
 
-            // Create the songs dropdown
+        // Label for the selected song
+        const songLabel = document.createElement('h4');
+
+        if (songsData.length > 1) {
+            // Create the songs dropdown with a label
+            const dropdownLabel = document.createElement('label');
+            dropdownLabel.textContent = 'Selected Track: ';
+            dropdownLabel.htmlFor = 'songDropdown';
+        
             const songDropdown = document.createElement('select');
             songDropdown.id = 'songDropdown';
 
@@ -215,77 +223,87 @@
                 songDropdown.appendChild(option);
             });
 
-            // Label for the selected song
-            const songLabel = document.createElement('h2');
+            container.appendChild(dropdownLabel);
             container.appendChild(songDropdown);
-            container.appendChild(songLabel);
-            
-            // Call function to load the first song by default
-            loadSong(songDropdown.value, songLabel, tempo);
 
             // Change event for the dropdown
             songDropdown.addEventListener('change', function() {
                 loadSong(this.value, songLabel, tempo);
             });
+
+            // Load the first song by default
+            loadSong(songsData[0].file, songLabel, tempo);
+        } else if (songsData.length === 1) {
+            // Load the single song without the dropdown
+            container.appendChild(songLabel); // Include the Now Playing line
+            loadSong(songsData[0].file, songLabel, tempo);
+        }
+    }
+
+    function loadSong(fileName, songLabel = null, tempo) {
+        const fileParts = fileName.split('/');
+        const rawFileName = fileParts[fileParts.length - 1]; // Get last part
+        const sanitizedID = rawFileName.replace(/\s+/g, '-').replace(/\.[^/.]+$/, ''); // Remove file extension for the ID
+
+        // Clear previous elements (if any), but preserve extra elements like the song label
+        const container = document.querySelector('.audioContainer');
+        container.querySelectorAll('audio, div').forEach(el => el.remove());
+
+        const speeds = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2];
+
+        // Create audio element
+        const audio = document.createElement('audio');
+        audio.controls = true;
+        const source = document.createElement('source');
+        source.src = fileName;
+        source.type = 'audio/mpeg';
+        audio.appendChild(source);
+
+        // Create a div for the dropdown menu for speeds
+        const selectContainer = document.createElement('div');
+        selectContainer.style.marginTop = '10px'; // Optional styling
+
+        // Create label and select elements
+        const label = document.createElement('label');
+        label.textContent = 'Playback Speed: ';
+        const select = document.createElement('select');
+        select.id = `playbackSpeed-${sanitizedID}`; // Unique ID for each select element
+
+        // Determine the tempo for the selected song
+        let songTempo = tempo; // Start with the default tempo
+        const selectedSong = songsData.find(song => song.file === fileName);
+        if (selectedSong.bpm) {
+            songTempo = selectedSong.bpm; // Override with the song's bpm if it exists
         }
 
-        function loadSong(fileName, songLabel, tempo) {
-            const fileParts = fileName.split('/');
-            const rawFileName = fileParts[fileParts.length - 1]; // Get last part
-            const sanitizedID = rawFileName.replace(/\s+/g, '-').replace(/\.[^/.]+$/, ''); // Remove file extension for the ID
+        // Populate dropdown options based on the determined tempo
+        speeds.forEach(speed => {
+            const option = document.createElement('option');
+            option.value = speed;
+            option.textContent = `${speed}x (${Math.round(songTempo * speed)} bpm)`; // Use the determined tempo
+            if (speed === 1) option.selected = true;
+            select.appendChild(option);
+        });
 
-            // Clear previous elements (if any)
-            const container = document.querySelector('.audioContainer');
-            container.querySelectorAll('audio, div').forEach(el => el.remove());
+        // Add event listener to change playback rate
+        select.addEventListener('change', function() {
+            audio.playbackRate = parseFloat(this.value);
+        });
 
-            const speeds = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2];
+        // Append label and select to the select container div
+        selectContainer.appendChild(label);
+        selectContainer.appendChild(select);
 
-            // Create audio element
-            const audio = document.createElement('audio');
-            audio.controls = true;
-            const source = document.createElement('source');
-            source.src = fileName;
-            source.type = 'audio/mpeg';
-            audio.appendChild(source);
+        // Append elements to the container
+        container.appendChild(audio);
+        container.appendChild(selectContainer);
 
-            // Create a div for the dropdown menu for speeds
-            const selectContainer = document.createElement('div');
-            selectContainer.style.marginTop = '10px'; // Optional styling
+        // Set the unique ID on the container
+        container.id = sanitizedID;
 
-            // Create label and select elements
-            const label = document.createElement('label');
-            label.textContent = 'Playback Speed: ';
-            const select = document.createElement('select');
-            select.id = `playbackSpeed-${sanitizedID}`; // Unique ID for each select element
-
-            // Populate dropdown options
-            speeds.forEach(speed => {
-                const option = document.createElement('option');
-                option.value = speed;
-                option.textContent = `${speed}x (${Math.round(tempo * speed)} bpm)`;
-                if (speed === 1) option.selected = true;
-                select.appendChild(option);
-            });
-
-            // Add event listener to change playback rate
-            select.addEventListener('change', function() {
-                audio.playbackRate = parseFloat(this.value);
-            });
-
-            // Append label and select to the select container div
-            selectContainer.appendChild(label);
-            selectContainer.appendChild(select);
-
-            // Append elements to the container
-            container.appendChild(songLabel);
-            container.appendChild(audio);
-            container.appendChild(selectContainer);
-
-            // Set the unique ID on the container
-            container.id = sanitizedID;
-
-            // Update the song label
-            const selectedSong = songsData.find(song => song.file === fileName);
-            songLabel.textContent = `Now Playing: ${selectedSong.label}`; // Use the song label
+        if (songLabel !== null) {
+            // Update the song label with strong tags for "Now Playing"
+            songLabel.innerHTML = `<strong>Now Playing</strong>: ${selectedSong.label}`; // Use the song label
         }
-    </script>
+    }
+</script>
