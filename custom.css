@@ -857,7 +857,7 @@ p.testimonial-quote {
 }
 
 .im.ugssp .hero-container {
-  background-image: url(https://www.filepicker.io/api/file/j7fblHDRRi1oHNF2iz3T);
+  background-image: url(https://uploads.teachablecdn.com/attachments/lfInAFYiQjOWuttIRLna_UGSSP-Signup-Hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center 0;
   width: 889px;
@@ -964,10 +964,10 @@ p.testimonial-quote {
 }
 
 .im ul.benefits li {
-  background: url(https://www.filepicker.io/api/file/Wn1HjASaQj6vgNnvOil5)
+  background: url(https://uploads.teachablecdn.com/attachments/3p5am4stQxWNawgm6KoZ_flash-yellow.png)
     no-repeat 9px 9px;
-  /*background: url(https://www.filepicker.io/api/file/wQsSUCQSQCiIGZ84NnZ0) no-repeat 9px 3px;*/
-  /*background: url(https://www.filepicker.io/api/file/DbZiLQzRcaSEcBX9Icpq) no-repeat 9px 3px;*/
+  /*background: url(https://uploads.teachablecdn.com/attachments/IbQ1zWO4TlK3IIptrujj_flash.png) no-repeat 9px 3px;*/
+  /*background: url(https://uploads.teachablecdn.com/attachments/ULxgXs1aTM2T2A9yleGp_round_checkmark+%281%29.png) no-repeat 9px 3px;*/
   padding: 3px 0 20px 43px;
 }
 
@@ -975,10 +975,10 @@ p.testimonial-quote {
 .im.bulletproof-saxophone-playing-complete-package-bu ul.benefits li,
 .im.bulletproof-saxophone-playing ul.benefits li,
 .im.famt ul.benefits li {
-  background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu)
+  background: url(https://uploads.teachablecdn.com/attachments/jf5MRyp0QPKUjQqZWSun_sax-icon-yellow.png)
     no-repeat 0 6px;
-  /*background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 9px 3px;*/
-  /*background: url(https://www.filepicker.io/api/file/kKKmSkFSpOPGBhd1y4Xu) no-repeat 9px 3px;*/
+  /*background: url(https://uploads.teachablecdn.com/attachments/jf5MRyp0QPKUjQqZWSun_sax-icon-yellow.png) no-repeat 9px 3px;*/
+  /*background: url(https://uploads.teachablecdn.com/attachments/jf5MRyp0QPKUjQqZWSun_sax-icon-yellow.png) no-repeat 9px 3px;*/
   padding: 3px 0 20px 33px;
 }
 
@@ -993,7 +993,7 @@ p.testimonial-quote {
 }
 
 .im ul.bonus li {
-  background: url(https://www.filepicker.io/api/file/Dugzs6ajQa0BLfSs1LHu)
+  background: url(https://uploads.teachablecdn.com/attachments/2CcbkNQpCFJCprTXTjug_plus.png)
     no-repeat 9px 7px;
   padding: 3px 0 20px 43px;
   list-style: none;
@@ -1004,7 +1004,7 @@ p.testimonial-quote {
 }
 
 .im ul.features-list li {
-  background: url(https://www.filepicker.io/api/file/U3I1EcS7QIyrYVR40LXs)
+  background: url(https://uploads.teachablecdn.com/attachments/Tu3JgJdSSJ6Xk87HtuT2_music-note-bullet.png)
     no-repeat 9px 7px;
   padding: 3px 0 20px 43px;
   list-style: none;
@@ -1333,6 +1333,10 @@ p.testimonial-quote {
 
 .im footer {
   padding: 15px 15px 5px;
+}
+
+footer.bottom-menu {
+  position: relative;
 }
 
 .im.famt .custom-header-container {
