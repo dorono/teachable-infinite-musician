@@ -2,7 +2,19 @@
   name="facebook-domain-verification"
   content="9mfpgoflo3fb6pz6fs5gyh075x8vct"
 />
-<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">-->
+
+<!--SAMPLE USAGE OF NON-COLLIDING BOOTSTRAP GRIP REPLACEMENT
+<div data-imgrid>
+  <div class="im-container">
+    <div class="im-row">
+      <div class="im-col-xs-12 im-col-sm-6 im-col-md-4">A</div>
+      <div class="im-col-xs-12 im-col-sm-6 im-col-md-4">B</div>
+      <div class="im-col-xs-12 im-col-sm-12 im-col-md-4">C</div>
+    </div>
+  </div>
+</div>
+
+-->
 
 <!-- begin code that was perhaps mistakenly removed -->
 <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
@@ -188,6 +200,84 @@
   gtag("config", "AW-1016009350");
 </script>
 
+<script>
+$(function () {
+  // Inject a11y-friendly "visually hidden" CSS exactly once
+  if (!$('#vh-price-style').length) {
+    $('head').append(
+      '<style id="vh-price-style">' +
+        '.visually-hidden-price{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}' +
+      '</style>'
+    );
+  }
+
+  function updatePricingForm($form) {
+    var $btnWrapper = $form.find('.block__pricing__button-wrapper').first();
+    var $btn = $btnWrapper.find('button.block__pricing__button').first();
+    if (!$btn.length) return;
+
+    // Cache the original label once so repeated runs are idempotent
+    if (!$btn.data('baseLabel')) {
+      $btn.data('baseLabel', $.trim($btn.text()));
+    }
+    var baseLabel = $btn.data('baseLabel');
+
+    // Find the selected plan
+    var $checked = $form.find('input.block__pricing__plan__radio:checked').first();
+    if (!$checked.length) return;
+
+    var $plan = $checked.closest('.block__pricing__plan');
+
+    // 1) Hide the selected plan's price (but keep it in the DOM)
+    //    First, unhide any previously hidden prices in this form:
+    $form.find('.block__pricing__plan__price').removeClass('visually-hidden-price');
+
+    var $priceDiv = $plan.find('.block__pricing__plan__price').first();
+    var priceText = $.trim($priceDiv.text());
+    if (priceText) $priceDiv.addClass('visually-hidden-price');
+
+    // 2) Move the button wrapper to be BEFORE the "or pay in installments" text
+    //    If that span isn't found, fall back to placing it before the payment messaging element.
+    var $installments = $plan.find('.bnpl__installments__text').first();
+    var $paymentMsg  = $plan.find('#payment-method-messaging-element').first();
+
+    if ($installments.length) {
+      $btnWrapper.detach();
+      $installments.before($btnWrapper);
+    } else if ($paymentMsg.length) {
+      $btnWrapper.detach();
+      $paymentMsg.before($btnWrapper);
+    } else {
+      // As a last resort, keep it at the form-level wrapper (idempotent)
+      var $fallback = $form.find('.block__pricing__button-wrapper').first();
+      if ($fallback.length && !$fallback.is($btnWrapper)) {
+        $btnWrapper.detach();
+        $fallback.before($btnWrapper);
+      }
+    }
+
+    // 3) Update the button label to "<original> for <price>"
+    if (priceText) {
+      $btn.text(baseLabel + ' for ' + priceText);
+    } else {
+      $btn.text(baseLabel); // revert if no price for some reason
+    }
+  }
+
+  // Initialize and bind for each pricing form on the page
+  $('form.block__pricing').each(function () {
+    var $form = $(this);
+    updatePricingForm($form);
+
+    // Re-run when the user switches plans
+    $form.on('change', 'input.block__pricing__plan__radio', function () {
+      updatePricingForm($form);
+    });
+  });
+});
+ 
+</script>
+
 <!-- Facebook Pixel Code -->
 <script>
   !(function (f, b, e, v, n, t, s) {
@@ -223,112 +313,3 @@
     src="https://www.facebook.com/tr?id=751675342232877&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
-
-<!--<script>
-    function createAudioPlayer(songsData, tempo) {
-        const container = document.querySelector('.audioContainer');
-
-        // Label for the selected song
-        const songLabel = document.createElement('h4');
-
-        if (songsData.length > 1) {
-            // Create the songs dropdown with a label
-            const dropdownLabel = document.createElement('label');
-            dropdownLabel.textContent = 'Selected Track: ';
-            dropdownLabel.htmlFor = 'songDropdown';
-        
-            const songDropdown = document.createElement('select');
-            songDropdown.id = 'songDropdown';
-
-            // Populate the dropdown with song options
-            songsData.forEach(song => {
-                const option = document.createElement('option');
-                option.value = song.file; // URL of the audio file
-                option.textContent = song.label; // Display label
-                songDropdown.appendChild(option);
-            });
-
-            container.appendChild(dropdownLabel);
-            container.appendChild(songDropdown);
-
-            // Change event for the dropdown
-            songDropdown.addEventListener('change', function() {
-                loadSong(this.value, songLabel, tempo);
-            });
-
-            // Load the first song by default
-            loadSong(songsData[0].file, songLabel, tempo);
-        } else if (songsData.length === 1) {
-            // Load the single song without the dropdown
-            container.appendChild(songLabel); // Include the Now Playing line
-            loadSong(songsData[0].file, songLabel, tempo);
-        }
-    }
-
-    function loadSong(fileName, songLabel = null, tempo) {
-        const fileParts = fileName.split('/');
-        const rawFileName = fileParts[fileParts.length - 1]; // Get last part
-        const sanitizedID = rawFileName.replace(/\s+/g, '-').replace(/\.[^/.]+$/, ''); // Remove file extension for the ID
-
-        // Clear previous elements (if any), but preserve extra elements like the song label
-        const container = document.querySelector('.audioContainer');
-        container.querySelectorAll('audio, div').forEach(el => el.remove());
-
-        const speeds = [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2];
-
-        // Create audio element
-        const audio = document.createElement('audio');
-        audio.controls = true;
-        const source = document.createElement('source');
-        source.src = fileName;
-        source.type = 'audio/mpeg';
-        audio.appendChild(source);
-
-        // Create a div for the dropdown menu for speeds
-        const selectContainer = document.createElement('div');
-        selectContainer.style.marginTop = '10px'; // Optional styling
-
-        // Create label and select elements
-        const label = document.createElement('label');
-        label.textContent = 'Playback Speed: ';
-        const select = document.createElement('select');
-        select.id = `playbackSpeed-${sanitizedID}`; // Unique ID for each select element
-
-        // Determine the tempo for the selected song
-        let songTempo = tempo; // Start with the default tempo
-        const selectedSong = songsData.find(song => song.file === fileName);
-        if (selectedSong.bpm) {
-            songTempo = selectedSong.bpm; // Override with the song's bpm if it exists
-        }
-
-        // Populate dropdown options based on the determined tempo
-        speeds.forEach(speed => {
-            const option = document.createElement('option');
-            option.value = speed;
-            option.textContent = `${speed}x (${Math.round(songTempo * speed)} bpm)`; // Use the determined tempo
-            if (speed === 1) option.selected = true;
-            select.appendChild(option);
-        });
-
-        // Add event listener to change playback rate
-        select.addEventListener('change', function() {
-            audio.playbackRate = parseFloat(this.value);
-        });
-
-        // Append label and select to the select container div
-        selectContainer.appendChild(label);
-        selectContainer.appendChild(select);
-
-        // Append elements to the container
-        container.appendChild(audio);
-        container.appendChild(selectContainer);
-
-        // Set the unique ID on the container
-        container.id = sanitizedID;
-
-        if (songLabel !== null) {
-            // Update the song label with strong tags for "Now Playing"
-            songLabel.innerHTML = `<strong>Now Playing</strong>: ${selectedSong.label}`; // Use the song label
-        }
-    }
-</script>-->
