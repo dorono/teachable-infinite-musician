@@ -1809,6 +1809,19 @@ html body .upsell-app h1 {
   max-height: 79px;
 }
 
+.rich-text p, 
+.rich-text ol, 
+.rich-text ul {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.course-block.block.text h3 {
+  border: #000 solid;
+  border-width: 1px 0;
+}
+
 .black-bg {
   background-color: #000;
 }
@@ -1857,6 +1870,12 @@ html body .upsell-app h1 {
 
 .block__pricing__button-wrapper .block__pricing__button {
   background-color: green;
+  font-size: 18px;
+}
+
+.empty_state__heading-text {
+  margin-bottom: 0;
+  height: 0;
 }
 
 /* END SALES PAGE 2.0 CUSTOMIZATIONS  */
