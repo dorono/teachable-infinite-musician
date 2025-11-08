@@ -1798,15 +1798,46 @@ html body .upsell-app h1 {
 
 
 /* BEGIN SALES PAGE 2.0 CUSTOMIZATIONS  */
-/*.im-img-responsive {*/
-/*  display: block;*/
-/*  width: 100%;*/
-/*  max-width: 100%;*/
-/*  height: auto;  */
-/*}*/
+.im-img-responsive {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;  
+  margin: 0 auto;
+}
+
+section.container.bl.block__text.rich-text > div {
+  width: 890px;
+  max-width: 100%;
+}
+
+.block__image-with-text h1,
+.block__image-with-text h2,
+.block__image-with-text h3,
+.block__image-with-text h4,
+.block__image-with-text h5,
+.block__image-with-text h6,
+.block__image-with-text p,
+.block__image-with-text ol,
+.block__image-with-text ul,
+.block__text h1,
+.block__text h2,
+.block__text h3,
+.block__text h4,
+.block__text h5,
+.block__text h6,
+.block__text p,
+.block__text ol,
+.block__text ul {
+  hyphens: none;
+}
 
 [data-imgrid].block.rich_text img.security-v2 {
   max-height: 79px;
+}
+
+.course-block.block.text section.bg-white {
+    background: #fff;
 }
 
 .rich-text p, 
@@ -1817,9 +1848,37 @@ html body .upsell-app h1 {
   font-weight: 400;
 }
 
-.course-block.block.text h3 {
-  border: #000 solid;
+.rich-text ol li, 
+.rich-text ul li {
+  list-style-type: none;
+}
+
+.block__image-with-text ul>li::before,
+.block__text ul>li::before, 
+.block__video ul>li::before, 
+.block__text-with-image-grid ul>li::before, 
+.block__upsell ul>li::before {
+  display: none;
+}
+
+.course-block.block.text h2 {
+  padding: 10px;
+  margin: 10px 0;
+  clear: both;
+  line-height: 120%;
+  border: black solid;
   border-width: 1px 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.course-block.block.text h3 {
+  font-weight: 500;
+  font-size: 25px;
+  background-color: #1670cd;
+  color: #fff;
+  padding: 0 15px;
+  margin: 0 0 15px;
 }
 
 .black-bg {
@@ -1831,8 +1890,10 @@ html body .upsell-app h1 {
 }
 
 .block__pricing__plan {
-  padding-bottom: 0;
-  margin-bottom: 0;
+  padding: 0 20px;
+  margin: 20px 0 0;
+  border: #000 solid;
+  border-width: 1px 0 0;
 }
 
 .block__pricing__plan__radio-wrapper,
@@ -1876,6 +1937,13 @@ html body .upsell-app h1 {
 .empty_state__heading-text {
   margin-bottom: 0;
   height: 0;
+}
+
+@media screen and (min-width: 768px) {
+    section.container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
 /* END SALES PAGE 2.0 CUSTOMIZATIONS  */
