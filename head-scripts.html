@@ -263,17 +263,19 @@ $(function () {
       $btn.text(baseLabel); // revert if no price for some reason
     }
   }
-
+  
+  /* BEGIN MOVING PRICE TO BUTTON */
   // Initialize and bind for each pricing form on the page
-  $('form.block__pricing').each(function () {
-    var $form = $(this);
-    updatePricingForm($form);
+  // $('form.block__pricing').each(function () {
+  //   var $form = $(this);
+  //   updatePricingForm($form);
 
-    // Re-run when the user switches plans
-    $form.on('change', 'input.block__pricing__plan__radio', function () {
-      updatePricingForm($form);
-    });
-  });
+  //   // Re-run when the user switches plans
+  //   $form.on('change', 'input.block__pricing__plan__radio', function () {
+  //     updatePricingForm($form);
+  //   });
+  // });
+  /* END MOVING PRICE TO BUTTON */
 });
  
 </script>
