@@ -1,7 +1,4 @@
-<meta
-  name="facebook-domain-verification"
-  content="9mfpgoflo3fb6pz6fs5gyh075x8vct"
-/>
+<meta name="facebook-domain-verification" content="9mfpgoflo3fb6pz6fs5gyh075x8vct" />
 
 <!--SAMPLE USAGE OF NON-COLLIDING BOOTSTRAP GRIP REPLACEMENT
 <div data-imgrid>
@@ -19,21 +16,16 @@
 <!-- begin code that was perhaps mistakenly removed -->
 <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
 
-<link
-  href="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.css"
-  rel="stylesheet"
-  type="text/css"
-/>
+<link href="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.css"
+  rel="stylesheet" type="text/css" />
 
 <script src="https://cdn.jsdelivr.net/gh/dorono/teachable-infinite-musician/video-player/im-video-player.js"></script>
 
 <!-- end code that was perhaps mistakenly removed -->
 
-<script
-  type="text/javascript"
+<script type="text/javascript"
   src="//platform-api.sharethis.com/js/sharethis.js#property=5c4f8b3fc9830d001319af9b&product=inline-share-buttons"
-  async="async"
-></script>
+  async="async"></script>
 
 <script>
   $(function () {
@@ -43,25 +35,25 @@
     //     console.log('IT WORKED');
     //   });
     // });
-  
-  
-  // Red alert banner  
-  // var $banner = $(`
-  //   <div id="alert-banner" style="background-color:#ff0000; text-align:center;">
-  //     <div class="container">
-  //       <div class="col-xs-12">
-  //         <em style="color: #fff">ENDING WED 11:59pm PST - </em>
-  //         <span style="font-weight: bold; color: yellow">30% Off</span>
-  //         <span style="color: #fff"> All Courses, Use Coupon Code </span>
-  //         <span style="font-weight: bold; color: yellow">FALL30</span>
-  //       </div>
-  //     </div>
-  //   </div>
-  // `);
-  
 
-  // $('body').prepend($banner);
-  
+
+    // Red alert banner  
+    // var $banner = $(`
+    //   <div id="alert-banner" style="background-color:#ff0000; text-align:center;">
+    //     <div class="container">
+    //       <div class="col-xs-12">
+    //         <em style="color: #fff">ENDING WED 11:59pm PST - </em>
+    //         <span style="font-weight: bold; color: yellow">30% Off</span>
+    //         <span style="color: #fff"> All Courses, Use Coupon Code </span>
+    //         <span style="font-weight: bold; color: yellow">FALL30</span>
+    //       </div>
+    //     </div>
+    //   </div>
+    // `);
+
+
+    // $('body').prepend($banner);
+
 
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
@@ -71,10 +63,10 @@
       if (localStorage.getItem('REGION')) {
         region = localStorage.getItem('REGION');
       } else {
-         localStorage.setItem('REGION', region)
+        localStorage.setItem('REGION', region)
       }
-      $('.view-school:first').addClass('region-'+ region);
-      
+      $('.view-school:first').addClass('region-' + region);
+
     }
 
     var cssCourseBodySelector = "";
@@ -186,10 +178,7 @@
 </script>
 
 <!-- Global site tag (gtag.js) - Google Ads: 1016009350 -->
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=AW-1016009350"
-></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1016009350"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -198,86 +187,6 @@
   gtag("js", new Date());
 
   gtag("config", "AW-1016009350");
-</script>
-
-<script>
-$(function () {
-  // Inject a11y-friendly "visually hidden" CSS exactly once
-  if (!$('#vh-price-style').length) {
-    $('head').append(
-      '<style id="vh-price-style">' +
-        '.visually-hidden-price{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}' +
-      '</style>'
-    );
-  }
-
-  function updatePricingForm($form) {
-    var $btnWrapper = $form.find('.block__pricing__button-wrapper').first();
-    var $btn = $btnWrapper.find('button.block__pricing__button').first();
-    if (!$btn.length) return;
-
-    // Cache the original label once so repeated runs are idempotent
-    if (!$btn.data('baseLabel')) {
-      $btn.data('baseLabel', $.trim($btn.text()));
-    }
-    var baseLabel = $btn.data('baseLabel');
-
-    // Find the selected plan
-    var $checked = $form.find('input.block__pricing__plan__radio:checked').first();
-    if (!$checked.length) return;
-
-    var $plan = $checked.closest('.block__pricing__plan');
-
-    // 1) Hide the selected plan's price (but keep it in the DOM)
-    //    First, unhide any previously hidden prices in this form:
-    $form.find('.block__pricing__plan__price').removeClass('visually-hidden-price');
-
-    var $priceDiv = $plan.find('.block__pricing__plan__price').first();
-    var priceText = $.trim($priceDiv.text());
-    if (priceText) $priceDiv.addClass('visually-hidden-price');
-
-    // 2) Move the button wrapper to be BEFORE the "or pay in installments" text
-    //    If that span isn't found, fall back to placing it before the payment messaging element.
-    var $installments = $plan.find('.bnpl__installments__text').first();
-    var $paymentMsg  = $plan.find('#payment-method-messaging-element').first();
-
-    if ($installments.length) {
-      $btnWrapper.detach();
-      $installments.before($btnWrapper);
-    } else if ($paymentMsg.length) {
-      $btnWrapper.detach();
-      $paymentMsg.before($btnWrapper);
-    } else {
-      // As a last resort, keep it at the form-level wrapper (idempotent)
-      var $fallback = $form.find('.block__pricing__button-wrapper').first();
-      if ($fallback.length && !$fallback.is($btnWrapper)) {
-        $btnWrapper.detach();
-        $fallback.before($btnWrapper);
-      }
-    }
-
-    // 3) Update the button label to "<original> for <price>"
-    if (priceText) {
-      $btn.text(baseLabel + ' for ' + priceText);
-    } else {
-      $btn.text(baseLabel); // revert if no price for some reason
-    }
-  }
-  
-  /* BEGIN MOVING PRICE TO BUTTON */
-  // Initialize and bind for each pricing form on the page
-  // $('form.block__pricing').each(function () {
-  //   var $form = $(this);
-  //   updatePricingForm($form);
-
-  //   // Re-run when the user switches plans
-  //   $form.on('change', 'input.block__pricing__plan__radio', function () {
-  //     updatePricingForm($form);
-  //   });
-  // });
-  /* END MOVING PRICE TO BUTTON */
-});
- 
 </script>
 
 <!-- Facebook Pixel Code -->
@@ -307,11 +216,6 @@ $(function () {
   fbq("track", "PageView");
   fbq("dataProcessingOptions", ["LDU"], 0, 0);
 </script>
-<noscript
-  ><img
-    height="1"
-    width="1"
-    style="display: none"
-    src="https://www.facebook.com/tr?id=751675342232877&ev=PageView&noscript=1"
-/></noscript>
+<noscript><img height="1" width="1" style="display: none"
+    src="https://www.facebook.com/tr?id=751675342232877&ev=PageView&noscript=1" /></noscript>
 <!-- End Facebook Pixel Code -->
