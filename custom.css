@@ -390,6 +390,10 @@ p {
   margin: 0 auto;
 }
 
+.ygtlr .block__upsell__button {
+  display: inline-block;
+}
+
 .block.rich_text p.money-back {
   text-align: center;
   font-weight: bold;
@@ -1836,11 +1840,6 @@ section.container.bl.block__text.rich-text > div {
   max-height: 79px;
 }
 
-.ygtlr h2.highlight {
-  
-}
-
-
 .course-block.block.text section.bg-white {
     background: #fff;
 }
@@ -1942,6 +1941,14 @@ section.container.bl.block__text.rich-text > div {
 .empty_state__heading-text {
   margin-bottom: 0;
   height: 0;
+}
+
+.block__video .b-207425102-description_color {
+  display: none;
+}
+
+.block__video__heading_text {
+  margin-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
