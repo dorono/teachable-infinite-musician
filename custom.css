@@ -1845,6 +1845,14 @@ section.container.bl.block__text.rich-text > div {
   width: 100%;
 }
 
+.course-block .custom-header img { 
+  max-width: 890px;
+}
+
+.multi-device-img {
+  max-width: 800px;
+}
+
 .course-block.block.text section.bg-white {
     background: #fff;
 }
