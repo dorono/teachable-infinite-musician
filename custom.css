@@ -1840,6 +1840,11 @@ section.container.bl.block__text.rich-text > div {
   max-height: 79px;
 }
 
+.course-block .features img,
+.course-block .custom-header img {
+  width: 100%;
+}
+
 .course-block.block.text section.bg-white {
     background: #fff;
 }
@@ -1956,6 +1961,12 @@ section.container.bl.block__text.rich-text > div {
         padding-top: 0;
         padding-bottom: 0;
     }
+}
+
+@media only screen and (max-width : 768px) {
+  .money_back img {
+    margin: 0 auto;
+  }
 }
 
 /* END SALES PAGE 2.0 CUSTOMIZATIONS  */
