@@ -17,13 +17,11 @@
   (function () {
     var ALERT_BAR_HTML = `
       <div id="alert-bar" class="px-8"
-        style="text-align: center;background-color: #fc0000;padding: 8px;font-size: 20px;font-weight: bold;color: #fff;">
-        <span style="color: #fffa21">
-          BLACK FRIDAY SALE:
-          <span style="color: #ffffff"> 50% OFF</span>
-          <em style="color:#000"> EVERYTHING!</em>
-          USE CODE:
-          <span style="color: #ffffff">JOLLY50</span>
+        style="text-align: center;background-color: #e54b8e;padding: 8px;font-size: 20px;font-weight: bold;color: #fff;">
+        <span style="color: #fff">
+          20% OFF
+          <span style="color: #000"> NEW "Bebop→Brecker" Rhythm Changes Pack!</span>
+          <a href="https://www.infinitemusician.com/p/rhythm-changes?coupon_code=RHYTHM20&product_id=6519009" style="color:#fff; text-decoration:underline;"><strong>CLICK HERE</strong></a>.          
         </span>
       </div>
     `;
@@ -39,7 +37,7 @@
     }
 
     /* BEGIN CODE TO DISPLAY ALERT BAR */
-    /* document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
       injectAlertBar();
 
       if (!window.MutationObserver || !document.body) return;
@@ -53,7 +51,7 @@
         childList: true,
         subtree: true
       });
-    });*/
+    });
     /* END CODE TO DISPLAY ALERT BAR */
   })();
 </script>
