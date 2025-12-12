@@ -1,18 +1,5 @@
 <meta name="facebook-domain-verification" content="9mfpgoflo3fb6pz6fs5gyh075x8vct" />
 
-<!--SAMPLE USAGE OF NON-COLLIDING BOOTSTRAP GRIP REPLACEMENT
-<div data-imgrid>
-  <div class="im-container">
-    <div class="im-row">
-      <div class="im-col-xs-12 im-col-sm-6 im-col-md-4">A</div>
-      <div class="im-col-xs-12 im-col-sm-6 im-col-md-4">B</div>
-      <div class="im-col-xs-12 im-col-sm-12 im-col-md-4">C</div>
-    </div>
-  </div>
-</div>
-
--->
-
 <script>
   (function () {
     var ALERT_BAR_HTML = `
@@ -38,6 +25,7 @@
 
     /* BEGIN CODE TO DISPLAY ALERT BAR */
     document.addEventListener('DOMContentLoaded', function () {
+
       injectAlertBar();
 
       if (!window.MutationObserver || !document.body) return;
@@ -45,6 +33,10 @@
       // Watch for SPA DOM changes (header being re-rendered, etc.)
       var observer = new MutationObserver(function () {
         injectAlertBar();
+        // for bundle pages where there is currently no jQuery
+        if (window.location.href.toLowerCase().includes("bundle")) {
+          document.body.classList.add("bundle");
+        }
       });
 
       observer.observe(document.body, {
@@ -72,153 +64,159 @@
   async="async"></script>
 
 <script>
-  $(function () {
-    // $('a[data-role=course-box-link]').each(function(idx,el) {
-    //   $(this).on('click',function(e) {
-    //     e.stopPropagation();
-    //     console.log('IT WORKED');
-    //   });
-    // });
+  if (window.jQuery) {
+    $(function () {
+      // $('a[data-role=course-box-link]').each(function(idx,el) {
+      //   $(this).on('click',function(e) {
+      //     e.stopPropagation();
+      //     console.log('IT WORKED');
+      //   });
+      // });
 
 
-    // Red alert banner  
-    // var $banner = $(`
-    //   <div id="alert-banner" style="background-color:#ff0000; text-align:center;">
-    //     <div class="container">
-    //       <div class="col-xs-12">
-    //         <em style="color: #fff">ENDING WED 11:59pm PST - </em>
-    //         <span style="font-weight: bold; color: yellow">30% Off</span>
-    //         <span style="color: #fff"> All Courses, Use Coupon Code </span>
-    //         <span style="font-weight: bold; color: yellow">FALL30</span>
-    //       </div>
-    //     </div>
-    //   </div>
-    // `);
+      // Red alert banner  
+      // var $banner = $(`
+      //   <div id="alert-banner" style="background-color:#ff0000; text-align:center;">
+      //     <div class="container">
+      //       <div class="col-xs-12">
+      //         <em style="color: #fff">ENDING WED 11:59pm PST - </em>
+      //         <span style="font-weight: bold; color: yellow">30% Off</span>
+      //         <span style="color: #fff"> All Courses, Use Coupon Code </span>
+      //         <span style="font-weight: bold; color: yellow">FALL30</span>
+      //       </div>
+      //     </div>
+      //   </div>
+      // `);
 
 
-    // $('body').prepend($banner);
+      // $('body').prepend($banner);
 
 
-    var queryString = window.location.search;
-    var urlParams = new URLSearchParams(queryString);
-    var region = urlParams.get('region')
+      var queryString = window.location.search;
+      var urlParams = new URLSearchParams(queryString);
+      var region = urlParams.get('region')
 
-    if (region || localStorage.getItem('REGION')) {
-      if (localStorage.getItem('REGION')) {
-        region = localStorage.getItem('REGION');
-      } else {
-        localStorage.setItem('REGION', region)
+      if (region || localStorage.getItem('REGION')) {
+        if (localStorage.getItem('REGION')) {
+          region = localStorage.getItem('REGION');
+        } else {
+          localStorage.setItem('REGION', region)
+        }
+        $('.view-school:first').addClass('region-' + region);
+
       }
-      $('.view-school:first').addClass('region-' + region);
 
-    }
-
-    var cssCourseBodySelector = "";
-    var cssPageSelector = (cssPageSelector =
-      window.location.pathname.split("/")[2] || "");
-    $("body").addClass("im");
-
-    if (
-      window.location.pathname.indexOf(
-        "sax-lessons-with-the-stars/lectures"
-      ) !== -1 ||
-      window.location.pathname.indexOf("691872") !== -1
-    ) {
-      $("body").addClass("slws-curriculum");
-    }
-
-    if (
-      window.location.pathname.indexOf("lightning") !== -1 ||
-      window.location.pathname.indexOf("ultimate-guide") !== -1 ||
-      window.location.pathname.indexOf("sax-lessons-with-the-stars") !== -1 ||
-      window.location.pathname.indexOf("bach-shapes") !== -1 ||
-      window.location.pathname.indexOf("fun-and-modern-tunes") !== -1 ||
-      window.location.pathname.indexOf("little-leaps-and-sounds") !== -1 ||
-      window.location.pathname.indexOf("one-chorus-wonders") !== -1
-    ) {
-      cssCourseBodySelector = "lfcc";
-
-      if (window.location.pathname.indexOf("ultimate-guide") !== -1) {
-        cssCourseBodySelector = cssCourseBodySelector + " ugssp";
-      }
+      var cssCourseBodySelector = "";
+      var cssPageSelector = (cssPageSelector =
+        window.location.pathname.split("/")[2] || "");
+      $("body").addClass("im");
 
       if (
-        window.location.pathname.indexOf("sax-lessons-with-the-stars") !== -1
+        window.location.pathname.indexOf(
+          "sax-lessons-with-the-stars/lectures"
+        ) !== -1 ||
+        window.location.pathname.indexOf("691872") !== -1
       ) {
-        cssCourseBodySelector = cssCourseBodySelector + " slws";
-      }
-
-      if (window.location.pathname.indexOf("bach-shapes") !== -1) {
-        cssCourseBodySelector = cssCourseBodySelector + " bs";
-      }
-
-      if (window.location.pathname.indexOf("fun-and-modern-tunes") !== -1) {
-        cssCourseBodySelector = " famt";
+        $("body").addClass("slws-curriculum");
       }
 
       if (
+        window.location.pathname.indexOf("lightning") !== -1 ||
+        window.location.pathname.indexOf("ultimate-guide") !== -1 ||
+        window.location.pathname.indexOf("sax-lessons-with-the-stars") !== -1 ||
+        window.location.pathname.indexOf("bach-shapes") !== -1 ||
+        window.location.pathname.indexOf("fun-and-modern-tunes") !== -1 ||
         window.location.pathname.indexOf("little-leaps-and-sounds") !== -1 ||
-        window.location.pathname.indexOf(2413545) !== -1
+        window.location.pathname.indexOf("one-chorus-wonders") !== -1
       ) {
-        cssCourseBodySelector = " lls";
+        cssCourseBodySelector = "lfcc";
+
+        if (window.location.pathname.indexOf("ultimate-guide") !== -1) {
+          cssCourseBodySelector = cssCourseBodySelector + " ugssp";
+        }
+
+        if (
+          window.location.pathname.indexOf("sax-lessons-with-the-stars") !== -1
+        ) {
+          cssCourseBodySelector = cssCourseBodySelector + " slws";
+        }
+
+        if (window.location.pathname.indexOf("bach-shapes") !== -1) {
+          cssCourseBodySelector = cssCourseBodySelector + " bs";
+        }
+
+        if (window.location.pathname.indexOf("bundle") !== -1) {
+          cssCourseBodySelector = cssCourseBodySelector + " bundle";
+        }
+
+        if (window.location.pathname.indexOf("fun-and-modern-tunes") !== -1) {
+          cssCourseBodySelector = " famt";
+        }
+
+        if (
+          window.location.pathname.indexOf("little-leaps-and-sounds") !== -1 ||
+          window.location.pathname.indexOf(2413545) !== -1
+        ) {
+          cssCourseBodySelector = " lls";
+        }
+
+        if (window.location.pathname.indexOf("one-chorus-wonders") !== -1) {
+          cssCourseBodySelector = " ocw";
+        }
       }
 
-      if (window.location.pathname.indexOf("one-chorus-wonders") !== -1) {
-        cssCourseBodySelector = " ocw";
+      if (cssCourseBodySelector) {
+        $("body").addClass(cssCourseBodySelector);
       }
-    }
 
-    if (cssCourseBodySelector) {
-      $("body").addClass(cssCourseBodySelector);
-    }
+      if (cssPageSelector) {
+        $("body").addClass(cssPageSelector);
+      }
 
-    if (cssPageSelector) {
-      $("body").addClass(cssPageSelector);
-    }
+      $(".custom-header").each(function () {
+        $(this)
+          .parents()
+          .closest(".container")
+          .addClass("custom-header-container");
+      });
 
-    $(".custom-header").each(function () {
-      $(this)
-        .parents()
-        .closest(".container")
-        .addClass("custom-header-container");
+      console.log("VAL", $("#course-id-val").text());
+
+      var lowerCasePath = window.location.href.toLowerCase();
+      if (lowerCasePath.indexOf("music-practice-for-busy-people") !== -1) {
+        $(".btn-enroll").each(function (idx, elem) {
+          $(elem).text($(elem).text().replace("Enroll", "Pre-Enroll"));
+        });
+      }
+
+      /*
+      var lowerCasePath = window.location.href.toLowerCase();
+       if (lowerCasePath.indexOf('giantsound') !== -1) {
+          $('.ugssp .reg-price').each(function (idx, elem) {
+              $(elem).hide();
+          });
+          $('.ugssp .discount').each(function (idx, elem) {
+              $(elem).show();
+          });
+      } else {
+          $('.ugssp .reg-price').each(function (idx, elem) {
+              $(elem).show();
+          });
+          $('.ugssp .discount').each(function (idx, elem) {
+              $(elem).hide();
+          });
+      }*/
+
+      // insert gift card messaging below all couse purchase buttons
+      if ($(".blocks-page-course_sales_page").length) {
+        $(".security-v2").each(function () {
+          $(this).after(
+            '<span class="gift-card-message">🎁 Looking to purchase this for someone else? At checkout, just check the "Send as a gift" check box.</span>'
+          );
+        });
+      }
     });
-
-    console.log("VAL", $("#course-id-val").text());
-
-    var lowerCasePath = window.location.href.toLowerCase();
-    if (lowerCasePath.indexOf("music-practice-for-busy-people") !== -1) {
-      $(".btn-enroll").each(function (idx, elem) {
-        $(elem).text($(elem).text().replace("Enroll", "Pre-Enroll"));
-      });
-    }
-
-    /*
-    var lowerCasePath = window.location.href.toLowerCase();
-     if (lowerCasePath.indexOf('giantsound') !== -1) {
-        $('.ugssp .reg-price').each(function (idx, elem) {
-            $(elem).hide();
-        });
-        $('.ugssp .discount').each(function (idx, elem) {
-            $(elem).show();
-        });
-    } else {
-        $('.ugssp .reg-price').each(function (idx, elem) {
-            $(elem).show();
-        });
-        $('.ugssp .discount').each(function (idx, elem) {
-            $(elem).hide();
-        });
-    }*/
-
-    // insert gift card messaging below all couse purchase buttons
-    if ($(".blocks-page-course_sales_page").length) {
-      $(".security-v2").each(function () {
-        $(this).after(
-          '<span class="gift-card-message">🎁 Looking to purchase this for someone else? At checkout, just check the "Send as a gift" check box.</span>'
-        );
-      });
-    }
-  });
+  }
 </script>
 
 <!-- Global site tag (gtag.js) - Google Ads: 1016009350 -->

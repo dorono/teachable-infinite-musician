@@ -7,111 +7,6 @@ body {
   overflow-x: hidden;
 }
 
-[data-imgrid] { --im-gutter: 15px; }
-
-/* Container (optional) */
-[data-imgrid] .im-container,
-[data-imgrid] .im-container-fluid {
-  margin-left:auto; margin-right:auto;
-  padding-left:var(--im-gutter); padding-right:var(--im-gutter);
-}
-@media (min-width:768px){  [data-imgrid] .im-container { max-width:750px; } }
-@media (min-width:992px){  [data-imgrid] .im-container { max-width:970px; } }
-@media (min-width:1200px){ [data-imgrid] .im-container { max-width:1170px; } }
-
-/* Row */
-[data-imgrid] .im-row {
-  display:flex; flex-wrap:wrap;
-  margin-left:calc(var(--im-gutter) * -1);
-  margin-right:calc(var(--im-gutter) * -1);
-  box-sizing:border-box;
-}
-
-/* Col base */
-[data-imgrid] [class*="im-col-"] {
-  box-sizing:border-box;
-  padding-left:var(--im-gutter); padding-right:var(--im-gutter);
-  min-height:1px; flex:0 0 auto;
-}
-
-/* ===== XS widths (no media query) ===== */
-[data-imgrid] .im-col-xs-1{width:8.333333%}
-[data-imgrid] .im-col-xs-2{width:16.666667%}
-[data-imgrid] .im-col-xs-3{width:25%}
-[data-imgrid] .im-col-xs-4{width:33.333333%}
-[data-imgrid] .im-col-xs-5{width:41.666667%}
-[data-imgrid] .im-col-xs-6{width:50%}
-[data-imgrid] .im-col-xs-7{width:58.333333%}
-[data-imgrid] .im-col-xs-8{width:66.666667%}
-[data-imgrid] .im-col-xs-9{width:75%}
-[data-imgrid] .im-col-xs-10{width:83.333333%}
-[data-imgrid] .im-col-xs-11{width:91.666667%}
-[data-imgrid] .im-col-xs-12{width:100%}
-
-/* ===== SM (≥768px) ===== */
-@media (min-width:768px){
-  [data-imgrid] .im-col-sm-1{width:8.333333%}
-  [data-imgrid] .im-col-sm-2{width:16.666667%}
-  [data-imgrid] .im-col-sm-3{width:25%}
-  [data-imgrid] .im-col-sm-4{width:33.333333%}
-  [data-imgrid] .im-col-sm-5{width:41.666667%}
-  [data-imgrid] .im-col-sm-6{width:50%}
-  [data-imgrid] .im-col-sm-7{width:58.333333%}
-  [data-imgrid] .im-col-sm-8{width:66.666667%}
-  [data-imgrid] .im-col-sm-9{width:75%}
-  [data-imgrid] .im-col-sm-10{width:83.333333%}
-  [data-imgrid] .im-col-sm-11{width:91.666667%}
-  [data-imgrid] .im-col-sm-12{width:100%}
-}
-
-/* ===== MD (≥992px) ===== */
-@media (min-width:992px){
-  [data-imgrid] .im-col-md-1{width:8.333333%}
-  [data-imgrid] .im-col-md-2{width:16.666667%}
-  [data-imgrid] .im-col-md-3{width:25%}
-  [data-imgrid] .im-col-md-4{width:33.333333%}
-  [data-imgrid] .im-col-md-5{width:41.666667%}
-  [data-imgrid] .im-col-md-6{width:50%}
-  [data-imgrid] .im-col-md-7{width:58.333333%}
-  [data-imgrid] .im-col-md-8{width:66.666667%}
-  [data-imgrid] .im-col-md-9{width:75%}
-  [data-imgrid] .im-col-md-10{width:83.333333%}
-  [data-imgrid] .im-col-md-11{width:91.666667%}
-  [data-imgrid] .im-col-md-12{width:100%}
-}
-
-/* ===== LG (≥1200px) ===== */
-@media (min-width:1200px){
-  [data-imgrid] .im-col-lg-1{width:8.333333%}
-  [data-imgrid] .im-col-lg-2{width:16.666667%}
-  [data-imgrid] .im-col-lg-3{width:25%}
-  [data-imgrid] .im-col-lg-4{width:33.333333%}
-  [data-imgrid] .im-col-lg-5{width:41.666667%}
-  [data-imgrid] .im-col-lg-6{width:50%}
-  [data-imgrid] .im-col-lg-7{width:58.333333%}
-  [data-imgrid] .im-col-lg-8{width:66.666667%}
-  [data-imgrid] .im-col-lg-9{width:75%}
-  [data-imgrid] .im-col-lg-10{width:83.333333%}
-  [data-imgrid] .im-col-lg-11{width:91.666667%}
-  [data-imgrid] .im-col-lg-12{width:100%}
-}
-
-/* Offsets (optional; add more as needed) */
-[data-imgrid] .im-col-xs-offset-1{margin-left:8.333333%}
-[data-imgrid] .im-col-xs-offset-2{margin-left:16.666667%}
-@media (min-width:768px){
-  [data-imgrid] .im-col-sm-offset-1{margin-left:8.333333%}
-  [data-imgrid] .im-col-sm-offset-2{margin-left:16.666667%}
-}
-@media (min-width:992px){
-  [data-imgrid] .im-col-md-offset-1{margin-left:8.333333%}
-  [data-imgrid] .im-col-md-offset-2{margin-left:16.666667%}
-}
-@media (min-width:1200px){
-  [data-imgrid] .im-col-lg-offset-1{margin-left:8.333333%}
-  [data-imgrid] .im-col-lg-offset-2{margin-left:16.666667%}
-}
-
 p {
   font-weight: 400;
 }
@@ -1629,7 +1524,7 @@ footer.bottom-menu {
 }
 
 #alert-bar {
-  display: none;
+  display: block;
 }
 
 #alert-banner {
@@ -1836,10 +1731,6 @@ section.container.bl.block__text.rich-text > div {
   hyphens: none;
 }
 
-[data-imgrid].block.rich_text img.security-v2 {
-  max-height: 79px;
-}
-
 .course-block .features img,
 .course-block .custom-header img {
   width: 100%;
@@ -1962,6 +1853,10 @@ section.container.bl.block__text.rich-text > div {
 
 .block__video__heading_text {
   margin-bottom: 0;
+}
+
+.bundle #alert-bar {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
