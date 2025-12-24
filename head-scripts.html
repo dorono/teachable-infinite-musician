@@ -26,13 +26,13 @@
     /* BEGIN CODE TO DISPLAY ALERT BAR */
     document.addEventListener('DOMContentLoaded', function () {
 
-      injectAlertBar();
+      // injectAlertBar();
 
       if (!window.MutationObserver || !document.body) return;
 
       // Watch for SPA DOM changes (header being re-rendered, etc.)
       var observer = new MutationObserver(function () {
-        injectAlertBar();
+        // injectAlertBar();
         // for bundle pages where there is currently no jQuery
         if (window.location.href.toLowerCase().includes("bundle")) {
           document.body.classList.add("bundle");
@@ -219,8 +219,99 @@
   }
 </script>
 
+<!-- CODE TO DISPLAY GERMAN-LANGAUAGE WELCOME BLOCK -->
+<script>
+  (function () {
+    const COUPON = 'SAXOFUN20';
+    const STORAGE_KEY = 'im_show_de_block';
+    const UGSSP_PATH_SNIPPET = '/p/ultimate-guide-to-saxophone-sound-production';
+
+    function onUgsspPage() {
+      return window.location.pathname.indexOf(UGSSP_PATH_SNIPPET) !== -1;
+    }
+
+    function hasCoupon() {
+      return new URLSearchParams(window.location.search).get('coupon_code') === COUPON;
+    }
+
+    function removeBlockIfPresent() {
+      const existing = document.getElementById('de-welcome-block');
+      if (existing) existing.remove();
+    }
+
+    function showBlock() {
+      if (document.getElementById('de-welcome-block')) return;
+
+      const block = document.createElement('div');
+      block.id = 'de-welcome-block';
+      block.style.background = '#f5f7f9';
+      block.style.border = '1px solid #e0e0e0';
+      block.style.padding = '16px';
+
+      block.innerHTML = `
+      <strong style="font-size:16px;">
+        🇩🇪 Willkommen, Saxofreunde aus Deutschland, Österreich und der Schweiz!
+      </strong>
+
+      <p style="margin:8px 0; font-size:15px; line-height:1.5em;">
+        Dieser Kurs ist Teil unseres Angebots für den deutschsprachigen Raum.
+        Der Unterricht ist <strong>auf Englisch</strong>, mit
+        <strong>sorgfältig überarbeiteten englischen Untertiteln</strong>.
+      </p>
+
+      <p style="margin:8px 0; font-size:15px; line-height:1.5em;">
+        Zum Start bieten wir euch einen <strong>20 % Einführungspreis</strong>. Wenn du über diesen Link hier bist, sollte der Rabatt automatisch <strong>angewendet werden</strong>.
+      </p>
+
+      <p style="margin:0; font-size:15px; line-height:1.5em;">
+        Falls nicht, nutze bitte den Gutscheincode:
+        <strong>${COUPON}</strong>
+      </p>
+    `;
+
+      const anchor =
+        document.querySelector('.course-hero') ||
+        document.querySelector('main') ||
+        document.body;
+
+      anchor.parentNode.insertBefore(block, anchor);
+    }
+
+    function run() {
+      // If we're NOT on UGSSP, ensure the block isn't hanging around
+      if (!onUgsspPage()) {
+        removeBlockIfPresent();
+        return;
+      }
+
+      // If we ARE on UGSSP, set the flag when coupon is present
+      if (hasCoupon()) {
+        localStorage.setItem(STORAGE_KEY, '1');
+      }
+
+      // Show block if we've ever seen the coupon
+      if (localStorage.getItem(STORAGE_KEY) === '1') {
+        showBlock();
+      } else {
+        removeBlockIfPresent();
+      }
+    }
+
+    // Run once on load…
+    document.addEventListener('DOMContentLoaded', run);
+
+    // …and also handle “soft navigations” (Teachable sometimes changes URL without full reload)
+    window.addEventListener('popstate', run);
+
+    // Fallback: if Teachable does a pushState navigation without triggering popstate,
+    // rerun shortly after load
+    setTimeout(run, 500);
+  })();
+</script>
+
 <!-- Global site tag (gtag.js) - Google Ads: 1016009350 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1016009350"></script>
+<!-- COMMENTING THIS OUT AT LEAST TEMPORARILY DUE TO INCORRECT EVENT BEING SENT VIA META PIXEL -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1016009350"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
@@ -229,10 +320,11 @@
   gtag("js", new Date());
 
   gtag("config", "AW-1016009350");
-</script>
+</script> -->
 
-<!-- Facebook Pixel Code -->
-<script>
+<!-- Facebook Pixel Code - COMMENTING OUT FOR NOW SINCE WE ARE USING TEACHABLE'S META PIXEL APP -->
+<!--<script>
+  
   !(function (f, b, e, v, n, t, s) {
     if (f.fbq) return;
     n = f.fbq = function () {
@@ -260,4 +352,5 @@
 </script>
 <noscript><img height="1" width="1" style="display: none"
     src="https://www.facebook.com/tr?id=751675342232877&ev=PageView&noscript=1" /></noscript>
+    -->
 <!-- End Facebook Pixel Code -->

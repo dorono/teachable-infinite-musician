@@ -1859,6 +1859,11 @@ section.container.bl.block__text.rich-text > div {
   display: none;
 }
 
+.bundle [data-sentry-source-file="ProductTile.tsx"] {
+  pointer-events: none;
+  cursor: default;
+}
+
 @media screen and (min-width: 768px) {
     section.container {
         padding-top: 0;

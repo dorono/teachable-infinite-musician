@@ -1,0 +1,25 @@
+<div class="checkout-cta">
+  {% if course.has_products? && course.is_open %}
+    <h2>
+      <!-- This is a final call-to-action that will say "Join 2,000 students and get started now!"
+           or simply "Get started now!" if you have fewer than 100 students in the course -->
+      {% if course.students.size > 100 %}
+      {{ 'courses.cta_before_count'|i18n }} {{ course.students }} {{ 'courses.cta_after_count'|i18n }}
+      {% else %}
+      {{ 'courses.cta_no_count'|i18n }}
+      {% endif %}
+    </h2>
+  {% else %}
+    <h2 class="no-products">
+      {{ 'courses.no_products'|i18n }}
+    </h2>
+  {% endif %}
+</div>
+{% purchase_form %}
+{% if block.data.enroll_button_text %}
+<script>
+  $(document).ready(function() {
+    $("#enroll-button").text('{{ block.data.enroll_button_text }}');
+  });
+</script>
+{% endif %}
